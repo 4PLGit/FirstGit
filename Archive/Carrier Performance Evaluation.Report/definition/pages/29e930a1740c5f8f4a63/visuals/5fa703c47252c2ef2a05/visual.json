@@ -1,0 +1,368 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "5fa703c47252c2ef2a05",
+  "position": {
+    "x": 405.54455445544551,
+    "y": 95.049504950495049,
+    "z": 11000,
+    "height": 572.10749646393208,
+    "width": 774.8797736916548,
+    "tabOrder": 12000
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Overall Performance",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontFamily": "Arial",
+                      "fontSize": "14pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Business Question",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontFamily": "Arial",
+                      "fontSize": "11pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "What is the overall service performance of carriers across all key transport KPIs?",
+                    "textStyle": {
+                      "fontFamily": "Arial",
+                      "fontSize": "11pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Definition",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontFamily": "Arial",
+                      "fontSize": "11pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "This KPI represents a combined performance score based on multiple operational KPIs across the transport lifecycle. Each KPI is first converted into a performance score:",
+                    "textStyle": {
+                      "fontFamily": "Arial",
+                      "fontSize": "11pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "A value of 1 (100%) means no violations (fully compliant)",
+                    "textStyle": {
+                      "fontFamily": "Arial",
+                      "fontSize": "11pt"
+                    }
+                  }
+                ],
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "A value of 0 (0%) means all shipments are violations",
+                    "textStyle": {
+                      "fontFamily": "Arial",
+                      "fontSize": "11pt"
+                    }
+                  }
+                ],
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "The following KPIs are included:",
+                    "textStyle": {
+                      "fontFamily": "Arial",
+                      "fontSize": "11pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Confirmation performance",
+                    "textStyle": {
+                      "fontFamily": "Arial",
+                      "fontSize": "11pt"
+                    }
+                  }
+                ],
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Planned Pickup performance",
+                    "textStyle": {
+                      "fontFamily": "Arial",
+                      "fontSize": "11pt"
+                    }
+                  }
+                ],
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Actual Pickup performance",
+                    "textStyle": {
+                      "fontFamily": "Arial",
+                      "fontSize": "11pt"
+                    }
+                  }
+                ],
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Reported Pickup performance",
+                    "textStyle": {
+                      "fontFamily": "Arial",
+                      "fontSize": "11pt"
+                    }
+                  }
+                ],
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Planned Delivery performance",
+                    "textStyle": {
+                      "fontFamily": "Arial",
+                      "fontSize": "11pt"
+                    }
+                  }
+                ],
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Actual Delivery performance",
+                    "textStyle": {
+                      "fontFamily": "Arial",
+                      "fontSize": "11pt"
+                    }
+                  }
+                ],
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Reported Delivery performance",
+                    "textStyle": {
+                      "fontFamily": "Arial",
+                      "fontSize": "11pt"
+                    }
+                  }
+                ],
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Each KPI is equally weighted (~14.3%) and averaged to produce a final score between 0% and 100%.",
+                    "textStyle": {
+                      "fontFamily": "Arial",
+                      "fontSize": "11pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Interpretation",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontFamily": "Arial",
+                      "fontSize": "11pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": " This KPI provides a holistic view of carrier performance across planning, execution, and reporting.",
+                    "textStyle": {
+                      "fontFamily": "Arial",
+                      "fontSize": "11pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Values close to 100%: strong overall performance across all areas",
+                    "textStyle": {
+                      "fontFamily": "Arial",
+                      "fontSize": "11pt"
+                    }
+                  }
+                ],
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Lower values: performance issues in one or more parts of the transport process",
+                    "textStyle": {
+                      "fontFamily": "Arial",
+                      "fontSize": "11pt"
+                    }
+                  }
+                ],
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Important",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontFamily": "Arial",
+                      "fontSize": "11pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "This KPI smooths out individual issues, so it should always be analyzed together with the detailed KPIs.",
+                    "textStyle": {
+                      "fontFamily": "Arial",
+                      "fontSize": "11pt"
+                    }
+                  }
+                ],
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "A good overall score does not necessarily mean all areas perform equally well.",
+                    "textStyle": {
+                      "fontFamily": "Arial",
+                      "fontSize": "11pt"
+                    }
+                  }
+                ],
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'EXP_Overall Performance'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "isHidden": true
+}

@@ -1,0 +1,101 @@
+expression Working_Minutes =
+		(Start as datetime, End as datetime) as number =>
+		let
+		    EndTime = if End = null then DateTime.LocalNow() else End,
+		
+		    WorkStart = #time(8,0,0),
+		    WorkEnd = #time(17,0,0),
+		
+		    StartDate = Date.From(Start),
+		    EndDate = Date.From(EndTime),
+		
+		    IsWorkday = (d as date) => Date.DayOfWeek(d, Day.Monday) < 5,
+		
+		    GetMinutesInDay = (d as date) =>
+		        let
+		            DayStart = DateTime.From(d & WorkStart),
+		            DayEnd = DateTime.From(d & WorkEnd),
+		
+		            ActualStart = if d = StartDate then List.Max({Start, DayStart}) else DayStart,
+		            ActualEnd = if d = EndDate then List.Min({EndTime, DayEnd}) else DayEnd,
+		
+		            Minutes = if ActualEnd > ActualStart then Duration.TotalMinutes(ActualEnd - ActualStart) else 0
+		        in
+		            if IsWorkday(d) then Minutes else 0,
+		
+		    Dates = List.Dates(StartDate, Duration.Days(EndDate - StartDate) + 1, #duration(1,0,0,0)),
+		
+		    Result = List.Sum(List.Transform(Dates, each GetMinutesInDay(_)))
+		in
+		    Result
+	lineageTag: f09acd9b-f75d-4b33-a8d2-ff1c89e9b70b
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Function
+
+expression Completed_Date =
+		let
+		    Source = PowerBI.Dataflows(null),
+		    #"9e645096-1673-4897-892a-ebeca0b45cd7" = Source{[workspaceId="9e645096-1673-4897-892a-ebeca0b45cd7"]}[Data],
+		    #"d16f5bb1-a1ef-434e-8bfb-d1fad2af7c89" = #"9e645096-1673-4897-892a-ebeca0b45cd7"{[dataflowId="d16f5bb1-a1ef-434e-8bfb-d1fad2af7c89"]}[Data],
+		    Completed_Date1 = #"d16f5bb1-a1ef-434e-8bfb-d1fad2af7c89"{[entity="Completed_Date"]}[Data]
+		in
+		    Completed_Date1
+	lineageTag: 3d2b61bf-d5ea-4f81-acad-bf8ac1e44d39
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
+expression Event_Date =
+		let
+		    Source = PowerBI.Dataflows(null),
+		    #"9e645096-1673-4897-892a-ebeca0b45cd7" = Source{[workspaceId="9e645096-1673-4897-892a-ebeca0b45cd7"]}[Data],
+		    #"d16f5bb1-a1ef-434e-8bfb-d1fad2af7c89" = #"9e645096-1673-4897-892a-ebeca0b45cd7"{[dataflowId="d16f5bb1-a1ef-434e-8bfb-d1fad2af7c89"]}[Data],
+		    Event_Date1 = #"d16f5bb1-a1ef-434e-8bfb-d1fad2af7c89"{[entity="Event_Date"]}[Data]
+		in
+		    Event_Date1
+	lineageTag: e4cbe922-9b4c-4d0c-a27a-587577c05155
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
+expression Scheduled_Date =
+		let
+		    Source = PowerBI.Dataflows(null),
+		    #"9e645096-1673-4897-892a-ebeca0b45cd7" = Source{[workspaceId="9e645096-1673-4897-892a-ebeca0b45cd7"]}[Data],
+		    #"d16f5bb1-a1ef-434e-8bfb-d1fad2af7c89" = #"9e645096-1673-4897-892a-ebeca0b45cd7"{[dataflowId="d16f5bb1-a1ef-434e-8bfb-d1fad2af7c89"]}[Data],
+		    Scheduled_Date1 = #"d16f5bb1-a1ef-434e-8bfb-d1fad2af7c89"{[entity="Scheduled_Date"]}[Data]
+		in
+		    Scheduled_Date1
+	lineageTag: fe7f8258-8b6f-4017-9c1d-ddfff9e24165
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
+expression 'Errors in Jobs_Events_Dates' =
+		let
+		Source = Jobs_Events_Dates,
+		  #"Detected Type Mismatches" = let
+		    tableWithOnlyPrimitiveTypes = Table.SelectColumns(Source, Table.ColumnsOfType(Source, {type nullable number, type nullable text, type nullable logical, type nullable date, type nullable datetime, type nullable datetimezone, type nullable time, type nullable duration})),
+		    recordTypeFields = Type.RecordFields(Type.TableRow(Value.Type(tableWithOnlyPrimitiveTypes))),
+		    fieldNames = Record.FieldNames(recordTypeFields),
+		    fieldTypes = List.Transform(Record.ToList(recordTypeFields), each [Type]),
+		    pairs = List.Transform(List.Positions(fieldNames), (i) => {fieldNames{i}, (v) => if v = null or Value.Is(v, fieldTypes{i}) then v else error [Message = "The type of the value does not match the type of the column.", Detail = v], fieldTypes{i}})
+		in
+		    Table.TransformColumns(Source, pairs),
+		  #"Added Index" = Table.AddIndexColumn(#"Detected Type Mismatches", "Row Number" ,1),
+		  #"Kept Errors" = Table.SelectRowsWithErrors(#"Added Index", {"Job Number", "Current Status", "Carrier Name", "MJB260_Event", "MJB290_Event", "MJB350_Event", "MJB600_Event", "MJB260_Scheduled", "MJB290_Scheduled", "MJB350_Scheduled", "MJB600_Scheduled", "MJB260_Completed", "MJB290_Completed", "MJB350_Completed", "MJB600_Completed", "Confirmation_Working_Minutes", "Status_Prio"}),
+		  #"Reordered Columns" = Table.ReorderColumns(#"Kept Errors", {"Row Number", "Job Number", "Current Status", "Carrier Name", "MJB260_Event", "MJB290_Event", "MJB350_Event", "MJB600_Event", "MJB260_Scheduled", "MJB290_Scheduled", "MJB350_Scheduled", "MJB600_Scheduled", "MJB260_Completed", "MJB290_Completed", "MJB350_Completed", "MJB600_Completed", "Confirmation_Working_Minutes", "Status_Prio"})
+		in
+		  #"Reordered Columns"
+	lineageTag: b306f6fb-5fab-4ad9-8488-95cf1186278d
+	queryGroup: 'Query Errors - 2026-06-11 15:55:02'
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

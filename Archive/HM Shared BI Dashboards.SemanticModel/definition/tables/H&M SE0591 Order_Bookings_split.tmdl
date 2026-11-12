@@ -1,0 +1,54 @@
+table 'H&M SE0591 Order_Bookings_split'
+	lineageTag: 337b0df8-709e-44aa-94a6-567b477771e0
+
+	column 'Booking Number'
+		dataType: string
+		lineageTag: eea6b25c-551d-44b3-af2a-417919cbc821
+		summarizeBy: none
+		sourceColumn: Booking Number
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Purchase Order Number'
+		dataType: string
+		lineageTag: 9308b567-c2ef-4784-a73c-837621449e55
+		summarizeBy: none
+		sourceColumn: Purchase Order Number
+
+		annotation SummarizationSetBy = Automatic
+
+	column REC_RETRIEV_DATE
+		dataType: string
+		lineageTag: 20ae7487-4ac8-49c8-b3e7-cbdd3ebece27
+		summarizeBy: none
+		sourceColumn: REC_RETRIEV_DATE
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Orig.Bookning Status'
+		dataType: string
+		lineageTag: 92802c97-2220-4a64-9ca7-a50f37294df1
+		summarizeBy: none
+		sourceColumn: Orig.Bookning Status
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'H&M SE0591 Order_Bookings_split-946106db-e436-462e-b2e8-fed16aae33ac' = m
+		mode: import
+		source =
+				let
+				    Source = PowerBI.Dataflows(null),
+				    #"8462b427-3fb4-4d62-bcf8-94449282024f" = Source{[workspaceId="9e645096-1673-4897-892a-ebeca0b45cd7"]}[Data],
+				    #"e85dd28d-65d4-4175-85e6-9a334a44abe6" = #"8462b427-3fb4-4d62-bcf8-94449282024f"{[dataflowId="889dc367-2045-4b51-990e-419d316519bd"]}[Data],
+				    #"New H&M SE0591 Bookings1" = #"e85dd28d-65d4-4175-85e6-9a334a44abe6"{[entity="CW_Optilo H&M SE0591 Bookings"]}[Data],
+				    #"Removed Columns" = Table.RemoveColumns(#"New H&M SE0591 Bookings1",{"Client", "Supplier Matchcode", "Loading Country", "Unloading Country", "Bookning Status", "Booking Type", "Booking Priority", "Booking Mode of Transport", "ADDNEWDATE", "First Booked to Imperial", "Booking Confirmation Date", "Booking last updated on", "Pickup Start", "Pickup End", "Shipment Number", "Latest On-Hold Reasoncode", "Record_Added_On"}),
+				    #"Split Column by Delimiter" = Table.ExpandListColumn(Table.TransformColumns(#"Removed Columns", {{"Purchase Order Number", Splitter.SplitTextByDelimiter(";", QuoteStyle.Csv), let itemType = (type nullable text) meta [Serialized.Text = true] in type {itemType}}}), "Purchase Order Number"),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Split Column by Delimiter",{{"Purchase Order Number", type text}}),
+				    #"Removed Columns1" = Table.RemoveColumns(#"Changed Type",{"Name"})
+				in
+				    #"Removed Columns1"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

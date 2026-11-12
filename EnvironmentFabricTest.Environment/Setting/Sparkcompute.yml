@@ -1,0 +1,16 @@
+enable_native_execution_engine: false
+instance_pool_id: 6e613da4-b8a7-4835-b59b-4dc0c71f232d
+live_pool:
+  state: Enabled
+  max_cluster_to_hydrate_per_activation: 1
+  deactivate_on_idle_in_minutes: 20
+  reactivate_interval_in_minutes: 30
+driver_cores: 4
+driver_memory: 28g
+executor_cores: 4
+executor_memory: 28g
+dynamic_executor_allocation:
+  enabled: true
+  min_executors: 1
+  max_executors: 1
+runtime_version: 2.0

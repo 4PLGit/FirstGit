@@ -1,0 +1,109 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "496d3d83c101017e6d0e",
+  "position": {
+    "x": 10.203720106288751,
+    "y": 121.31089459698848,
+    "z": 0,
+    "height": 598.61824623560665,
+    "width": 827.63507528786533,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Jobs_Events_Dates"
+                    }
+                  },
+                  "Property": "Job Number"
+                }
+              },
+              "queryRef": "Jobs_Events_Dates.Job Number",
+              "nativeQueryRef": "Job Number"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Loading_Changes"
+                    }
+                  },
+                  "Property": "Initial_Loading_Change_From"
+                }
+              },
+              "queryRef": "Loading_Changes.Initial_Loading_Change_From",
+              "nativeQueryRef": "Initial_Loading_Change_From1"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Jobs_Events_Dates"
+                    }
+                  },
+                  "Property": "MJB350_Scheduled"
+                }
+              },
+              "queryRef": "Jobs_Events_Dates.MJB350_Scheduled",
+              "nativeQueryRef": "MJB350_Scheduled"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Jobs_Events_Dates"
+                    }
+                  },
+                  "Property": "Loading_Plan_Violation"
+                }
+              },
+              "queryRef": "Sum(Jobs_Events_Dates.Pickup_Violation)",
+              "nativeQueryRef": "Pickup_Violation"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Loading_Changes"
+                    }
+                  },
+                  "Property": "Count_CHGLOD"
+                }
+              },
+              "queryRef": "Sum(Loading_Changes.Count_CHGLOD)",
+              "nativeQueryRef": "Count_CHGLOD"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "total": [
+        {
+          "properties": {
+            "totals": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

@@ -1,0 +1,42 @@
+table Unloading_Baseline
+	lineageTag: 6f573b7c-20c0-4d34-b11b-482a508db8bb
+
+	column 'Job Number'
+		dataType: string
+		lineageTag: e5d27e3d-e7c9-4edc-ae59-33d82234fd55
+		summarizeBy: none
+		sourceColumn: Job Number
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Base_Date_Unloading (SLABDU)'
+		dataType: dateTime
+		formatString: yyyy-mm-dd hh:nn:ss
+		lineageTag: 9444572f-1b11-4e70-b353-0bc2fa3505bc
+		summarizeBy: none
+		sourceColumn: Base_Date_Unloading (SLABDU)
+
+		variation Variation
+			isDefault
+			relationship: a308902c-e578-4b96-97cc-cc09c512aa4a
+			defaultHierarchy: LocalDateTable_762a5408-11a9-4de6-8fc3-de2a7fc3b99f.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	partition Unloading_Baseline = m
+		mode: import
+		source =
+				let
+				    Source = PowerBI.Dataflows(null),
+				    #"9e645096-1673-4897-892a-ebeca0b45cd7" = Source{[workspaceId="9e645096-1673-4897-892a-ebeca0b45cd7"]}[Data],
+				    #"d16f5bb1-a1ef-434e-8bfb-d1fad2af7c89" = #"9e645096-1673-4897-892a-ebeca0b45cd7"{[dataflowId="d16f5bb1-a1ef-434e-8bfb-d1fad2af7c89"]}[Data],
+				    Unloading_Baseline1 = #"d16f5bb1-a1ef-434e-8bfb-d1fad2af7c89"{[entity="Unloading_Baseline"]}[Data]
+				in
+				    Unloading_Baseline1
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

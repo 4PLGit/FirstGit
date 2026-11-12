@@ -1,0 +1,70 @@
+{
+  "properties": {
+    "jobMode": "Batch",
+    "source": {
+      "type": "Parquet",
+      "connectionSettings": {
+        "type": "AzureBlobStorage",
+        "typeProperties": {
+          "containerUri": "https://azureopendatastorage.blob.core.windows.net/nyctlc"
+        }
+      }
+    },
+    "destination": {
+      "type": "LakehouseTable",
+      "connectionSettings": {
+        "type": "Lakehouse",
+        "typeProperties": {
+          "workspaceId": "00000000-0000-0000-0000-000000000000",
+          "artifactId": "afcdf815-400a-b0ae-4c72-a6fdd8f0e179",
+          "rootFolder": "Tables"
+        }
+      }
+    },
+    "policy": {
+      "timeout": "0.12:00:00",
+      "retry": 0
+    }
+  },
+  "activities": [
+    {
+      "id": "c3cb9164-9ba6-48b7-b5f3-16ac4011de12",
+      "properties": {
+        "source": {
+          "datasetSettings": {
+            "location": {
+              "type": "AzureBlobStorageLocation",
+              "container": "nyctlc"
+            },
+            "compressionCodec": "snappy"
+          },
+          "storeSettings": {
+            "recursive": false,
+            "wildcardFolderPath": "green/puYear=*/puMonth=*",
+            "wildcardFileName": "*.parquet",
+            "enablePartitionDiscovery": false
+          }
+        },
+        "destination": {
+          "writeBehavior": "Append",
+          "datasetSettings": {
+            "schema": "dbo",
+            "table": "Bronze"
+          },
+          "applyVOrder": false,
+          "enableTimestampNtz": false
+        },
+        "enableStaging": false,
+        "translator": {
+          "type": "TabularTranslator"
+        },
+        "typeConversionSettings": {
+          "typeConversion": {
+            "allowDataTruncation": true,
+            "treatBooleanAsNumber": false
+          }
+        }
+      }
+    }
+  ]
+}

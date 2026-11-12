@@ -1,0 +1,67 @@
+table Unloading_Changes
+	lineageTag: de9f54b6-96cf-483f-b053-390547364f13
+
+	column 'Job Number'
+		dataType: string
+		lineageTag: b5873b34-57a3-48ab-b55d-ce650a3498e6
+		summarizeBy: none
+		sourceColumn: Job Number
+
+		annotation SummarizationSetBy = Automatic
+
+	column Count_CHGUND
+		dataType: int64
+		formatString: 0
+		lineageTag: 3a3bcb8f-12fd-4589-a437-bf5e48786d16
+		summarizeBy: none
+		sourceColumn: Count_CHGUND
+
+		annotation SummarizationSetBy = User
+
+	column Initial_Unloading_Change_From
+		dataType: dateTime
+		formatString: yyyy-mm-dd hh:nn:ss
+		lineageTag: 4627103d-9186-410e-bfb6-beb8b699393c
+		summarizeBy: none
+		sourceColumn: Initial_Unloading_Change_From
+
+		variation Variation
+			isDefault
+			relationship: 584104a7-5d9b-4eb5-8025-fc32815391f5
+			defaultHierarchy: LocalDateTable_c42ecdec-7a87-40c2-858a-3db9f5b6bd00.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column Initial_Unloading_Change_To
+		dataType: dateTime
+		formatString: yyyy-mm-dd hh:nn:ss
+		lineageTag: ded6c48c-9de5-4b0d-8ef7-dd5e67e822f0
+		summarizeBy: none
+		sourceColumn: Initial_Unloading_Change_To
+
+		variation Variation
+			isDefault
+			relationship: bd1f3b3e-becc-4155-ae78-7c8db8be4b86
+			defaultHierarchy: LocalDateTable_cd85af55-c7cf-460b-9c78-9622146960a0.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	partition Unloading_Changes = m
+		mode: import
+		source =
+				let
+				    Source = PowerBI.Dataflows(null),
+				    #"9e645096-1673-4897-892a-ebeca0b45cd7" = Source{[workspaceId="9e645096-1673-4897-892a-ebeca0b45cd7"]}[Data],
+				    #"d16f5bb1-a1ef-434e-8bfb-d1fad2af7c89" = #"9e645096-1673-4897-892a-ebeca0b45cd7"{[dataflowId="d16f5bb1-a1ef-434e-8bfb-d1fad2af7c89"]}[Data],
+				    Unloading_Changes1 = #"d16f5bb1-a1ef-434e-8bfb-d1fad2af7c89"{[entity="Unloading_Changes"]}[Data]
+				in
+				    Unloading_Changes1
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

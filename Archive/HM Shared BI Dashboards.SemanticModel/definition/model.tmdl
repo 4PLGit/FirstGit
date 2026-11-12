@@ -1,0 +1,53 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: sv-SE
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation PBI_QueryOrder = ["H&M SE0591 Bookings","H&M SE0591 Orders","H&M SE0591 ShipmentsFacts","H&M SE0591 ShipmentsDims","H&M SE0591 Order_Bookings_split","H&M SE0591 Bookings_shipment_split","Distances between cities world wide","H&M SE0591 Suppliers","_Measures"]
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_ProTooling = ["DaxQueryView_Desktop"]
+
+ref table 'H&M SE0591 Bookings'
+ref table DateTableTemplate_76e570ac-d587-45d2-8745-d7ab1562113f
+ref table LocalDateTable_d7d6a52f-0fd0-4edb-9dcf-d3f7acf973e8
+ref table LocalDateTable_ac1a63a2-1c31-4639-80ef-eee39b842bc0
+ref table LocalDateTable_8a248798-fefe-4204-9fdb-58269ee1f703
+ref table LocalDateTable_c5d066b1-444e-4a3a-ab20-148ae23d0c08
+ref table LocalDateTable_38b1d4da-664a-48d6-bc42-ffe7224494ad
+ref table LocalDateTable_a2f8688f-e7a3-4023-9d58-9bdcad6664e3
+ref table LocalDateTable_2666798b-e100-41f1-80a8-75f19fa0c3e9
+ref table 'H&M SE0591 Orders'
+ref table LocalDateTable_0348b69c-bada-4bf8-9578-c167cf196a20
+ref table LocalDateTable_5e02bde8-dc9a-4bd5-a95d-ef7edeae972f
+ref table LocalDateTable_25ad685d-661c-469d-ba22-153d80839739
+ref table LocalDateTable_abf0c9af-e9bd-499a-b487-5c6589a2a4d6
+ref table 'H&M SE0591 ShipmentsFacts'
+ref table LocalDateTable_fba2e105-bbb8-4c1d-8e4e-07e2fe762326
+ref table LocalDateTable_ee8e2aa6-71da-46a5-82a6-bd9c0b4f5333
+ref table LocalDateTable_971843dc-5652-4b94-aced-3caf50a2a707
+ref table LocalDateTable_e3155f41-f4cd-44e4-bd17-6ed91a3ac085
+ref table LocalDateTable_b7415045-fadb-4cf3-8fe2-e69d0feed842
+ref table LocalDateTable_0b1899d8-b527-42af-9fe4-c39a620620de
+ref table 'H&M SE0591 ShipmentsDims'
+ref table LocalDateTable_83be1549-d31a-4ec0-b032-541c11131a5e
+ref table LocalDateTable_25eaf993-69a5-439d-ab38-1ef3420ad78e
+ref table 'H&M SE0591 Order_Bookings_split'
+ref table 'H&M SE0591 Bookings_shipment_split'
+ref table LocalDateTable_a9c6f992-1a5b-4eda-a70b-7951ff4c2cdf
+ref table LocalDateTable_5da28b72-2bbe-4de9-8fd5-c96b3d257b71
+ref table 'Distances between cities world wide'
+ref table 'Supplier Summary'
+ref table 'H&M SE0591 Suppliers'
+ref table _Measures
+ref table LocalDateTable_2d67f3a4-4285-4018-bec8-9c509d87ea84
+ref table LocalDateTable_759d5619-92a3-4af9-93d7-5b9586242d86
+ref table LocalDateTable_2dce266a-e0d0-4870-bf0e-cc0f318481d1
+ref table LocalDateTable_c95a933c-c9fa-4ce3-a5f1-e01c25ecaa3a
+
+ref cultureInfo en-US
+

@@ -1,0 +1,81 @@
+{
+  "properties": {
+    "activities": [
+      {
+        "type": "InvokeCopyJob",
+        "typeProperties": {
+          "copyJobId": "5056095f-d36b-a3d7-436c-7e2c154a6072",
+          "workspaceId": "00000000-0000-0000-0000-000000000000"
+        },
+        "externalReferences": {
+          "connection": "6c07696e-7b4b-4d33-b665-208f6deb68c4"
+        },
+        "policy": {
+          "timeout": "0.12:00:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "CopyJob_1",
+        "dependsOn": []
+      },
+      {
+        "type": "Office365Email",
+        "typeProperties": {
+          "body": "<p>@concat('RunID = ', pipeline().RunId, ' ; ', 'Files written: ', activity('CopyJob_1').output.value[0].output.filesWritten, ' ; ','Throughput: ', activity('CopyJob_1').output.value[0].output.throughput,' ; ','Time to copy: ', activity('CopyJob_1').output.executionDuration,' ; ','Time in queue: ', activity('CopyJob_1').output.durationInQueue)</p>",
+          "to": "grace.ofori@4plcs.com",
+          "subject": {
+            "value": "@concat('File copy has Succeeded', pipeline().RunId)",
+            "type": "Expression"
+          }
+        },
+        "externalReferences": {
+          "connection": "da4cc41a-543d-4ab4-ae1f-7b3d38636025"
+        },
+        "policy": {
+          "timeout": "0.12:00:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "Office365Email1",
+        "dependsOn": [
+          {
+            "activity": "Dataflow1",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "RefreshDataflow",
+        "typeProperties": {
+          "dataflowId": "1d8cd68a-2442-81b7-4229-cba75184eb7d",
+          "workspaceId": "00000000-0000-0000-0000-000000000000",
+          "notifyOption": "NoNotification",
+          "dataflowType": "DataflowFabric",
+          "executeMashupQueriesOnly": true
+        },
+        "policy": {
+          "timeout": "0.12:00:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "Dataflow1",
+        "dependsOn": [
+          {
+            "activity": "CopyJob_1",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

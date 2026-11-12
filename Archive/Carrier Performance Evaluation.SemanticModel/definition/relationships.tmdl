@@ -1,0 +1,170 @@
+relationship d553a1e2-fd3f-41c2-85ec-d39d79ccda7b
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Dispo.FinanceDate
+	toColumn: LocalDateTable_e24e2a57-f5d4-48cb-8fbd-234b9faba170.Date
+
+relationship 458d2850-8d35-4def-aa10-d6bd4e3c7000
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Job_Number.Rec_retriev_date
+	toColumn: LocalDateTable_5f7cead8-8bb1-4085-8951-9e7083cb3a36.Date
+
+relationship e173f16c-929d-4441-8c85-9e1daf77d98d
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Loading_Changes.Initial_Loading_Change_From
+	toColumn: LocalDateTable_71a76138-2cc5-42df-b43c-a0f298b23bfe.Date
+
+relationship 10eb549c-ad60-4e28-bbf7-ad1f14192a7f
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Loading_Changes.Initial_Loading_Change_To
+	toColumn: LocalDateTable_031ee04a-6386-4d8d-9e65-572e0d5786a2.Date
+
+relationship 584104a7-5d9b-4eb5-8025-fc32815391f5
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Unloading_Changes.Initial_Unloading_Change_From
+	toColumn: LocalDateTable_c42ecdec-7a87-40c2-858a-3db9f5b6bd00.Date
+
+relationship bd1f3b3e-becc-4155-ae78-7c8db8be4b86
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Unloading_Changes.Initial_Unloading_Change_To
+	toColumn: LocalDateTable_cd85af55-c7cf-460b-9c78-9622146960a0.Date
+
+relationship 931004b3-eb05-47b5-8297-151c05326544
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Loading_Baseline.'Base_Date_Loading (SLABDL)'
+	toColumn: LocalDateTable_08c2a712-42ec-4c4d-855c-9128ddb246b7.Date
+
+relationship a308902c-e578-4b96-97cc-cc09c512aa4a
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Unloading_Baseline.'Base_Date_Unloading (SLABDU)'
+	toColumn: LocalDateTable_762a5408-11a9-4de6-8fc3-de2a7fc3b99f.Date
+
+relationship 7c294fdc-7d8e-4bde-a51d-3391bcd445a6
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Loading_SLA.'SLA Date_Loading (SLALOA)'
+	toColumn: LocalDateTable_7fba494b-0c0e-452a-82ef-32e8e7c201f3.Date
+
+relationship a8714685-74bc-404f-ad91-2c605b42cf9d
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Unloading_SLA.'SLA Date_Unloading (SLAUNL)'
+	toColumn: LocalDateTable_6c37c630-0cea-4e6b-97c7-32292a4c0fa3.Date
+
+relationship AutoDetected_5ec379f6-1240-4cfb-944b-bf1ba5cf3dd6
+	fromColumn: Job_Number.'Carrier Name'
+	toColumn: 'Carrier Name'.'Carrier Name'
+
+relationship AutoDetected_1f38d195-89ab-4c8c-94e0-76f75ea24dcf
+	fromColumn: Job_Number.'Current Status'
+	toColumn: Current_Status.'Current Status'
+
+relationship AutoDetected_747e62e4-4ae0-443b-8c09-9bbcf9fc3ade
+	fromColumn: Loading_Baseline.'Job Number'
+	toColumn: Loading_Changes.'Job Number'
+
+relationship AutoDetected_6c333d5d-52a1-47e8-8634-ff642dad2430
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: Unloading_Baseline.'Job Number'
+	toColumn: Loading_Changes.'Job Number'
+
+relationship AutoDetected_99e0c13d-2913-4084-9116-ae7187a1f72a
+	fromColumn: Loading_SLA.'Job Number'
+	toColumn: Loading_Changes.'Job Number'
+
+relationship AutoDetected_88578094-f954-44f5-82aa-52b5f8a88c4f
+	fromColumn: Unloading_SLA.'Job Number'
+	toColumn: Loading_Changes.'Job Number'
+
+relationship AutoDetected_41ace5ae-90c1-4b2b-b7b5-4a585cb1282d
+	fromColumn: Job_Number.'Event Code'
+	toColumn: Event_Code.'Event Code'
+
+relationship aa9b50cb-2870-4de1-b357-1bda230bc994
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Jobs_Events_Dates.MJB260_Event
+	toColumn: LocalDateTable_dac85330-ea09-46e8-b80e-6ce09cf7cb47.Date
+
+relationship b9a6e4eb-d7de-4dda-b879-9b359bb6c553
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Jobs_Events_Dates.MJB290_Event
+	toColumn: LocalDateTable_83e10a8c-c4e6-4634-a965-26fa40a42e66.Date
+
+relationship 19312dfc-641c-417d-b2f6-45e6fc048271
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Jobs_Events_Dates.MJB350_Event
+	toColumn: LocalDateTable_6ba385c1-bc31-4c3d-b3fe-b291a35a8253.Date
+
+relationship 2d8a7e16-de68-4b25-806b-c84a201de56b
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Jobs_Events_Dates.MJB600_Event
+	toColumn: LocalDateTable_a5af39c5-2ab0-42a9-8e16-df86b1da0fba.Date
+
+relationship 5505c336-010c-42f6-8852-19302ae09977
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Jobs_Events_Dates.MJB290_Scheduled
+	toColumn: LocalDateTable_1504afe6-98dc-47aa-ada1-25994fd00173.Date
+
+relationship d4504cc1-f5b4-4b15-bdb5-137129992f8e
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Jobs_Events_Dates.MJB600_Scheduled
+	toColumn: LocalDateTable_3ad550aa-3700-40e7-abed-45bb71a18ab5.Date
+
+relationship 83fbcd90-6e24-4ace-b160-acb6b23e32a6
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Jobs_Events_Dates.MJB260_Completed
+	toColumn: LocalDateTable_9880ff06-80d2-4443-94a7-12b91edc6bf0.Date
+
+relationship 8fe3d509-07be-4333-b75d-38c1e6c98e26
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Jobs_Events_Dates.MJB290_Completed
+	toColumn: LocalDateTable_cffcfddd-cb65-4e35-b533-d3cb3affcc84.Date
+
+relationship 4fa3b249-f5e1-4815-89ea-3ef14dbb4ecd
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Jobs_Events_Dates.MJB350_Completed
+	toColumn: LocalDateTable_58015e29-ad09-444f-b528-3008a80714e4.Date
+
+relationship cd7f0309-c6db-44e1-82da-c9ffaf4d1a67
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Jobs_Events_Dates.MJB600_Completed
+	toColumn: LocalDateTable_d7d085e0-c1df-4fd0-9c14-cce00bf4ed24.Date
+
+relationship AutoDetected_4c6ac322-9fd7-4f2e-987c-c21703465d4d
+	fromColumn: Jobs_Events_Dates.'Carrier Name'
+	toColumn: 'Carrier Name'.'Carrier Name'
+
+relationship AutoDetected_31d3c3f4-439c-40bf-a68f-b5d7c3b73fdb
+	fromColumn: Jobs_Events_Dates.'Current Status'
+	toColumn: Current_Status.'Current Status'
+
+relationship AutoDetected_ce6a3474-3e22-466a-9983-390e045c67b0
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: Jobs_Events_Dates.'Job Number'
+	toColumn: Unloading_Changes.'Job Number'
+
+relationship 0ff0227b-32be-068f-4ea6-9972342ddbfa
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: Jobs_Events_Dates.'Job Number'
+	toColumn: Dispo.'Job Number'
+
+relationship 5553fd3c-19e5-434c-bdb1-694efdf16399
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Jobs_Events_Dates.MJB260_Scheduled
+	toColumn: LocalDateTable_ebf5a6e1-3d4e-4dc3-a81b-7e3b2893c5ff.Date
+
+relationship 5c0d0f50-498d-2398-7477-2cca803562f8
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: Loading_Changes.'Job Number'
+	toColumn: Jobs_Events_Dates.'Job Number'
+
+relationship cec82b1b-2e43-4347-a9a8-875bfbce6fe1
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Jobs_Events_Dates.MJB350_Scheduled
+	toColumn: LocalDateTable_5b3741c4-c7ea-4925-bf76-ce9d20530bc2.Date
+
+relationship 05e7153b-7c2b-943e-b677-f26bac82a599
+	fromColumn: Jobs_Events_Dates.Relational_MJB350
+	toColumn: DimDate.Date
+

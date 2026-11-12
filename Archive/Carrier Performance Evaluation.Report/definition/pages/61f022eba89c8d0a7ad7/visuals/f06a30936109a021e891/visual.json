@@ -1,0 +1,94 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "f06a30936109a021e891",
+  "position": {
+    "x": 9.1624910522548326,
+    "y": 83.378668575518972,
+    "z": 0,
+    "height": 636.79312813171089,
+    "width": 872.26914817466,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Jobs_Events_Dates"
+                    }
+                  },
+                  "Property": "Job Number"
+                }
+              },
+              "queryRef": "Jobs_Events_Dates.Job Number",
+              "nativeQueryRef": "Job Number"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Jobs_Events_Dates"
+                    }
+                  },
+                  "Property": "MJB350_Completed"
+                }
+              },
+              "queryRef": "Jobs_Events_Dates.MJB350_Completed",
+              "nativeQueryRef": "MJB350_Completed"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Jobs_Events_Dates"
+                    }
+                  },
+                  "Property": "MJB600_Completed"
+                }
+              },
+              "queryRef": "Jobs_Events_Dates.MJB600_Completed",
+              "nativeQueryRef": "MJB600_Completed"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Jobs_Events_Dates"
+                    }
+                  },
+                  "Property": "LeadTime_Calendar_Days"
+                }
+              },
+              "queryRef": "Jobs_Events_Dates.LeadTime_Calendar_Days",
+              "nativeQueryRef": "LeadTime_Calendar_Days"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Jobs_Events_Dates"
+                    }
+                  },
+                  "Property": "LeadTime_Calendar_Min"
+                }
+              },
+              "queryRef": "Jobs_Events_Dates.LeadTime_Calendar_Min",
+              "nativeQueryRef": "LeadTime_Calendar_Min"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

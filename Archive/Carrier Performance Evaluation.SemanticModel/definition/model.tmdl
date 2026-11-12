@@ -1,0 +1,60 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-SE
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+/// Errors in queries that were loaded on 2026-06-11 15:55:02.
+queryGroup 'Query Errors - 2026-06-11 15:55:02'
+
+	annotation PBI_QueryGroupOrder = 0
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_QueryOrder = ["Working_Minutes","Carrier Name","Completed_Date","Current_Status","Dispo","Event_Code","Job_Number","Loading_Changes","Unloading_Changes","Loading_Baseline","Unloading_Baseline","Loading_SLA","Unloading_SLA","Event_Date","Scheduled_Date","Jobs_Events_Dates","Errors in Jobs_Events_Dates"]
+
+ref table Calendar
+ref table _Measure
+ref table KPI_Main
+ref table Subcategory_Selector
+ref table 'Carrier Name'
+ref table Current_Status
+ref table Dispo
+ref table DateTableTemplate_56f96d54-b1cc-43f1-89af-fef6e10b0395
+ref table LocalDateTable_e24e2a57-f5d4-48cb-8fbd-234b9faba170
+ref table Event_Code
+ref table Job_Number
+ref table LocalDateTable_5f7cead8-8bb1-4085-8951-9e7083cb3a36
+ref table Loading_Changes
+ref table LocalDateTable_71a76138-2cc5-42df-b43c-a0f298b23bfe
+ref table LocalDateTable_031ee04a-6386-4d8d-9e65-572e0d5786a2
+ref table Unloading_Changes
+ref table LocalDateTable_c42ecdec-7a87-40c2-858a-3db9f5b6bd00
+ref table LocalDateTable_cd85af55-c7cf-460b-9c78-9622146960a0
+ref table Loading_Baseline
+ref table LocalDateTable_08c2a712-42ec-4c4d-855c-9128ddb246b7
+ref table Unloading_Baseline
+ref table LocalDateTable_762a5408-11a9-4de6-8fc3-de2a7fc3b99f
+ref table Loading_SLA
+ref table LocalDateTable_7fba494b-0c0e-452a-82ef-32e8e7c201f3
+ref table Unloading_SLA
+ref table LocalDateTable_6c37c630-0cea-4e6b-97c7-32292a4c0fa3
+ref table Jobs_Events_Dates
+ref table LocalDateTable_dac85330-ea09-46e8-b80e-6ce09cf7cb47
+ref table LocalDateTable_83e10a8c-c4e6-4634-a965-26fa40a42e66
+ref table LocalDateTable_6ba385c1-bc31-4c3d-b3fe-b291a35a8253
+ref table LocalDateTable_a5af39c5-2ab0-42a9-8e16-df86b1da0fba
+ref table LocalDateTable_1504afe6-98dc-47aa-ada1-25994fd00173
+ref table LocalDateTable_3ad550aa-3700-40e7-abed-45bb71a18ab5
+ref table LocalDateTable_9880ff06-80d2-4443-94a7-12b91edc6bf0
+ref table LocalDateTable_cffcfddd-cb65-4e35-b533-d3cb3affcc84
+ref table LocalDateTable_58015e29-ad09-444f-b528-3008a80714e4
+ref table LocalDateTable_d7d085e0-c1df-4fd0-9c14-cce00bf4ed24
+ref table LocalDateTable_ebf5a6e1-3d4e-4dc3-a81b-7e3b2893c5ff
+ref table DimDate
+ref table LocalDateTable_5b3741c4-c7ea-4925-bf76-ce9d20530bc2
+
+ref cultureInfo en-US
+

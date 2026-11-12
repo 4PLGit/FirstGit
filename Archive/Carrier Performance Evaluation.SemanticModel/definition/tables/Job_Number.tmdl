@@ -1,0 +1,64 @@
+table Job_Number
+	lineageTag: 73ad06e7-f2e1-4e74-988d-95bb0335ed0b
+
+	column 'Job Number'
+		dataType: string
+		lineageTag: d787e610-0722-4610-b315-fbf47af1670c
+		summarizeBy: none
+		sourceColumn: Job Number
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Current Status'
+		dataType: string
+		lineageTag: 6614355f-c4b1-4ca0-b5eb-6dcecc5cc310
+		summarizeBy: none
+		sourceColumn: Current Status
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Carrier Name'
+		dataType: string
+		lineageTag: 2d0957c3-d14c-4aa6-bcc9-3afea518f3bd
+		summarizeBy: none
+		sourceColumn: Carrier Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Event Code'
+		dataType: string
+		lineageTag: 8541eebc-aeab-4cf4-9bc8-da963ceb4783
+		summarizeBy: none
+		sourceColumn: Event Code
+
+		annotation SummarizationSetBy = Automatic
+
+	column Rec_retriev_date
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: f75892e5-3963-4d53-9567-b55838709a61
+		summarizeBy: none
+		sourceColumn: Rec_retriev_date
+
+		variation Variation
+			isDefault
+			relationship: 458d2850-8d35-4def-aa10-d6bd4e3c7000
+			defaultHierarchy: LocalDateTable_5f7cead8-8bb1-4085-8951-9e7083cb3a36.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Job_Number = m
+		mode: import
+		source =
+				let
+				    Source = PowerBI.Dataflows(null),
+				    #"9e645096-1673-4897-892a-ebeca0b45cd7" = Source{[workspaceId="9e645096-1673-4897-892a-ebeca0b45cd7"]}[Data],
+				    #"d16f5bb1-a1ef-434e-8bfb-d1fad2af7c89" = #"9e645096-1673-4897-892a-ebeca0b45cd7"{[dataflowId="d16f5bb1-a1ef-434e-8bfb-d1fad2af7c89"]}[Data],
+				    Job_Number1 = #"d16f5bb1-a1ef-434e-8bfb-d1fad2af7c89"{[entity="Job_Number"]}[Data]
+				in
+				    Job_Number1
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

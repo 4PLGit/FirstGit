@@ -1,0 +1,653 @@
+table _Measure
+	lineageTag: baca69f4-db02-4020-961e-c86fa53992e8
+
+	measure Total_Violations =
+			
+			SUM('Jobs_Events_Dates'[Planning_SLA_Violation])
+		formatString: 0
+		lineageTag: 40af4346-54dd-41d6-8299-5b4535c81912
+
+	measure Violation_% =
+			
+			DIVIDE(
+			    [Total_Violations],
+			    [Total_Jobs]
+			)
+		formatString: 0\ %;-0\ %;0\ %
+		lineageTag: 4c13f565-b163-41a2-8aee-9534187eaa8b
+
+	measure 'Avg_Confirmation_Latency (min)' =
+			
+			AVERAGE(Jobs_Events_Dates[Confirmation_Latency (min)])
+		lineageTag: 442cdfd6-9665-4ada-a136-318e6c956a1a
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure Confirmation_Violation_Total =
+			
+			SUM(Jobs_Events_Dates[Confirmation_Violation])
+		formatString: 0
+		lineageTag: 56a7b00e-bb8f-4ccf-8af1-2abfa5fff85f
+
+	measure Confirmation_Violation_% =
+			
+			DIVIDE([Confirmation_Violation_Total], [Confirmed_Total_Jobs])
+		formatString: 0\ %;-0\ %;0\ %
+		lineageTag: bbcd9235-20a2-4d31-83bf-cc066f3390d4
+
+	measure Total_Jobs = COUNTROWS(Jobs_Events_Dates)
+		formatString: 0
+		lineageTag: 947ac4bb-cd95-4cae-b5a1-755bcc3ac9e7
+
+	measure Confirmed_Total_Jobs = ```
+			
+			COUNTROWS(
+			    FILTER('Jobs_Events_Dates', 
+			           NOT(ISBLANK('Jobs_Events_Dates'[Confirmation_Violation])))
+			)
+			```
+		formatString: 0
+		lineageTag: ab0d5511-af40-4fe0-87a1-1edeb768a4aa
+
+	measure Loaded_Plan_Total_Jobs = ```
+			
+			COUNTROWS(
+			    FILTER('Jobs_Events_Dates', 
+			           NOT(ISBLANK('Jobs_Events_Dates'[Loading_Plan_Violation])))
+			)
+			
+			```
+		formatString: 0
+		lineageTag: f9848a3c-1dc1-4ea4-a1ee-8e1b46ecbc8b
+
+	measure Loading_Plan_Violation_Total =
+			
+			SUM(Jobs_Events_Dates[Loading_Plan_Violation])
+		formatString: 0
+		lineageTag: 5674f18d-08e1-424a-9f6e-68f9c6e4a191
+
+	measure Loading_Plan_Violation_% =
+			
+			DIVIDE([Loading_Plan_Violation_Total], [Loaded_Plan_Total_Jobs])
+		formatString: 0\ %;-0\ %;0\ %
+		lineageTag: b2da6e1d-4ad2-4e6b-8b48-ec403c2b44fc
+
+	measure Unloaded_Plan_Total_Jobs = ```
+			
+			COUNTROWS(
+			    FILTER('Jobs_Events_Dates', 
+			           NOT(ISBLANK('Jobs_Events_Dates'[Delivery_Plan_Violation])))
+			)
+			```
+		formatString: 0
+		lineageTag: 5dbba8c1-4f2f-4e50-a423-9fa518705cdd
+
+	measure Unloading_Plan_Violation_Total =
+			
+			SUM(Jobs_Events_Dates[Delivery_Plan_Violation])
+		formatString: 0
+		lineageTag: 842261b8-80a5-4c11-8840-e8d4a8ca0de8
+
+	measure Unloading_Plan_Violation_% =
+			
+			DIVIDE([Unloading_Plan_Violation_Total], [Unloaded_Plan_Total_Jobs])
+		formatString: 0\ %;-0\ %;0\ %
+		lineageTag: 81e93980-051e-4bde-946a-1e1cb15a3ade
+
+	measure Loading_Actual_Violation_Total =
+			
+			SUM(Jobs_Events_Dates[Loading_Actual_Violation])
+		formatString: 0
+		lineageTag: fa38aa33-92bd-4968-9788-3dc393b8741a
+
+	measure Loaded_Actual_Total_Jobs = ```
+			
+			COUNTROWS(
+			    FILTER('Jobs_Events_Dates', 
+			           NOT(ISBLANK('Jobs_Events_Dates'[Loading_Actual_Violation])))
+			)
+			```
+		formatString: 0
+		lineageTag: e497bf04-1c7a-4c93-8033-a42c18ccc19a
+
+	measure Loading_Actual_Violation_% =
+			
+			DIVIDE([Loading_Actual_Violation_Total], [Loaded_Actual_Total_Jobs])
+		formatString: 0\ %;-0\ %;0\ %
+		lineageTag: 3c57322c-59fc-4245-a63a-98a529af045f
+
+	measure Unloaded_Actual_Total_Jobs = ```
+			
+			COUNTROWS(
+			    FILTER('Jobs_Events_Dates', 
+			           NOT(ISBLANK('Jobs_Events_Dates'[Delivery_Actual_Violation])))
+			)
+			```
+		formatString: 0
+		lineageTag: adafbc45-5466-40b9-9a62-b37624eb447d
+
+	measure Unloading_Actual_Violation_Total =
+			
+			SUM(Jobs_Events_Dates[Delivery_Actual_Violation])
+		formatString: 0
+		lineageTag: 907424cb-53d6-4733-9b24-6ba14a3d3608
+
+	measure Unloading_Actual_Violation_% =
+			
+			DIVIDE([Unloading_Actual_Violation_Total], [Unloaded_Actual_Total_Jobs])
+		formatString: 0\ %;-0\ %;0\ %
+		lineageTag: 66bf60ac-7e19-46fa-a740-fba9cfd273a6
+
+	measure Loading_Reporting_Violation_Total =
+			
+			SUM(Jobs_Events_Dates[Loading_Reporting_Violation])
+		formatString: 0
+		lineageTag: e6da99f7-91f6-472a-ad8e-878d65d3eeb8
+
+	measure Loaded_Reporting_Total_Jobs = ```
+			
+			COUNTROWS(
+			    FILTER('Jobs_Events_Dates', 
+			           NOT(ISBLANK('Jobs_Events_Dates'[Loading_Reporting_Violation])))
+			)
+			```
+		formatString: 0
+		lineageTag: f18a344a-87ca-48d9-b24c-a25b62e6a5de
+
+	measure Loading_Reporting_Violation_% =
+			
+			DIVIDE([Loading_Reporting_Violation_Total], [Loaded_Reporting_Total_Jobs])
+		formatString: 0\ %;-0\ %;0\ %
+		lineageTag: d2dbc26f-4cea-4d91-8097-4b78730288bf
+
+	measure Unloading_Reporting_Violation_Total =
+			
+			SUM(Jobs_Events_Dates[Unloading_Reporting_Violation])
+		formatString: 0
+		lineageTag: 95efc308-aeae-4f7b-854c-0f5d28d84d32
+
+	measure Unloaded_Reporting_Total_Jobs = ```
+			
+			COUNTROWS(
+			    FILTER('Jobs_Events_Dates', 
+			           NOT(ISBLANK('Jobs_Events_Dates'[Unloading_Reporting_Violation])))
+			)
+			```
+		formatString: 0
+		lineageTag: 2bb8db91-0f0d-458e-8d97-e8d0e2711ec1
+
+	measure Unloading_Reporting_Violation_% =
+			
+			DIVIDE([Unloading_Reporting_Violation_Total], [Unloaded_Reporting_Total_Jobs])
+		formatString: 0\ %;-0\ %;0\ %
+		lineageTag: 76062769-8e63-4547-a275-76206a1681be
+
+	measure Confirmation_Selection =
+			
+			IF(
+			    "Confirmation" IN VALUES(KPI_Main[KPI]),
+			    [Confirmation_Violation_%],
+			    BLANK()
+			)
+		lineageTag: d2b275f7-f8dd-4079-8c72-d1e00b7e27dc
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure Overall_Performance_% =
+			
+			VAR Confirmation = 1- [Confirmation_Violation_%]
+			VAR Loading_Planned  = 1- [Loading_Plan_Violation_%]
+			VAR Loading_Actual = 1- [Loading_Actual_Violation_%]
+			VAR Loading_Reported = 1 - [Loading_Reporting_Violation_%]
+			VAR Unloading_Planned = 1 - [Unloading_Plan_Violation_%]
+			VAR Unloading_Actual = 1 - [Unloading_Actual_Violation_%]
+			VAR Unloading_Reported = 1 - [Unloading_Reporting_Violation_%]
+			
+			RETURN
+			(
+			    Confirmation * 0.143 +
+			    Loading_Planned * 0.143 +
+			    Loading_Actual * 0.143 +
+			    Loading_Reported * 0.143 +
+			    Unloading_Planned * 0.143 +
+			    Unloading_Actual * 0.143 +
+			    Unloading_Reported * 0.143
+			)
+		formatString: 0\ %;-0\ %;0\ %
+		lineageTag: f6c376b4-7a54-42b1-aa8b-32267daddcf6
+
+	measure Confirmation_Violation_%_Minus1M =
+			
+			VAR _End = [Debug Selected End]
+			VAR _PrevEnd = EOMONTH(_End, -1)
+			VAR _PrevStart = EOMONTH(_End, -2) + 1
+			RETURN
+			CALCULATE(
+			    [Confirmation_Violation_%],
+			    REMOVEFILTERS('DimDate'),
+			    DATESBETWEEN(
+			        'DimDate'[Date],
+			        _PrevStart,
+			        _PrevEnd
+			    )
+			)
+		formatString: 0\ %;-0\ %;0\ %
+		lineageTag: 3e5aafb7-26bb-4248-bbdc-018953dcf4aa
+
+	measure Confirmation_Violation_%_Minus2M =
+			
+			VAR _End = [Debug Selected End]
+			VAR _PrevEnd = EOMONTH(_End, -2)
+			VAR _PrevStart = EOMONTH(_End, -3) + 1
+			RETURN
+			CALCULATE(
+			    [Confirmation_Violation_%],
+			    REMOVEFILTERS('DimDate'),
+			    DATESBETWEEN(
+			        'DimDate'[Date],
+			        _PrevStart,
+			        _PrevEnd
+			    )
+			)
+		formatString: 0\ %;-0\ %;0\ %
+		lineageTag: d63b3c16-dfd1-4b65-92df-a1fdf5e15fc0
+
+	measure Confirmation_Violation_%_Reference =
+			
+			VAR _Start = [Debug Selected Start]
+			VAR _End = [Debug Selected End]
+			RETURN
+			CALCULATE(
+			    [Confirmation_Violation_%],
+			    REMOVEFILTERS('DimDate'),
+			    DATESBETWEEN(
+			        'DimDate'[Date],
+			        _Start,
+			        _End
+			    )
+			)
+		formatString: 0\ %;-0\ %;0\ %
+		lineageTag: 53576b25-bd01-498c-8a7d-b9b7939f6b54
+
+	measure 'Debug Selected Start' =
+			
+			MINX(
+			    ALLSELECTED('DimDate'),
+			    'DimDate'[Date]
+			)
+		formatString: General Date
+		lineageTag: 4cad9f4a-3c4e-4f85-8119-ed5822048647
+
+	measure 'Debug Selected End' =
+			
+			MAXX(
+			    ALLSELECTED('DimDate'),
+			    'DimDate'[Date]
+			)
+		formatString: General Date
+		lineageTag: 9dec39e6-9e06-4c37-8e0d-bfdde7b1e5ac
+
+	measure 'Debug Selected Period' =
+			
+			FORMAT([Debug Selected Start], "yyyy-MM-dd")
+			    & " / "
+			    & FORMAT([Debug Selected End], "yyyy-MM-dd")
+		lineageTag: 5e842dc4-0b2d-499b-b0f3-3b4beb1219e4
+
+	measure 'Debug -1M Period' =
+			
+			VAR _End = [Debug Selected End]
+			VAR _PrevEnd = EOMONTH(_End, -1)
+			VAR _PrevStart = EOMONTH(_End, -2) + 1
+			RETURN
+			FORMAT(_PrevStart, "yyyy-MM-dd")
+			    & " / "
+			    & FORMAT(_PrevEnd, "yyyy-MM-dd")
+		lineageTag: f8317e48-0749-4be7-b1a5-defd0d5d4c87
+
+	measure 'Debug -2M Period' =
+			
+			VAR _End = [Debug Selected End]
+			VAR _PrevEnd = EOMONTH(_End, -2)
+			VAR _PrevStart = EOMONTH(_End, -3) + 1
+			RETURN
+			FORMAT(_PrevStart, "yyyy-MM-dd")
+			    & " / "
+			    & FORMAT(_PrevEnd, "yyyy-MM-dd")
+		lineageTag: 0f336a34-a0d3-4874-9a5d-23416dfd46e4
+
+	measure Loading_Plan_Violation_%_Reference =
+			
+			VAR _Start = [Debug Selected Start]
+			VAR _End = [Debug Selected End]
+			RETURN
+			CALCULATE(
+			    [Loading_Plan_Violation_%],
+			    REMOVEFILTERS('DimDate'),
+			    DATESBETWEEN(
+			        'DimDate'[Date],
+			        _Start,
+			        _End
+			    )
+			)
+		formatString: 0\ %;-0\ %;0\ %
+		lineageTag: 0ed55c4c-c552-4ea2-8201-9c035a88709d
+
+	measure Loading_Plan_Violation_%_Minus1M =
+			
+			VAR _End = [Debug Selected End]
+			VAR _PrevEnd = EOMONTH(_End, -1)
+			VAR _PrevStart = EOMONTH(_End, -2) + 1
+			RETURN
+			CALCULATE(
+			    [Loading_Plan_Violation_%],
+			    REMOVEFILTERS('DimDate'),
+			    DATESBETWEEN(
+			        'DimDate'[Date],
+			        _PrevStart,
+			        _PrevEnd
+			    )
+			)
+		formatString: 0\ %;-0\ %;0\ %
+		lineageTag: 40ba8599-61e9-4e95-b543-c9d4a1c7c820
+
+	measure Loading_Plan_Violation_%_Minus2M =
+			
+			VAR _End = [Debug Selected End]
+			VAR _PrevEnd = EOMONTH(_End, -2)
+			VAR _PrevStart = EOMONTH(_End, -3) + 1
+			RETURN
+			CALCULATE(
+			    [Loading_Plan_Violation_%],
+			    REMOVEFILTERS('DimDate'),
+			    DATESBETWEEN(
+			        'DimDate'[Date],
+			        _PrevStart,
+			        _PrevEnd
+			    )
+			)
+		formatString: 0\ %;-0\ %;0\ %
+		lineageTag: 7b3021f2-f169-4352-abd5-ee85c9706f84
+
+	measure Loading_Actual_Violation_%_Minus2M =
+			
+			VAR _End = [Debug Selected End]
+			VAR _PrevEnd = EOMONTH(_End, -2)
+			VAR _PrevStart = EOMONTH(_End, -3) + 1
+			RETURN
+			CALCULATE(
+			    [Loading_Actual_Violation_%],
+			    REMOVEFILTERS('DimDate'),
+			    DATESBETWEEN(
+			        'DimDate'[Date],
+			        _PrevStart,
+			        _PrevEnd
+			    )
+			)
+		formatString: 0\ %;-0\ %;0\ %
+		lineageTag: 8433ada3-3897-4e43-90a4-f65b842488c9
+
+	measure Loading_Reporting_Violation_%_Minus2M =
+			
+			VAR _End = [Debug Selected End]
+			VAR _PrevEnd = EOMONTH(_End, -2)
+			VAR _PrevStart = EOMONTH(_End, -3) + 1
+			RETURN
+			CALCULATE(
+			    [Loading_Reporting_Violation_%],
+			    REMOVEFILTERS('DimDate'),
+			    DATESBETWEEN(
+			        'DimDate'[Date],
+			        _PrevStart,
+			        _PrevEnd
+			    )
+			)
+		formatString: 0\ %;-0\ %;0\ %
+		lineageTag: 8597c2f2-fefe-4329-8c46-b99cbdd9db9c
+
+	measure Unloading_Plan_Violation_%_Minus2M =
+			
+			VAR _End = [Debug Selected End]
+			VAR _PrevEnd = EOMONTH(_End, -2)
+			VAR _PrevStart = EOMONTH(_End, -3) + 1
+			RETURN
+			CALCULATE(
+			    [Unloading_Plan_Violation_%],
+			    REMOVEFILTERS('DimDate'),
+			    DATESBETWEEN(
+			        'DimDate'[Date],
+			        _PrevStart,
+			        _PrevEnd
+			    )
+			)
+		formatString: 0\ %;-0\ %;0\ %
+		lineageTag: 18ce3181-c5e4-437a-9e3f-6500ff76a994
+
+	measure Unloading_Actual_Violation_%_Minus2M =
+			
+			VAR _End = [Debug Selected End]
+			VAR _PrevEnd = EOMONTH(_End, -2)
+			VAR _PrevStart = EOMONTH(_End, -3) + 1
+			RETURN
+			CALCULATE(
+			    [Unloading_Actual_Violation_%],
+			    REMOVEFILTERS('DimDate'),
+			    DATESBETWEEN(
+			        'DimDate'[Date],
+			        _PrevStart,
+			        _PrevEnd
+			    )
+			)
+		formatString: 0\ %;-0\ %;0\ %
+		lineageTag: e5413eb3-7169-4323-a959-fbcb6cee4864
+
+	measure Unloading_Reporting_Violation_%_Minus2M =
+			
+			VAR _End = [Debug Selected End]
+			VAR _PrevEnd = EOMONTH(_End, -2)
+			VAR _PrevStart = EOMONTH(_End, -3) + 1
+			RETURN
+			CALCULATE(
+			    [Unloading_Reporting_Violation_%],
+			    REMOVEFILTERS('DimDate'),
+			    DATESBETWEEN(
+			        'DimDate'[Date],
+			        _PrevStart,
+			        _PrevEnd
+			    )
+			)
+		formatString: 0\ %;-0\ %;0\ %
+		lineageTag: f9fce6a6-3c13-40f8-ab56-18e96349825e
+
+	measure Loading_Actual_Violation_%_Reference =
+			
+			VAR _Start = [Debug Selected Start]
+			VAR _End = [Debug Selected End]
+			RETURN
+			CALCULATE(
+			    [Loading_Actual_Violation_%],
+			    REMOVEFILTERS('DimDate'),
+			    DATESBETWEEN(
+			        'DimDate'[Date],
+			        _Start,
+			        _End
+			    )
+			)
+		formatString: 0\ %;-0\ %;0\ %
+		lineageTag: ec49adeb-7a70-48de-a42e-5c712cedad55
+
+	measure Loading_Reporting_Violation_%_Reference =
+			
+			VAR _Start = [Debug Selected Start]
+			VAR _End = [Debug Selected End]
+			RETURN
+			CALCULATE(
+			    [Loading_Reporting_Violation_%],
+			    REMOVEFILTERS('DimDate'),
+			    DATESBETWEEN(
+			        'DimDate'[Date],
+			        _Start,
+			        _End
+			    )
+			)
+		formatString: 0\ %;-0\ %;0\ %
+		lineageTag: 031b6ff5-5984-4c6d-b433-f080cfe214cd
+
+	measure Unloading_Actual_Violation_%_Reference =
+			
+			VAR _Start = [Debug Selected Start]
+			VAR _End = [Debug Selected End]
+			RETURN
+			CALCULATE(
+			    [Unloading_Actual_Violation_%],
+			    REMOVEFILTERS('DimDate'),
+			    DATESBETWEEN(
+			        'DimDate'[Date],
+			        _Start,
+			        _End
+			    )
+			)
+		formatString: 0\ %;-0\ %;0\ %
+		lineageTag: 557d1ab6-e7e4-4cfa-b764-582aa11f86f4
+
+	measure Unloading_Plan_Violation_%_Reference =
+			
+			VAR _Start = [Debug Selected Start]
+			VAR _End = [Debug Selected End]
+			RETURN
+			CALCULATE(
+			    [Unloading_Plan_Violation_%],
+			    REMOVEFILTERS('DimDate'),
+			    DATESBETWEEN(
+			        'DimDate'[Date],
+			        _Start,
+			        _End
+			    )
+			)
+		formatString: 0\ %;-0\ %;0\ %
+		lineageTag: 429b97b9-b3eb-4038-9e4b-f60b3c1cdc96
+
+	measure Unloading_Reporting_Violation_%_Reference =
+			
+			VAR _Start = [Debug Selected Start]
+			VAR _End = [Debug Selected End]
+			RETURN
+			CALCULATE(
+			    [Unloading_Reporting_Violation_%],
+			    REMOVEFILTERS('DimDate'),
+			    DATESBETWEEN(
+			        'DimDate'[Date],
+			        _Start,
+			        _End
+			    )
+			)
+		formatString: 0\ %;-0\ %;0\ %
+		lineageTag: 3016178a-cee6-4bfd-8b29-46bd2f323e91
+
+	measure Loading_Actual_Violation_%_Minus1M =
+			
+			VAR _End = [Debug Selected End]
+			VAR _PrevEnd = EOMONTH(_End, -1)
+			VAR _PrevStart = EOMONTH(_End, -2) + 1
+			RETURN
+			CALCULATE(
+			    [Loading_Actual_Violation_%],
+			    REMOVEFILTERS('DimDate'),
+			    DATESBETWEEN(
+			        'DimDate'[Date],
+			        _PrevStart,
+			        _PrevEnd
+			    )
+			)
+		formatString: 0\ %;-0\ %;0\ %
+		lineageTag: 47cbb1a9-58cb-4aa2-b5b5-c3cc4c595249
+
+	measure Loading_Reporting_Violation_%_Minus1M =
+			
+			VAR _End = [Debug Selected End]
+			VAR _PrevEnd = EOMONTH(_End, -1)
+			VAR _PrevStart = EOMONTH(_End, -2) + 1
+			RETURN
+			CALCULATE(
+			    [Loading_Reporting_Violation_%],
+			    REMOVEFILTERS('DimDate'),
+			    DATESBETWEEN(
+			        'DimDate'[Date],
+			        _PrevStart,
+			        _PrevEnd
+			    )
+			)
+		formatString: 0\ %;-0\ %;0\ %
+		lineageTag: 0f77b12e-5e47-421d-afb4-6e4ca690e477
+
+	measure Unloading_Actual_Violation_%_Minus1M =
+			
+			VAR _End = [Debug Selected End]
+			VAR _PrevEnd = EOMONTH(_End, -1)
+			VAR _PrevStart = EOMONTH(_End, -2) + 1
+			RETURN
+			CALCULATE(
+			    [Unloading_Actual_Violation_%],
+			    REMOVEFILTERS('DimDate'),
+			    DATESBETWEEN(
+			        'DimDate'[Date],
+			        _PrevStart,
+			        _PrevEnd
+			    )
+			)
+		formatString: 0\ %;-0\ %;0\ %
+		lineageTag: 1806540d-c0e0-49a6-b4c8-9345a1e4faaf
+
+	measure Unloading_Plan_Violation_%_Minus1M =
+			
+			VAR _End = [Debug Selected End]
+			VAR _PrevEnd = EOMONTH(_End, -1)
+			VAR _PrevStart = EOMONTH(_End, -2) + 1
+			RETURN
+			CALCULATE(
+			    [Unloading_Plan_Violation_%],
+			    REMOVEFILTERS('DimDate'),
+			    DATESBETWEEN(
+			        'DimDate'[Date],
+			        _PrevStart,
+			        _PrevEnd
+			    )
+			)
+		formatString: 0\ %;-0\ %;0\ %
+		lineageTag: 9abe6950-2725-4fc3-846b-0b3386ec4dd1
+
+	measure Unloading_Reporting_Violation_%_Minus1M =
+			
+			VAR _End = [Debug Selected End]
+			VAR _PrevEnd = EOMONTH(_End, -1)
+			VAR _PrevStart = EOMONTH(_End, -2) + 1
+			RETURN
+			CALCULATE(
+			    [Unloading_Reporting_Violation_%],
+			    REMOVEFILTERS('DimDate'),
+			    DATESBETWEEN(
+			        'DimDate'[Date],
+			        _PrevStart,
+			        _PrevEnd
+			    )
+			)
+		formatString: 0\ %;-0\ %;0\ %
+		lineageTag: 8645828f-56ef-4679-baa6-e151b5bb2a44
+
+	column Column
+		formatString: 0
+		lineageTag: e6ac0881-790f-4b41-8697-e0144f9275f5
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Column]
+
+		annotation SummarizationSetBy = User
+
+	partition _Measure = calculated
+		mode: import
+		source = Row("Column", BLANK())
+
+	annotation PBI_Id = dd3272ac302a43ad98ff7d2a1992fe17
+
+	annotation 436ba87b-9c83-4389-a31b-ebd06a36be98 = {"Expression":""}
+

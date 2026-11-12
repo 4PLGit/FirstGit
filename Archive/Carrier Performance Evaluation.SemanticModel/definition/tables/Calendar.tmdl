@@ -1,0 +1,90 @@
+table Calendar
+	lineageTag: b0e1a992-1b3a-461b-9d0a-5e7ffc93309c
+	dataCategory: Time
+
+	column Date
+		isKey
+		formatString: General Date
+		lineageTag: bfb41d1e-1afb-4752-8a66-950439e5ead4
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Date]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Year
+		formatString: 0
+		lineageTag: a3e9f407-2e56-4ee6-9842-e73c6b420d1a
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Year]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Month No'
+		formatString: 0
+		lineageTag: e5c29906-d5a2-42f2-b393-427fa7ec88bb
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Month No]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Month
+		lineageTag: 4402b456-f57f-42fb-8e95-de37f5a35e45
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Month]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Year-Month
+		lineageTag: 1798bd4d-ca3c-4bb0-bd7e-88d80d24ae29
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Year-Month]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Quarter
+		lineageTag: 8c35f2a2-7556-4b0c-a76a-859faa1d653f
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Quarter]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Weekday No'
+		formatString: 0
+		lineageTag: 73d85ed3-56a6-4281-9976-22c853404a52
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Weekday No]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Weekday
+		lineageTag: 7647f012-e6d1-474e-bacb-d3cb98a9f01b
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Weekday]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Calendar = calculated
+		mode: import
+		source =
+				
+				ADDCOLUMNS (
+				    CALENDAR ( DATE ( 2024, 1, 1 ), DATE ( 2030, 12, 31 ) ),
+				    "Year", YEAR ( [Date] ),
+				    "Month No", MONTH ( [Date] ),
+				    "Month", FORMAT ( [Date], "MMMM" ),
+				    "Year-Month", FORMAT ( [Date], "YYYY-MM" ),
+				    "Quarter", "Q" & FORMAT ( [Date], "Q" ),
+				    "Weekday No", WEEKDAY ( [Date], 2 ),
+				    "Weekday", FORMAT ( [Date], "dddd" )
+				)
+
+	annotation PBI_Id = 36dad3bde3ef4303901c53037aa13deb
+

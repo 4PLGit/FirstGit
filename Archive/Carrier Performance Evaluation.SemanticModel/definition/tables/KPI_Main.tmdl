@@ -1,0 +1,26 @@
+table KPI_Main
+	lineageTag: d37338bc-0e91-4e94-924a-28dddbf42cd1
+
+	column KPI
+		lineageTag: 362de44a-ac7c-4fd4-80c1-e22edd443890
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [KPI]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition KPI_Main = calculated
+		mode: import
+		source =
+				
+				DATATABLE(
+				    "KPI", STRING,
+				    {
+				        {"Confirmation"},
+				        {"Pickup"},
+				        {"Delivery"}
+				    }
+				)
+
+	annotation PBI_Id = a02a8aef5b0f4386b236846b872d973f
+

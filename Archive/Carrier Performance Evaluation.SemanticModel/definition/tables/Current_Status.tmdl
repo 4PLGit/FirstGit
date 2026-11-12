@@ -1,0 +1,26 @@
+table Current_Status
+	lineageTag: 8ba41230-6d59-4dfb-8ffd-af5b459e56ee
+
+	column 'Current Status'
+		dataType: string
+		lineageTag: 935f1903-b548-4335-a3f3-1da2d56e4cae
+		summarizeBy: none
+		sourceColumn: Current Status
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Current_Status = m
+		mode: import
+		source =
+				let
+				    Source = PowerBI.Dataflows(null),
+				    #"9e645096-1673-4897-892a-ebeca0b45cd7" = Source{[workspaceId="9e645096-1673-4897-892a-ebeca0b45cd7"]}[Data],
+				    #"d16f5bb1-a1ef-434e-8bfb-d1fad2af7c89" = #"9e645096-1673-4897-892a-ebeca0b45cd7"{[dataflowId="d16f5bb1-a1ef-434e-8bfb-d1fad2af7c89"]}[Data],
+				    Current_Status1 = #"d16f5bb1-a1ef-434e-8bfb-d1fad2af7c89"{[entity="Current_Status"]}[Data]
+				in
+				    Current_Status1
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

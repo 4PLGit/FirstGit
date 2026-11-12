@@ -1,0 +1,62 @@
+table 'H&M SE0591 Suppliers'
+	lineageTag: 38581d79-4cf8-46d2-baa0-919a8d6faf1a
+
+	column Sender_Code
+		dataType: string
+		lineageTag: 29ba79ce-2b9a-4795-946a-af11f0a060ad
+		summarizeBy: none
+		sourceColumn: Sender_Code
+
+		annotation SummarizationSetBy = Automatic
+
+	column SHP_Shipper
+		dataType: string
+		lineageTag: be2a9fff-93e4-4715-99af-8ada355347e1
+		summarizeBy: none
+		sourceColumn: SHP_Shipper
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'H&M SE0591 Orders.Supplier Name'
+		dataType: string
+		lineageTag: c2978476-c181-4d8a-9e0a-7aa36c6622fd
+		summarizeBy: none
+		sourceColumn: H&M SE0591 Orders.Supplier Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Supplier name'
+		dataType: string
+		lineageTag: 04f202a3-7499-4e86-8892-6608ec15614c
+		summarizeBy: none
+		sourceColumn: Supplier name
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'H&M SE0591 Suppliers-98c3d8db-533d-48cb-80ab-c6c3e9591046' = m
+		mode: import
+		source =
+				let
+				    Source = PowerBI.Dataflows(null),
+				    #"8462b427-3fb4-4d62-bcf8-94449282024f" = Source{[workspaceId="9e645096-1673-4897-892a-ebeca0b45cd7"]}[Data],
+				    #"e85dd28d-65d4-4175-85e6-9a334a44abe6" = #"8462b427-3fb4-4d62-bcf8-94449282024f"{[dataflowId="889dc367-2045-4b51-990e-419d316519bd"]}[Data],
+				    #"H&M SE0591 Shipments1" = #"e85dd28d-65d4-4175-85e6-9a334a44abe6"{[entity="CW_Optilo H&M SE0591 Shipments"]}[Data],
+				    #"Removed Columns" = Table.RemoveColumns(#"H&M SE0591 Shipments1",{"Km", "Collies", "Loading Meters", "Cubic Meters CBM", "Gross Weight KGs", "Freight Chargeable Weight KGs", "ETD", "ETA", "ATD", "ATA", "Financial Date", "Revenue"}),
+				    #"Added Custom" = Table.AddColumn(#"Removed Columns", "CNTCNTLane", each [Loading Country]&[Unloading Country]),
+				    #"Removed Columns1" = Table.RemoveColumns(#"Added Custom",{"Source.Name", "Shipment", "ImpShipment", "Folder", "Ref", "Client Code", "Client_Name", "Invoice_Code", "Invoice_CNT"}),
+				    #"Removed Other Columns" = Table.SelectColumns(#"Removed Columns1",{"Sender_Code", "Shipper"}),
+				    #"Removed Duplicates" = Table.Distinct(#"Removed Other Columns"),
+				    #"Sorted Rows" = Table.Sort(#"Removed Duplicates",{{"Sender_Code", Order.Ascending}}),
+				    #"Renamed Columns" = Table.RenameColumns(#"Sorted Rows",{{"Shipper", "SHP_Shipper"}}),
+				    #"Merged Queries" = Table.NestedJoin(#"Renamed Columns", {"Sender_Code"}, #"H&M SE0591 Orders", {"Supplier Matchcode"}, "H&M SE0591 Orders", JoinKind.LeftOuter),
+				    #"Expanded H&M SE0591 Orders" = Table.ExpandTableColumn(#"Merged Queries", "H&M SE0591 Orders", {"Supplier Name"}, {"H&M SE0591 Orders.Supplier Name"}),
+				    #"Added Custom1" = Table.AddColumn(#"Expanded H&M SE0591 Orders", "Supplier name", each if [#"H&M SE0591 Orders.Supplier Name"]=null then [SHP_Shipper] else [#"H&M SE0591 Orders.Supplier Name"]),
+				    #"Removed Duplicates1" = Table.Distinct(#"Added Custom1", {"Sender_Code", "Supplier name"}),
+				    #"Removed Duplicates2" = Table.Distinct(#"Removed Duplicates1", {"Sender_Code"})
+				in
+				    #"Removed Duplicates2"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

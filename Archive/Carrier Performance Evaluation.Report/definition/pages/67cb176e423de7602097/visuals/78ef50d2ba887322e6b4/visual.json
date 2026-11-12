@@ -1,0 +1,108 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "78ef50d2ba887322e6b4",
+  "position": {
+    "x": 10.078740157480317,
+    "y": 96.206156048675737,
+    "z": 0,
+    "height": 607.47315676449534,
+    "width": 986.80028632784547,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Jobs_Events_Dates"
+                    }
+                  },
+                  "Property": "Job Number"
+                }
+              },
+              "queryRef": "Jobs_Events_Dates.Job Number",
+              "nativeQueryRef": "Job Number"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Loading_Changes"
+                    }
+                  },
+                  "Property": "Initial_Loading_Change_From"
+                }
+              },
+              "queryRef": "Loading_Changes.Initial_Loading_Change_From",
+              "nativeQueryRef": "Initial_Loading_Change_From"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Jobs_Events_Dates"
+                    }
+                  },
+                  "Property": "MJB350_Scheduled"
+                }
+              },
+              "queryRef": "Jobs_Events_Dates.MJB350_Scheduled",
+              "nativeQueryRef": "MJB350_Scheduled"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Jobs_Events_Dates"
+                    }
+                  },
+                  "Property": "MJB350_Completed"
+                }
+              },
+              "queryRef": "Jobs_Events_Dates.MJB350_Completed",
+              "nativeQueryRef": "MJB350_Completed"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Jobs_Events_Dates"
+                    }
+                  },
+                  "Property": "Loading_Actual_Violation"
+                }
+              },
+              "queryRef": "Jobs_Events_Dates.Loading_Actual_Violation",
+              "nativeQueryRef": "Loading_Actual_Violation"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Loading_Changes"
+                    }
+                  },
+                  "Property": "Count_CHGLOD"
+                }
+              },
+              "queryRef": "Loading_Changes.Count_CHGLOD",
+              "nativeQueryRef": "Count_CHGLOD"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

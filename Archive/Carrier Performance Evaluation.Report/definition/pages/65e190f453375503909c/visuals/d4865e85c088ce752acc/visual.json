@@ -1,0 +1,66 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "d4865e85c088ce752acc",
+  "position": {
+    "x": 18.324982104509665,
+    "y": 9.1624910522548326,
+    "z": 1000,
+    "height": 93.4574087329993,
+    "width": 964.81030780243384,
+    "tabOrder": 1000
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Tiden mellan när 'Loading' planerades för första gången, och när den sist är planerat. ",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontFamily": "quote-cjk-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif",
+                      "fontSize": "12pt",
+                      "color": "#0f1115"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Om CHGLOD inte finns betyder att carrier inte har ändrat vår planering och vi behöver inte följa upp. Då är det ingen violation.",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontFamily": "quote-cjk-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif",
+                      "fontSize": "12pt",
+                      "color": "#0f1115"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "+3 dagar är VIOLATION"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

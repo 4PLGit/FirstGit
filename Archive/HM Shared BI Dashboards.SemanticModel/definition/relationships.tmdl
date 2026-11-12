@@ -1,0 +1,163 @@
+relationship 724b0641-e2ba-49f2-8a17-2e7f17bfd382
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'H&M SE0591 Bookings'.ADDNEWDATE
+	toColumn: LocalDateTable_d7d6a52f-0fd0-4edb-9dcf-d3f7acf973e8.Date
+
+relationship d8661b0b-0be5-4c76-beae-491444dabc3b
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'H&M SE0591 Bookings'.'First Booked to Imperial'
+	toColumn: LocalDateTable_ac1a63a2-1c31-4639-80ef-eee39b842bc0.Date
+
+relationship 25843a4e-7c41-47ad-a0d9-16e4f35d67d5
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'H&M SE0591 Bookings'.'Booking Confirmation Date'
+	toColumn: LocalDateTable_8a248798-fefe-4204-9fdb-58269ee1f703.Date
+
+relationship 3e35ba5e-b479-46e7-ae39-8816ae06bd07
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'H&M SE0591 Bookings'.'Booking last updated on'
+	toColumn: LocalDateTable_c5d066b1-444e-4a3a-ab20-148ae23d0c08.Date
+
+relationship 7b8ad98e-f100-4521-976b-c55204d0c06a
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'H&M SE0591 Bookings'.'Pickup Start'
+	toColumn: LocalDateTable_38b1d4da-664a-48d6-bc42-ffe7224494ad.Date
+
+relationship ad759855-fa19-49c8-afd7-2f56b0938c42
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'H&M SE0591 Bookings'.'Pickup End'
+	toColumn: LocalDateTable_a2f8688f-e7a3-4023-9d58-9bdcad6664e3.Date
+
+relationship 333e2f63-5540-4b0e-90cc-f46aba8c844e
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'H&M SE0591 Bookings'.Record_Added_On
+	toColumn: LocalDateTable_2666798b-e100-41f1-80a8-75f19fa0c3e9.Date
+
+relationship e5e503db-2cef-4837-a910-4fcc3f912e6e
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'H&M SE0591 Orders'.'PO Transport Date'
+	toColumn: LocalDateTable_0348b69c-bada-4bf8-9578-c167cf196a20.Date
+
+relationship aeb80686-37da-4a45-989d-7a422b9c2281
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'H&M SE0591 Orders'.'PO Delivery Date'
+	toColumn: LocalDateTable_5e02bde8-dc9a-4bd5-a95d-ef7edeae972f.Date
+
+relationship f365ab68-f4f2-4653-950c-832ab1499674
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'H&M SE0591 Orders'.'Order last updated on'
+	toColumn: LocalDateTable_25ad685d-661c-469d-ba22-153d80839739.Date
+
+relationship 31b3dbcc-ca90-4546-9a99-267f2523a371
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'H&M SE0591 Orders'.Record_Added_On
+	toColumn: LocalDateTable_abf0c9af-e9bd-499a-b487-5c6589a2a4d6.Date
+
+relationship 61388f88-7452-41a2-9ba6-6363bd0d4fbd
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'H&M SE0591 ShipmentsFacts'.ETD
+	toColumn: LocalDateTable_fba2e105-bbb8-4c1d-8e4e-07e2fe762326.Date
+
+relationship ea4e966d-35c1-4de0-aca3-024cb3fb4244
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'H&M SE0591 ShipmentsFacts'.ETA
+	toColumn: LocalDateTable_ee8e2aa6-71da-46a5-82a6-bd9c0b4f5333.Date
+
+relationship 76968126-2e90-494f-9d27-1cfabb971ef7
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'H&M SE0591 ShipmentsFacts'.ATD
+	toColumn: LocalDateTable_971843dc-5652-4b94-aced-3caf50a2a707.Date
+
+relationship bda3d9f8-3ede-47e9-abc1-480861bc47aa
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'H&M SE0591 ShipmentsFacts'.ATA
+	toColumn: LocalDateTable_e3155f41-f4cd-44e4-bd17-6ed91a3ac085.Date
+
+relationship 63c10f5a-e9ed-4de0-ad95-3405ee3f3b04
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'H&M SE0591 ShipmentsFacts'.'Financial Date'
+	toColumn: LocalDateTable_b7415045-fadb-4cf3-8fe2-e69d0feed842.Date
+
+relationship 78223f59-e7f7-4d0f-8455-a45bb432b2e6
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'H&M SE0591 ShipmentsFacts'.AddNewDate
+	toColumn: LocalDateTable_0b1899d8-b527-42af-9fe4-c39a620620de.Date
+
+relationship 044eef0c-0988-4fb7-89c8-6fd2f12208c1
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'H&M SE0591 ShipmentsDims'.AddNewDate
+	toColumn: LocalDateTable_83be1549-d31a-4ec0-b032-541c11131a5e.Date
+
+relationship e20ccfc3-4407-448e-99bf-499fd94ca5f1
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'H&M SE0591 ShipmentsDims'.'Data Updated On'
+	toColumn: LocalDateTable_25eaf993-69a5-439d-ab38-1ef3420ad78e.Date
+
+relationship 6e9cb340-6f73-4959-aa73-1118685a8d11
+	crossFilteringBehavior: bothDirections
+	fromColumn: 'H&M SE0591 Order_Bookings_split'.'Booking Number'
+	toColumn: 'H&M SE0591 Bookings'.'Booking Number'
+
+relationship 305a4df4-ce41-4e4c-8e41-1ff85c11b723
+	crossFilteringBehavior: bothDirections
+	fromColumn: 'H&M SE0591 Bookings_shipment_split'.'Booking Number'
+	toColumn: 'H&M SE0591 Bookings'.'Booking Number'
+
+relationship 5ca681e2-95c5-47da-bcad-a05b583d12d3
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'H&M SE0591 ShipmentsDims'.Shipment
+	toColumn: 'H&M SE0591 ShipmentsFacts'.Shipment
+
+relationship 44a06a96-34bf-4bba-975f-118375f4f0f0
+	crossFilteringBehavior: bothDirections
+	fromColumn: 'H&M SE0591 Order_Bookings_split'.'Purchase Order Number'
+	toColumn: 'H&M SE0591 Orders'.'Purchase Order Number'
+
+relationship e45b1ff0-b11e-47ab-adb3-137778a08823
+	crossFilteringBehavior: bothDirections
+	fromColumn: 'H&M SE0591 Bookings_shipment_split'.'Shipment Number'
+	toColumn: 'H&M SE0591 ShipmentsDims'.Shipment
+
+relationship 22c11492-fc68-4403-931e-cc4c6ae3a574
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'H&M SE0591 ShipmentsFacts'.'Delivery Date'
+	toColumn: LocalDateTable_a9c6f992-1a5b-4eda-a70b-7951ff4c2cdf.Date
+
+relationship 86a55609-0f6c-42f8-8814-7ea424d92266
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'H&M SE0591 ShipmentsFacts'.'Pickup Date'
+	toColumn: LocalDateTable_5da28b72-2bbe-4de9-8fd5-c96b3d257b71.Date
+
+relationship 6ff216a6-b815-4ffb-ba16-b27d3c6b2a12
+	fromColumn: 'H&M SE0591 ShipmentsDims'.CNTCNTLane
+	toColumn: 'Distances between cities world wide'.CNTCNT
+
+relationship 5c34f64c-dcfb-4a4b-8751-74119ae7fc41
+	fromColumn: 'H&M SE0591 ShipmentsDims'.Sender_Code
+	toColumn: 'H&M SE0591 Suppliers'.Sender_Code
+
+relationship 23be727a-c34d-4089-a15e-e89a09758652
+	fromColumn: 'Supplier Summary'.Sender_Code
+	toColumn: 'H&M SE0591 Suppliers'.Sender_Code
+
+relationship 05f884e2-2285-450d-9da2-4c70b068bb58
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'H&M SE0591 ShipmentsFacts'.Add_New
+	toColumn: LocalDateTable_2d67f3a4-4285-4018-bec8-9c509d87ea84.Date
+
+relationship 9cf12828-59e8-4196-8485-085de7124b50
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'H&M SE0591 ShipmentsFacts'.Rec_retriev_date
+	toColumn: LocalDateTable_759d5619-92a3-4af9-93d7-5b9586242d86.Date
+
+relationship 9488fa02-ce13-4877-9a87-666b43220c28
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'H&M SE0591 ShipmentsDims'.Add_New
+	toColumn: LocalDateTable_2dce266a-e0d0-4870-bf0e-cc0f318481d1.Date
+
+relationship c3a2cc43-3f26-4be5-ad18-ef0e00dd8efc
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'H&M SE0591 ShipmentsDims'.Rec_retriev_date
+	toColumn: LocalDateTable_c95a933c-c9fa-4ce3-a5f1-e01c25ecaa3a.Date
+

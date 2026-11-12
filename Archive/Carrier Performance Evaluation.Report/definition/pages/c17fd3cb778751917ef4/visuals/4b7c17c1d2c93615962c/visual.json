@@ -1,0 +1,329 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "4b7c17c1d2c93615962c",
+  "position": {
+    "x": 82.139037433155082,
+    "y": 55.900178253119428,
+    "z": 1000,
+    "height": 616.04278074866306,
+    "width": 1102.0320855614973,
+    "tabOrder": 2000
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "KPI Descriptions",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontFamily": "Arial",
+                      "fontSize": "14pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Confirmation",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontFamily": "Arial",
+                      "fontSize": "12pt",
+                      "color": "inherit"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Confirmation of transport orders in TMS-extranet is expected to happen within two hours of the transportation order being sent from 4PLCS to the carrier during regular office hours. Confirmations happening later than two office hours are logged as a violation.",
+                    "textStyle": {
+                      "fontFamily": "Arial",
+                      "fontSize": "12pt",
+                      "color": "inherit"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": " ",
+                    "textStyle": {
+                      "fontFamily": "Arial",
+                      "fontSize": "12pt",
+                      "color": "inherit"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Pickup and delivery SLAs",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontFamily": "Arial",
+                      "fontSize": "12pt",
+                      "color": "inherit"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Standard transport order comes with a planned pickup date and time from the 4PLCS dispatcher. Carriers are allowed to plan and execute pickup within a time span of three days starting from the day of requested pickup. If a carrier plan or executes pickup later than three days from the requested date a violation is logged on the transport order.",
+                    "textStyle": {
+                      "fontFamily": "Arial",
+                      "fontSize": "12pt",
+                      "color": "inherit"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Deliveries are allowed to be planned and executed three days earlier than the requested delivery time, but not later than the requested time. Deviations to this agreement is logged as a violation on the transport order.",
+                    "textStyle": {
+                      "fontFamily": "Arial",
+                      "fontSize": "12pt",
+                      "color": "inherit"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": " ",
+                    "textStyle": {
+                      "fontFamily": "Arial",
+                      "fontSize": "12pt",
+                      "color": "inherit"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": " ",
+                    "textStyle": {
+                      "fontFamily": "Arial",
+                      "fontSize": "12pt",
+                      "color": "inherit"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": " ",
+                    "textStyle": {
+                      "fontFamily": "Arial",
+                      "fontSize": "12pt",
+                      "color": "inherit"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Reported pickup and delivery",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontFamily": "Arial",
+                      "fontSize": "12pt",
+                      "color": "inherit"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "The actual time of pickup and delivery is expected to be reported back in TMS-extranet within 24 hours of each event. Event times being reported more than 24 hours after occurrence are logged as deviations on the transport order.",
+                    "textStyle": {
+                      "fontFamily": "Arial",
+                      "fontSize": "12pt",
+                      "color": "inherit"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": " ",
+                    "textStyle": {
+                      "fontFamily": "Arial",
+                      "fontSize": "12pt",
+                      "color": "inherit"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Leadtime",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontFamily": "Arial",
+                      "fontSize": "12pt",
+                      "color": "inherit"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "The transport lead time is calculated from the actual loading and delivery events as reported by the carrier. The reported transit times are regularly checked against transit times stated by the carrier in the annual tender.",
+                    "textStyle": {
+                      "fontFamily": "Arial",
+                      "fontSize": "12pt",
+                      "color": "inherit"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'EXP_Confirmation'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "031a8c09952988e4a361",
+  "position": {
+    "x": 98.75,
+    "y": 6,
+    "z": 7000,
+    "height": 81.5,
+    "width": 274.75,
+    "tabOrder": 6000
+  },
+  "visualGroup": {
+    "displayName": "Date-Slicer",
+    "groupMode": "ScaleMode"
+  }
+}
