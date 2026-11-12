@@ -12,7 +12,9 @@
 # CELL ********************
 
 #Im learning Git
-
+%%pyspark
+import pandas as pd
+import json
 
 # METADATA ********************
 
