@@ -1,0 +1,132 @@
+table Dispo
+	lineageTag: 5ecfab49-505f-44b1-b693-6a52b9343260
+
+	column 'Job Number'
+		dataType: string
+		lineageTag: 09c384ae-ea98-4687-b265-3375e1951df4
+		summarizeBy: none
+		sourceColumn: Job Number
+
+		annotation SummarizationSetBy = Automatic
+
+	column SUBCONTRACTOR
+		dataType: string
+		lineageTag: d1d107a6-a736-43cf-a89b-a7c337920e0c
+		summarizeBy: none
+		sourceColumn: SUBCONTRACTOR
+
+		annotation SummarizationSetBy = Automatic
+
+	column TYP
+		dataType: string
+		lineageTag: 9d282a98-128a-41af-8fdc-6d66a753b0a7
+		summarizeBy: none
+		sourceColumn: TYP
+
+		annotation SummarizationSetBy = Automatic
+
+	column MAXWEIGHT
+		dataType: double
+		lineageTag: 8fe28fcc-2c30-4b80-9fcf-736f177bd294
+		summarizeBy: sum
+		sourceColumn: MAXWEIGHT
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Start_CNT
+		dataType: string
+		lineageTag: 0b8b34d8-8aba-4816-a43a-f4152aff59e4
+		summarizeBy: none
+		sourceColumn: Start_CNT
+
+		annotation SummarizationSetBy = Automatic
+
+	column End_CNT
+		dataType: string
+		lineageTag: 2231dbfb-40f9-4933-9aa7-d98e82ca436e
+		summarizeBy: none
+		sourceColumn: End_CNT
+
+		annotation SummarizationSetBy = Automatic
+
+	column FinanceDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: d4394a44-e393-4a2f-9b41-7d5939d7894c
+		summarizeBy: none
+		sourceColumn: FinanceDate
+
+		variation Variation
+			isDefault
+			relationship: d553a1e2-fd3f-41c2-85ec-d39d79ccda7b
+			defaultHierarchy: LocalDateTable_e24e2a57-f5d4-48cb-8fbd-234b9faba170.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column Total_Price
+		dataType: double
+		lineageTag: 0a5afe1f-c509-4234-9061-f1c40b8eba28
+		summarizeBy: sum
+		sourceColumn: Total_Price
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Currency
+		dataType: string
+		lineageTag: 6a064846-c3bd-4aeb-9e5e-c5d2f4373f83
+		summarizeBy: none
+		sourceColumn: Currency
+
+		annotation SummarizationSetBy = Automatic
+
+	column Crrier_Name
+		dataType: string
+		lineageTag: 731125f8-d52a-4f05-96a2-7f275d4d988e
+		summarizeBy: none
+		sourceColumn: Crrier_Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column Carrier_Country
+		dataType: string
+		lineageTag: 93be02b2-804d-4356-86e6-905aac0be198
+		summarizeBy: none
+		sourceColumn: Carrier_Country
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Service Type'
+		dataType: string
+		lineageTag: 097541c3-ffaa-4a5c-9c8b-dcdfb3982d10
+		summarizeBy: none
+		sourceColumn: Service Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column Lane =
+			
+			Dispo[Start_CNT] & " → " & Dispo[End_CNT]
+		lineageTag: 1542d96d-d6b2-47b9-bd6f-8945955b29b4
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Dispo = m
+		mode: import
+		source =
+				let
+				    Source = PowerBI.Dataflows(null),
+				    #"9e645096-1673-4897-892a-ebeca0b45cd7" = Source{[workspaceId="9e645096-1673-4897-892a-ebeca0b45cd7"]}[Data],
+				    #"d16f5bb1-a1ef-434e-8bfb-d1fad2af7c89" = #"9e645096-1673-4897-892a-ebeca0b45cd7"{[dataflowId="d16f5bb1-a1ef-434e-8bfb-d1fad2af7c89"]}[Data],
+				    Dispo1 = #"d16f5bb1-a1ef-434e-8bfb-d1fad2af7c89"{[entity="Dispo"]}[Data]
+				in
+				    Dispo1
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

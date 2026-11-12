@@ -1,0 +1,58 @@
+table 'Distances between cities world wide'
+	lineageTag: 4294ba43-6863-46fd-8b26-86d0b4b76851
+
+	column 'KM Major cities'
+		dataType: string
+		lineageTag: 96355645-12d7-40ac-b676-6eedfd690538
+		summarizeBy: none
+		sourceColumn: KM Major cities
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'KM Capitol Cities'
+		dataType: string
+		lineageTag: f61bda3e-f843-44ef-b60c-16aa46171c44
+		summarizeBy: none
+		sourceColumn: KM Capitol Cities
+
+		annotation SummarizationSetBy = Automatic
+
+	column OriginCNT
+		dataType: string
+		lineageTag: 1dceac78-d8bd-45c4-8079-5e7a3f4c5dac
+		summarizeBy: none
+		sourceColumn: OriginCNT
+
+		annotation SummarizationSetBy = Automatic
+
+	column DestinationCNT
+		dataType: string
+		lineageTag: 9105ee72-54ae-4d90-8b65-a1646696bd35
+		summarizeBy: none
+		sourceColumn: DestinationCNT
+
+		annotation SummarizationSetBy = Automatic
+
+	column CNTCNT
+		dataType: string
+		lineageTag: 4ac63244-0217-48d9-b6a2-4e2e7d8fcdc6
+		summarizeBy: none
+		sourceColumn: CNTCNT
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Distances between cities world wide-61617906-9ccf-42a3-9ed2-d499bcf65b8a' = m
+		mode: import
+		source =
+				let
+				    Source = PowerBI.Dataflows(null),
+				    #"8462b427-3fb4-4d62-bcf8-94449282024f" = Source{[workspaceId="0d15d8b3-9477-4577-a43a-2cdbd2cda2bf"]}[Data],
+				    #"4d22ce64-af48-4d1b-9469-26f618235378" = #"8462b427-3fb4-4d62-bcf8-94449282024f"{[dataflowId="4bf4f0cb-98e4-4784-98f2-ac08e45391e2"]}[Data],
+				    #"Distances between cities world wide1" = #"4d22ce64-af48-4d1b-9469-26f618235378"{[entity="Distances between cities world wide"]}[Data]
+				in
+				    #"Distances between cities world wide1"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

@@ -1,0 +1,29 @@
+table DimDate
+	lineageTag: 01ad9bab-d80c-48f8-b095-c0231145aef6
+	dataCategory: Time
+
+	column Date
+		isKey
+		formatString: yyyy-mm-dd
+		lineageTag: cb897c6e-a0a6-4700-a831-1ed5ffc781d8
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Date]
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	partition DimDate = calculated
+		mode: import
+		source =
+				
+				CALENDAR(
+				    MIN('Jobs_Events_Dates'[Relational_MJB350]),
+				    MAX('Jobs_Events_Dates'[Relational_MJB350])
+				)
+
+	annotation PBI_Id = b42a71ebd4a246bcab4e6938598145d6
+

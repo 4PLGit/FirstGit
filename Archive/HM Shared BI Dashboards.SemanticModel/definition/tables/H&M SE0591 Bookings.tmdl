@@ -1,0 +1,238 @@
+table 'H&M SE0591 Bookings'
+	lineageTag: 9d511b74-532a-4a80-9f0f-3a8d7d1ed2cd
+
+	column 'Booking Number'
+		dataType: string
+		lineageTag: 2d2f61ed-94f6-4344-a05d-b8f92de231ef
+		summarizeBy: none
+		sourceColumn: Booking Number
+
+		annotation SummarizationSetBy = Automatic
+
+	column Client
+		dataType: string
+		lineageTag: 8211113b-d24c-46c2-bbfc-a6a5a12ab075
+		summarizeBy: none
+		sourceColumn: Client
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Supplier Matchcode'
+		dataType: string
+		lineageTag: 665f44f7-630c-4306-a485-60d6a2374fec
+		summarizeBy: none
+		sourceColumn: Supplier Matchcode
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Loading Country'
+		dataType: string
+		lineageTag: a5fa74d9-d81c-4961-bf29-7523b86064f9
+		summarizeBy: none
+		sourceColumn: Loading Country
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Unloading Country'
+		dataType: string
+		lineageTag: 369d901a-a8d8-4987-94ca-9cad4ae67d06
+		summarizeBy: none
+		sourceColumn: Unloading Country
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Bookning Status'
+		dataType: string
+		lineageTag: dfccae41-6a3c-46a3-8b01-e609913f58b1
+		summarizeBy: none
+		sourceColumn: Bookning Status
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Booking Type'
+		dataType: string
+		lineageTag: ebed4e11-cd19-40c7-982c-9ded61421c19
+		summarizeBy: none
+		sourceColumn: Booking Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Booking Priority'
+		dataType: string
+		lineageTag: 6ed154cf-6799-480a-bcda-f7468c70033e
+		summarizeBy: none
+		sourceColumn: Booking Priority
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Booking Mode of Transport'
+		dataType: string
+		lineageTag: a63d2adb-1618-40fb-8ed1-7e698a5f2b2b
+		summarizeBy: none
+		sourceColumn: Booking Mode of Transport
+
+		annotation SummarizationSetBy = Automatic
+
+	column ADDNEWDATE
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 100a2564-3d6f-4e38-97fd-93e0913b0031
+		summarizeBy: none
+		sourceColumn: ADDNEWDATE
+
+		variation Variation
+			isDefault
+			relationship: 724b0641-e2ba-49f2-8a17-2e7f17bfd382
+			defaultHierarchy: LocalDateTable_d7d6a52f-0fd0-4edb-9dcf-d3f7acf973e8.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'First Booked to Imperial'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 52c907dd-c96c-46e2-a7ea-cb2e33e7fed1
+		summarizeBy: none
+		sourceColumn: First Booked to Imperial
+
+		variation Variation
+			isDefault
+			relationship: d8661b0b-0be5-4c76-beae-491444dabc3b
+			defaultHierarchy: LocalDateTable_ac1a63a2-1c31-4639-80ef-eee39b842bc0.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Booking Confirmation Date'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 10fd4af2-ced8-49ce-b40c-a406679d2ba7
+		summarizeBy: none
+		sourceColumn: Booking Confirmation Date
+
+		variation Variation
+			isDefault
+			relationship: 25843a4e-7c41-47ad-a0d9-16e4f35d67d5
+			defaultHierarchy: LocalDateTable_8a248798-fefe-4204-9fdb-58269ee1f703.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Booking last updated on'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: d3791448-8574-4d76-8f1a-a8ed9c15c518
+		summarizeBy: none
+		sourceColumn: Booking last updated on
+
+		variation Variation
+			isDefault
+			relationship: 3e35ba5e-b479-46e7-ae39-8816ae06bd07
+			defaultHierarchy: LocalDateTable_c5d066b1-444e-4a3a-ab20-148ae23d0c08.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Pickup Start'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 7a70b66f-528d-4634-bcbe-ba6862c491c0
+		summarizeBy: none
+		sourceColumn: Pickup Start
+
+		variation Variation
+			isDefault
+			relationship: 7b8ad98e-f100-4521-976b-c55204d0c06a
+			defaultHierarchy: LocalDateTable_38b1d4da-664a-48d6-bc42-ffe7224494ad.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Pickup End'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 31246c02-fc67-4e6c-900b-c21d65f8e1a4
+		summarizeBy: none
+		sourceColumn: Pickup End
+
+		variation Variation
+			isDefault
+			relationship: ad759855-fa19-49c8-afd7-2f56b0938c42
+			defaultHierarchy: LocalDateTable_a2f8688f-e7a3-4023-9d58-9bdcad6664e3.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Purchase Order Number'
+		dataType: string
+		lineageTag: 2f2b50e3-bd92-465e-b76d-1256dc7aa2d9
+		summarizeBy: none
+		sourceColumn: Purchase Order Number
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Shipment Number'
+		dataType: string
+		lineageTag: e6af3f0f-023f-4a82-aa95-160eaf78ad70
+		summarizeBy: none
+		sourceColumn: Shipment Number
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Latest On-Hold Reasoncode'
+		dataType: string
+		lineageTag: 77fd6860-15b0-4780-b250-cbde0bbedd8e
+		summarizeBy: none
+		sourceColumn: Latest On-Hold Reasoncode
+
+		annotation SummarizationSetBy = Automatic
+
+	column Record_Added_On
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: b3bd5226-2119-4fd7-bcfb-6c4ce839d228
+		summarizeBy: none
+		sourceColumn: Record_Added_On
+
+		variation Variation
+			isDefault
+			relationship: 333e2f63-5540-4b0e-90cc-f46aba8c844e
+			defaultHierarchy: LocalDateTable_2666798b-e100-41f1-80a8-75f19fa0c3e9.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column REC_RETRIEV_DATE
+		dataType: string
+		lineageTag: 19574bbd-a829-4974-86a8-52c234aa9241
+		summarizeBy: none
+		sourceColumn: REC_RETRIEV_DATE
+
+		annotation SummarizationSetBy = Automatic
+
+	column Name
+		dataType: string
+		lineageTag: e4adc76f-674a-4718-a6d7-12b8cb3aaa0c
+		summarizeBy: none
+		sourceColumn: Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Orig.Bookning Status'
+		dataType: string
+		lineageTag: 7890667d-1247-43f8-96a3-f03d333020c8
+		summarizeBy: none
+		sourceColumn: Orig.Bookning Status
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'H&M SE0591 Bookings-16fb7185-20e1-4ca7-aff3-dd4d3628e617' = m
+		mode: import
+		source =
+				let
+				    Source = PowerBI.Dataflows(null),
+				    #"8462b427-3fb4-4d62-bcf8-94449282024f" = Source{[workspaceId="9e645096-1673-4897-892a-ebeca0b45cd7"]}[Data],
+				    #"e85dd28d-65d4-4175-85e6-9a334a44abe6" = #"8462b427-3fb4-4d62-bcf8-94449282024f"{[dataflowId="889dc367-2045-4b51-990e-419d316519bd"]}[Data],
+				    #"New H&M SE0591 Bookings1" = #"e85dd28d-65d4-4175-85e6-9a334a44abe6"{[entity="CW_Optilo H&M SE0591 Bookings"]}[Data]
+				in
+				    #"New H&M SE0591 Bookings1"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

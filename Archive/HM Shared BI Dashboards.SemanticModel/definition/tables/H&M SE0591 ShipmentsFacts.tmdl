@@ -1,0 +1,438 @@
+table 'H&M SE0591 ShipmentsFacts'
+	lineageTag: 49415ce5-22dd-4a6d-bf86-642634a6cec7
+
+	measure 'FrKg per Shipment' = DIVIDE(SUM([Freight Chargeable Weight KGs]),DISTINCTCOUNT([Shipment]))
+		lineageTag: f797a618-dd48-4253-a985-72cc5b457248
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Cost per freighted kilo' = DIVIDE(SUM('H&M SE0591 ShipmentsFacts'[Revenue]),SUM('H&M SE0591 ShipmentsFacts'[Freight Chargeable Weight KGs]))
+		lineageTag: 6ac44928-ef7d-416b-b279-b728a74131d2
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Source.Name'
+		dataType: string
+		lineageTag: 6e9f8eb0-6a5f-4860-9878-b972c9dcd04b
+		summarizeBy: none
+		sourceColumn: Source.Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column Shipment
+		dataType: string
+		lineageTag: 8e9e7ab5-270b-4191-8460-d4fedcf15109
+		summarizeBy: none
+		sourceColumn: Shipment
+
+		annotation SummarizationSetBy = Automatic
+
+	column Km
+		dataType: double
+		lineageTag: 3af4d1a6-c299-4ccf-84dc-8f5a5f4f5db4
+		summarizeBy: sum
+		sourceColumn: Km
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Collies
+		dataType: int64
+		lineageTag: 22e0544e-a0fc-4035-8b09-0dfc6bb5413b
+		summarizeBy: sum
+		sourceColumn: Collies
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Loading Meters'
+		dataType: double
+		lineageTag: 36254a78-3422-4e26-beb4-31fe9293ff1c
+		summarizeBy: sum
+		sourceColumn: Loading Meters
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Cubic Meters CBM'
+		dataType: double
+		lineageTag: be53d096-b875-4671-bc11-f6f8b0cc528a
+		summarizeBy: sum
+		sourceColumn: Cubic Meters CBM
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Gross Weight KGs'
+		dataType: double
+		lineageTag: 9519fa26-d8a1-42fb-bd18-11c0efe33a9e
+		summarizeBy: sum
+		sourceColumn: Gross Weight KGs
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Freight Chargeable Weight KGs'
+		dataType: double
+		lineageTag: 91843313-8c43-459f-8d84-661864f9cc2d
+		summarizeBy: sum
+		sourceColumn: Freight Chargeable Weight KGs
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ETD
+		dataType: dateTime
+		lineageTag: f093020b-cf74-45ea-a0a9-c4de504eac4d
+		summarizeBy: none
+		sourceColumn: ETD
+
+		variation Variation
+			isDefault
+			relationship: 61388f88-7452-41a2-9ba6-6363bd0d4fbd
+			defaultHierarchy: LocalDateTable_fba2e105-bbb8-4c1d-8e4e-07e2fe762326.'Date Hierarchy'
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column ETA
+		dataType: dateTime
+		lineageTag: a675da8e-bfd2-4640-992a-94d85dbeb4f8
+		summarizeBy: none
+		sourceColumn: ETA
+
+		variation Variation
+			isDefault
+			relationship: ea4e966d-35c1-4de0-aca3-024cb3fb4244
+			defaultHierarchy: LocalDateTable_ee8e2aa6-71da-46a5-82a6-bd9c0b4f5333.'Date Hierarchy'
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column ATD
+		dataType: dateTime
+		lineageTag: a4652680-4133-48e4-8c9d-9fa68fc5fb41
+		summarizeBy: none
+		sourceColumn: ATD
+
+		variation Variation
+			isDefault
+			relationship: 76968126-2e90-494f-9d27-1cfabb971ef7
+			defaultHierarchy: LocalDateTable_971843dc-5652-4b94-aced-3caf50a2a707.'Date Hierarchy'
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column ATA
+		dataType: dateTime
+		lineageTag: 10b77e71-5576-436f-99fe-140c8b682c9d
+		summarizeBy: none
+		sourceColumn: ATA
+
+		variation Variation
+			isDefault
+			relationship: bda3d9f8-3ede-47e9-abc1-480861bc47aa
+			defaultHierarchy: LocalDateTable_e3155f41-f4cd-44e4-bd17-6ed91a3ac085.'Date Hierarchy'
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column 'Financial Date'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 421a570a-d3af-474b-a957-6ea9df2d087a
+		summarizeBy: none
+		sourceColumn: Financial Date
+
+		variation Variation
+			isDefault
+			relationship: 63c10f5a-e9ed-4de0-ad95-3405ee3f3b04
+			defaultHierarchy: LocalDateTable_b7415045-fadb-4cf3-8fe2-e69d0feed842.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column AddNewDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 8369d5f2-a75f-4cda-acea-f0b1cb501863
+		summarizeBy: none
+		sourceColumn: AddNewDate
+
+		variation Variation
+			isDefault
+			relationship: 78223f59-e7f7-4d0f-8455-a45bb432b2e6
+			defaultHierarchy: LocalDateTable_0b1899d8-b527-42af-9fe4-c39a620620de.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column Revenue
+		dataType: double
+		formatString: #,0.00\ "kr";-#,0.00\ "kr";#,0.00\ "kr"
+		lineageTag: a075c7b1-2c31-4ec2-9514-3da0bc2b2393
+		summarizeBy: sum
+		sourceColumn: Revenue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"sv-SE"}
+
+	column 'Delivery Date' = IF(ISBLANK('H&M SE0591 ShipmentsFacts'[ATA]),[ETA],[ATA])
+		lineageTag: a56db50a-a141-4d4d-adbe-ad98bfb3486d
+		summarizeBy: none
+
+		variation Variation
+			isDefault
+			relationship: 22c11492-fc68-4403-931e-cc4c6ae3a574
+			defaultHierarchy: LocalDateTable_a9c6f992-1a5b-4eda-a70b-7951ff4c2cdf.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column 'Pickup Date' = IF(ISBLANK([ATD]),[ETD],[ATD])
+		lineageTag: bf2bde96-dfae-44d9-b722-c305331b2282
+		summarizeBy: none
+
+		variation Variation
+			isDefault
+			relationship: 86a55609-0f6c-42f8-8814-7ea424d92266
+			defaultHierarchy: LocalDateTable_5da28b72-2bbe-4de9-8fd5-c96b3d257b71.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column 'Shipment Distance' = ```
+			
+			//uses calculated KM from TMS [Km], is htis is missing a value is supplied form the supporting table "Distances between cities world wide". The distances in the table is calculated between histoircal Loading and Unloading adresses and averaged.
+			VAR CNTCNTLane = RELATED('H&M SE0591 ShipmentsDims'[CNTCNTLane])
+			
+			
+			VAR AlternativeDistance = LOOKUPVALUE('Distances between cities world wide'[KM Capitol Cities],'Distances between cities world wide'[CNTCNT],CNTCNTLane)
+			
+			RETURN 
+			    ROUND(AlternativeDistance,0)
+			```
+		lineageTag: d31cfdb3-5d69-4b88-b3da-cf393be3446e
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Calc CO2' =
+			
+			//CO2 Emissions calulated using average distances of transport (capitol city to capitol city) and the shipment's actual weight.
+			VAR ShipmentWeightTonne = DIVIDE([Gross Weight KGs],1000)
+			RETURN
+			
+			ROUNDUP(
+			    SWITCH(
+			         RELATED('H&M SE0591 ShipmentsDims'[Service Type]),
+			         "Sea Freight",ShipmentWeightTonne * [Shipment Distance]*15/1000000 ,
+			         "Air Freight",ShipmentWeightTonne * [Shipment Distance]*602/1000000,
+			         "Courier",ShipmentWeightTonne * [Shipment Distance]*602/1000000,
+			         "Road Transport",ShipmentWeightTonne * [Shipment Distance]*62/1000000,
+			         "Train Transport",ShipmentWeightTonne * [Shipment Distance]*22/1000000
+			    ),
+			
+			4)
+		formatString: 0.00000
+		lineageTag: aaffd3f3-d487-4ab9-a4aa-8be201b901b6
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Col Cost per frkg' = DIVIDE([Revenue],[Freight Chargeable Weight KGs])
+		lineageTag: 6bbf78f4-bf7a-4c08-8f6d-5d9a385a6710
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column CO2/CBM = DIVIDE('H&M SE0591 ShipmentsFacts'[Calc CO2],'H&M SE0591 ShipmentsFacts'[Cubic Meters CBM])
+		formatString: 0.00000000
+		lineageTag: ebe0cb33-730c-4cef-a3d6-3e8da2d15011
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column Add_New
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 6246f742-43e0-4100-ba21-3bfd6c18dc40
+		summarizeBy: none
+		sourceColumn: Add_New
+
+		variation Variation
+			isDefault
+			relationship: 05f884e2-2285-450d-9da2-4c70b068bb58
+			defaultHierarchy: LocalDateTable_2d67f3a4-4285-4018-bec8-9c509d87ea84.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column cancelled
+		dataType: string
+		lineageTag: be8de06b-6382-48cf-84a4-9ce1a825d406
+		summarizeBy: none
+		sourceColumn: cancelled
+
+		annotation SummarizationSetBy = Automatic
+
+	column Rec_retriev_date
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 0d168014-7b77-4046-ba2a-1c955e318de7
+		summarizeBy: none
+		sourceColumn: Rec_retriev_date
+
+		variation Variation
+			isDefault
+			relationship: 9cf12828-59e8-4196-8485-085de7124b50
+			defaultHierarchy: LocalDateTable_759d5619-92a3-4af9-93d7-5b9586242d86.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Old Chargeable Weight KGs'
+		dataType: double
+		lineageTag: 59dd5d46-348a-4d44-bd99-2446d000ea1b
+		summarizeBy: sum
+		sourceColumn: Old Chargeable Weight KGs
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Std_CBM
+		dataType: int64
+		formatString: 0
+		lineageTag: 61277904-4ebd-469c-8267-4906008c1a29
+		summarizeBy: sum
+		sourceColumn: Std_CBM
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'New CBM'
+		dataType: double
+		lineageTag: 6a16421c-f105-46be-825d-b8769c5cd234
+		summarizeBy: sum
+		sourceColumn: New CBM
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Std_LDM
+		dataType: int64
+		formatString: 0
+		lineageTag: 73d5a960-d2d9-44ea-a63e-1ded8d2c74ce
+		summarizeBy: sum
+		sourceColumn: Std_LDM
+
+		annotation SummarizationSetBy = Automatic
+
+	column New_LDM
+		dataType: double
+		lineageTag: 056a00a1-7fb3-4937-8776-618bb932eef7
+		summarizeBy: sum
+		sourceColumn: New_LDM
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ActIncome
+		dataType: string
+		lineageTag: 488a6d73-6ad7-42ad-bb4c-87be7e608564
+		summarizeBy: none
+		sourceColumn: ActIncome
+
+		annotation SummarizationSetBy = Automatic
+
+	column ActCosts
+		dataType: string
+		lineageTag: f4e20258-b98e-433e-9c98-52f843569a4b
+		summarizeBy: none
+		sourceColumn: ActCosts
+
+		annotation SummarizationSetBy = Automatic
+
+	column ActResult
+		dataType: string
+		lineageTag: d5c40471-74a6-4d55-8c6b-d2cc8e23da2c
+		summarizeBy: none
+		sourceColumn: ActResult
+
+		annotation SummarizationSetBy = Automatic
+
+	column EstIncome
+		dataType: string
+		lineageTag: a5819b82-41c0-43fe-b6ab-2d74024cfca0
+		summarizeBy: none
+		sourceColumn: EstIncome
+
+		annotation SummarizationSetBy = Automatic
+
+	column EstCosts
+		dataType: string
+		lineageTag: eb43533e-0aba-44f8-93d0-cc2ccef1a65b
+		summarizeBy: none
+		sourceColumn: EstCosts
+
+		annotation SummarizationSetBy = Automatic
+
+	column EstResult
+		dataType: string
+		lineageTag: 517949a2-2524-4cdd-beec-1d9a4733933a
+		summarizeBy: none
+		sourceColumn: EstResult
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'H&M SE0591 ShipmentsFacts-138ac7a5-55bb-4b1c-93e5-6daba90c4b9f' = m
+		mode: import
+		source =
+				let
+				    Source = PowerBI.Dataflows(null),
+				    #"8462b427-3fb4-4d62-bcf8-94449282024f" = Source{[workspaceId="9e645096-1673-4897-892a-ebeca0b45cd7"]}[Data],
+				    #"e85dd28d-65d4-4175-85e6-9a334a44abe6" = #"8462b427-3fb4-4d62-bcf8-94449282024f"{[dataflowId="889dc367-2045-4b51-990e-419d316519bd"]}[Data],
+				    #"New H&M SE0591 Shipments1" = #"e85dd28d-65d4-4175-85e6-9a334a44abe6"{[entity="CW_Optilo H&M SE0591 Shipments"]}[Data],
+				    #"Removed Columns" = Table.RemoveColumns(#"New H&M SE0591 Shipments1",{"ImpShipment", "Folder", "Ref", "Client Code", "Client_Name", "Invoice_Code", "Invoice_CNT", "Sender_Code", "Shipper", "Load Code", "Loading Name", "Loading Country", "Loading Postal Code", "Loading City", "Unload Code", "Unloading Name", "Unloading Country", "Unloading Postal Code", "Unloading City", "Consignee Code", "Consignee Country", "Traffic type", "Equipment type", "Container", "Template", "Priority", "Department", "User added row", "Origin_PRT_Code", "Destin_PRT_Code", "Orders", "Dispos", "Invoices", "Data Updated On", "Service Type"})
+				in
+				    #"Removed Columns"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

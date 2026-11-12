@@ -1,0 +1,219 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "fd1f67576a4bf56a97b8",
+  "position": {
+    "x": 9.1624910522548326,
+    "y": 110.86614173228347,
+    "z": 0,
+    "height": 608.38940586972092,
+    "width": 921.74659985683616,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Jobs_Events_Dates"
+                    }
+                  },
+                  "Property": "Job Number"
+                }
+              },
+              "queryRef": "Jobs_Events_Dates.Job Number",
+              "nativeQueryRef": "Job Number"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Jobs_Events_Dates"
+                    }
+                  },
+                  "Property": "MJB260_Completed"
+                }
+              },
+              "queryRef": "Jobs_Events_Dates.MJB260_Completed",
+              "nativeQueryRef": "MJB260_Completed"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Jobs_Events_Dates"
+                    }
+                  },
+                  "Property": "MJB290_Completed"
+                }
+              },
+              "queryRef": "Jobs_Events_Dates.MJB290_Completed",
+              "nativeQueryRef": "MJB290_Completed"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Jobs_Events_Dates"
+                    }
+                  },
+                  "Property": "Confirmation_Working_Minutes"
+                }
+              },
+              "queryRef": "Sum(Jobs_Events_Dates.Confirmation_Working_Minutes)",
+              "nativeQueryRef": "Confirmation_Latency (min)",
+              "displayName": "Confirmation_Latency (min)"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Jobs_Events_Dates"
+                    }
+                  },
+                  "Property": "Confirmation_Latency_day"
+                }
+              },
+              "queryRef": "Sum(Jobs_Events_Dates.Confirmation_Latency_day)",
+              "nativeQueryRef": "Confirmation_Latency (day)",
+              "displayName": "Confirmation_Latency (day)"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Jobs_Events_Dates"
+                    }
+                  },
+                  "Property": "Confirmation_Violation"
+                }
+              },
+              "queryRef": "Jobs_Events_Dates.Confirmation_Violation",
+              "nativeQueryRef": "Confirmation_Violation"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Jobs_Events_Dates"
+                  }
+                },
+                "Property": "Job Number"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ]
+      }
+    },
+    "objects": {
+      "total": [
+        {
+          "properties": {
+            "totals": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "223.82754547496563D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Jobs_Events_Dates.MJB290_Completed"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "218.5821675709878D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Jobs_Events_Dates.MJB260_Completed"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "97.6068376068376D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(Jobs_Events_Dates.Confirmation_Working_Minutes)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "103.36977798234344D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(Jobs_Events_Dates.Confirmation_Latency_day)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "103.51369939266209D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Jobs_Events_Dates.Confirmation_Violation"
+          }
+        }
+      ],
+      "columnHeaders": [
+        {
+          "properties": {}
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

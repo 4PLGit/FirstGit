@@ -1,0 +1,10 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
+  "name": "0c4efd94920ec5459ba5",
+  "displayName": "Tooltip_Confirmation",
+  "displayOption": "ActualSize",
+  "height": 160,
+  "width": 130,
+  "visibility": "HiddenInViewMode",
+  "type": "Tooltip"
+}

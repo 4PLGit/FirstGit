@@ -1,0 +1,586 @@
+table 'H&M SE0591 ShipmentsDims'
+	lineageTag: 79f757c5-854a-4479-9d5b-531cf9d32b8a
+
+	column 'Source.Name'
+		dataType: string
+		lineageTag: 966dc173-e400-4ec1-a214-0540c2330a69
+		summarizeBy: none
+		sourceColumn: Source.Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column Shipment
+		dataType: string
+		lineageTag: 402d1266-7e52-4b8a-af2f-658533b16203
+		summarizeBy: none
+		sourceColumn: Shipment
+
+		annotation SummarizationSetBy = Automatic
+
+	column ImpShipment
+		dataType: string
+		lineageTag: d55a681e-b187-47ee-853c-c6c970dfb3c7
+		summarizeBy: none
+		sourceColumn: ImpShipment
+
+		annotation SummarizationSetBy = Automatic
+
+	column Folder
+		dataType: string
+		lineageTag: 5d136eb9-3970-4fe9-bc6f-540025ed145f
+		summarizeBy: none
+		sourceColumn: Folder
+
+		annotation SummarizationSetBy = Automatic
+
+	column Ref
+		dataType: string
+		lineageTag: 57729eb6-27ba-4db0-9e2c-7cf7ef504180
+		summarizeBy: none
+		sourceColumn: Ref
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Client Code'
+		dataType: string
+		lineageTag: ab0350c3-be54-4ed4-9db0-6b0cce8f3f89
+		summarizeBy: none
+		sourceColumn: Client Code
+
+		annotation SummarizationSetBy = Automatic
+
+	column Client_Name
+		dataType: string
+		lineageTag: 4aeb4ca6-cf92-4280-b8c5-a84061e56b51
+		summarizeBy: none
+		sourceColumn: Client_Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column Invoice_Code
+		dataType: string
+		lineageTag: 7fbcc9fb-6430-4b00-a52b-39a2a02f99eb
+		summarizeBy: none
+		sourceColumn: Invoice_Code
+
+		annotation SummarizationSetBy = Automatic
+
+	column Invoice_CNT
+		dataType: string
+		lineageTag: f3cd44bf-88a8-4e49-b6f8-4c4be0be9f7a
+		summarizeBy: none
+		sourceColumn: Invoice_CNT
+
+		annotation SummarizationSetBy = Automatic
+
+	column Sender_Code
+		dataType: string
+		lineageTag: 7ee103bc-1cde-4ae4-b144-6e24e1562a10
+		summarizeBy: none
+		sourceColumn: Sender_Code
+
+		annotation SummarizationSetBy = Automatic
+
+	column Shipper
+		dataType: string
+		lineageTag: c11909a7-9db0-41e5-a553-17ce03d743d6
+		summarizeBy: none
+		sourceColumn: Shipper
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Load Code'
+		dataType: string
+		lineageTag: 33cc9e4d-6347-4639-b3f4-6ccdb3098c78
+		summarizeBy: none
+		sourceColumn: Load Code
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Loading Name'
+		dataType: string
+		lineageTag: 9690fac3-b220-4018-81d5-6f0dd3895a49
+		summarizeBy: none
+		sourceColumn: Loading Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Loading Country'
+		dataType: string
+		lineageTag: c51f9714-07c2-4bfd-aa93-75da39604d76
+		summarizeBy: none
+		sourceColumn: Loading Country
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Loading Postal Code'
+		dataType: string
+		lineageTag: d7d07837-dd29-4eec-bba1-c7cca328b661
+		summarizeBy: none
+		sourceColumn: Loading Postal Code
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Loading City'
+		dataType: string
+		lineageTag: cbebc4a4-391a-4a31-a27e-533b892239f7
+		summarizeBy: none
+		sourceColumn: Loading City
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Unload Code'
+		dataType: string
+		lineageTag: e11488b6-bbcb-4bb8-9e9f-45c73174e883
+		summarizeBy: none
+		sourceColumn: Unload Code
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Unloading Name'
+		dataType: string
+		lineageTag: e517e661-9964-44be-ae8e-4aa5e956b595
+		summarizeBy: none
+		sourceColumn: Unloading Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Unloading Country'
+		dataType: string
+		lineageTag: 01340d4d-e2b3-459e-8476-0d3751d90b7c
+		summarizeBy: none
+		sourceColumn: Unloading Country
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation __PBI_SemanticLinks = [{"LinkTarget":{"TableName":"H&M SE0591 ShipmentsDims","TableItemName":"Franchise Partner","ObjectType":4},"LinkType":"UsedInGroup"}]
+
+	column 'Unloading Postal Code'
+		dataType: string
+		lineageTag: 2a29381f-7891-4b17-b804-dd236f16fd60
+		summarizeBy: none
+		sourceColumn: Unloading Postal Code
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Unloading City'
+		dataType: string
+		lineageTag: 229179ad-3eee-4d9a-b85c-d6710bae9df7
+		summarizeBy: none
+		sourceColumn: Unloading City
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Consignee Code'
+		dataType: string
+		lineageTag: a3fe4257-56ea-4eef-b584-d24d139972bb
+		summarizeBy: none
+		sourceColumn: Consignee Code
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Consignee Country'
+		dataType: string
+		lineageTag: 06e9b64f-9434-4b56-86d4-685959ccfef1
+		summarizeBy: none
+		sourceColumn: Consignee Country
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Traffic type'
+		dataType: string
+		lineageTag: 10de8e7d-46f9-4eb9-b498-46380d06b9b0
+		summarizeBy: none
+		sourceColumn: Traffic type
+
+		annotation SummarizationSetBy = Automatic
+
+	column Template
+		dataType: string
+		lineageTag: 70082245-1716-4c0d-917d-8b62c41e2373
+		summarizeBy: none
+		sourceColumn: Template
+
+		annotation SummarizationSetBy = Automatic
+
+	column Priority
+		dataType: string
+		lineageTag: 778f672f-f50e-4b4d-af2b-0d7bb247e161
+		summarizeBy: none
+		sourceColumn: Priority
+
+		annotation SummarizationSetBy = Automatic
+
+	column Department
+		dataType: string
+		lineageTag: 55eec2d3-67f3-4bf6-b885-918b8e9b3e1b
+		summarizeBy: none
+		sourceColumn: Department
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'User added row'
+		dataType: string
+		lineageTag: f5105a55-6dcb-4d4f-9185-9ce0c62431d3
+		summarizeBy: none
+		sourceColumn: User added row
+
+		annotation SummarizationSetBy = Automatic
+
+	column AddNewDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: ca3767f0-42f6-47f7-a363-1630fad73df4
+		summarizeBy: none
+		sourceColumn: AddNewDate
+
+		variation Variation
+			isDefault
+			relationship: 044eef0c-0988-4fb7-89c8-6fd2f12208c1
+			defaultHierarchy: LocalDateTable_83be1549-d31a-4ec0-b032-541c11131a5e.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column Origin_PRT_Code
+		dataType: string
+		lineageTag: 811e8efd-e443-4413-9ea2-1e0ba509fede
+		summarizeBy: none
+		sourceColumn: Origin_PRT_Code
+
+		annotation SummarizationSetBy = Automatic
+
+	column Destin_PRT_Code
+		dataType: string
+		lineageTag: 305e7a82-d650-454d-9cdf-27473a6bb0ee
+		summarizeBy: none
+		sourceColumn: Destin_PRT_Code
+
+		annotation SummarizationSetBy = Automatic
+
+	column Orders
+		dataType: string
+		lineageTag: a6f5d573-e23d-49f1-a276-ec00dc9c2e60
+		summarizeBy: none
+		sourceColumn: Orders
+
+		annotation SummarizationSetBy = Automatic
+
+	column Dispos
+		dataType: string
+		lineageTag: 86e2c5ea-b755-4a8a-a3d0-a3b8bb90a7ca
+		summarizeBy: none
+		sourceColumn: Dispos
+
+		annotation SummarizationSetBy = Automatic
+
+	column Invoices
+		dataType: string
+		lineageTag: 41049df8-6d3d-4733-b6c9-3340c761cbab
+		summarizeBy: none
+		sourceColumn: Invoices
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Data Updated On'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 16b4578a-a6be-4b00-9960-d94193329e0e
+		summarizeBy: none
+		sourceColumn: Data Updated On
+
+		variation Variation
+			isDefault
+			relationship: e20ccfc3-4407-448e-99bf-499fd94ca5f1
+			defaultHierarchy: LocalDateTable_25eaf993-69a5-439d-ab38-1ef3420ad78e.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Service Type'
+		dataType: string
+		lineageTag: 06a62954-4390-4728-9b94-52199dabca30
+		summarizeBy: none
+		sourceColumn: Service Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Temd Dist' = ```
+			RELATED('H&M SE0591 ShipmentsFacts'[Shipment Distance]) 
+			```
+		lineageTag: b07973b4-ac76-4554-98d5-a76ae327aead
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column CNTCNTLane
+		dataType: string
+		lineageTag: 1365c400-1a3a-4b14-a4c0-0c82450bb0e9
+		summarizeBy: none
+		sourceColumn: CNTCNTLane
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Temp CO2' = ```
+			RELATED('H&M SE0591 ShipmentsFacts'[Calc CO2]) 
+			```
+		lineageTag: 3cfcc84c-5bef-4d7f-ac93-4aba4f9f4092
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Faulty Shipment' =
+			SWITCH(TRUE(),'H&M SE0591 ShipmentsDims'[Service Type]="Warehousing","OK",
+			'H&M SE0591 ShipmentsDims'[Ref]="Splitpoint", "OK",
+			IF(RELATED('H&M SE0591 ShipmentsFacts'[Freight Chargeable Weight KGs])>100000,"Do not include","OK"))
+		lineageTag: 25a6eb9c-6f77-4a64-8b36-e791c1696d4d
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Franchise Partner' =
+			SWITCH(
+				TRUE,
+				ISBLANK('H&M SE0591 ShipmentsDims'[Unloading Country]),
+				"(Blank)",
+				'H&M SE0591 ShipmentsDims'[Unloading Country] IN {"AE",
+					"BH",
+					"EG",
+					"JO",
+					"KW",
+					"LB",
+					"OM",
+					"QA",
+					"SA",
+					"TN"},
+				"Alshaya",
+				'H&M SE0591 ShipmentsDims'[Unloading Country] IN {"ID",
+					"KH",
+					"TH"},
+				"Gill Capital",
+				'H&M SE0591 ShipmentsDims'[Unloading Country] IN {"CR",
+					"DO",
+					"GT",
+					"PA",
+					"SV",
+					"VE"},
+				"Hola Moda",
+				'H&M SE0591 ShipmentsDims'[Unloading Country] IN {"MA",
+					"MT"},
+				"Hudson",
+				'H&M SE0591 ShipmentsDims'[Unloading Country] IN {"IL"},
+				"Match Retail",
+				'H&M SE0591 ShipmentsDims'[Unloading Country] IN {"MX"},
+				"Retail Fashion Group",
+				'H&M SE0591 ShipmentsDims'[Unloading Country] IN {"AZ"},
+				"Sinteks",
+				"H&M incl brands (Other)"
+			)
+		lineageTag: 29059e61-7ab3-451e-bdd1-fa1455bf1a71
+		summarizeBy: none
+
+		extendedProperty GroupingMetadata =
+				{
+				  "version": 0,
+				  "groupedColumns": [
+				    {
+				      "Column": {
+				        "Expression": {
+				          "SourceRef": {
+				            "Entity": "H&M SE0591 ShipmentsDims"
+				          }
+				        },
+				        "Property": "Unloading Country"
+				      }
+				    }
+				  ]
+				}
+
+		annotation GroupingDesignState = {"Version":0,"Sources":[{"Name":"h","Entity":"H&M SE0591 ShipmentsDims"}],"GroupedColumns":[{"Column":{"Expression":{"SourceRef":{"Source":"h"}},"Property":"Unloading Country"}}],"GroupItems":[{"DisplayName":"(Blank)","BlankDefaultPlaceholder":true},{"DisplayName":"Alshaya","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"h"}},"Property":"Unloading Country"}}],"Values":[[{"Literal":{"Value":"'AE'"}}],[{"Literal":{"Value":"'BH'"}}],[{"Literal":{"Value":"'EG'"}}],[{"Literal":{"Value":"'JO'"}}],[{"Literal":{"Value":"'KW'"}}],[{"Literal":{"Value":"'LB'"}}],[{"Literal":{"Value":"'OM'"}}],[{"Literal":{"Value":"'QA'"}}],[{"Literal":{"Value":"'SA'"}}],[{"Literal":{"Value":"'TN'"}}]]}}},{"DisplayName":"Gill Capital","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"h"}},"Property":"Unloading Country"}}],"Values":[[{"Literal":{"Value":"'ID'"}}],[{"Literal":{"Value":"'KH'"}}],[{"Literal":{"Value":"'TH'"}}]]}}},{"DisplayName":"Hola Moda","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"h"}},"Property":"Unloading Country"}}],"Values":[[{"Literal":{"Value":"'CR'"}}],[{"Literal":{"Value":"'DO'"}}],[{"Literal":{"Value":"'GT'"}}],[{"Literal":{"Value":"'PA'"}}],[{"Literal":{"Value":"'SV'"}}],[{"Literal":{"Value":"'VE'"}}]]}}},{"DisplayName":"Hudson","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"h"}},"Property":"Unloading Country"}}],"Values":[[{"Literal":{"Value":"'MA'"}}],[{"Literal":{"Value":"'MT'"}}]]}}},{"DisplayName":"Match Retail","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"h"}},"Property":"Unloading Country"}}],"Values":[[{"Literal":{"Value":"'IL'"}}]]}}},{"DisplayName":"Retail Fashion Group","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"h"}},"Property":"Unloading Country"}}],"Values":[[{"Literal":{"Value":"'MX'"}}]]}}},{"DisplayName":"Sinteks","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"h"}},"Property":"Unloading Country"}}],"Values":[[{"Literal":{"Value":"'AZ'"}}]]}}},{"DisplayName":"H&M incl brands (Other)"}]}
+
+		annotation SummarizationSetBy = Automatic
+
+	column Add_New
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: a27fd5a1-3049-433d-8f36-3bcf3eca1686
+		summarizeBy: none
+		sourceColumn: Add_New
+
+		variation Variation
+			isDefault
+			relationship: 9488fa02-ce13-4877-9a87-666b43220c28
+			defaultHierarchy: LocalDateTable_2dce266a-e0d0-4870-bf0e-cc0f318481d1.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column cancelled
+		dataType: string
+		lineageTag: 79a82dba-f6f4-4028-a192-a69a258e6cb9
+		summarizeBy: none
+		sourceColumn: cancelled
+
+		annotation SummarizationSetBy = Automatic
+
+	column Rec_retriev_date
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: e63b85c9-95b8-4e18-ba96-62ec4219a70b
+		summarizeBy: none
+		sourceColumn: Rec_retriev_date
+
+		variation Variation
+			isDefault
+			relationship: c3a2cc43-3f26-4be5-ad18-ef0e00dd8efc
+			defaultHierarchy: LocalDateTable_c95a933c-c9fa-4ce3-a5f1-e01c25ecaa3a.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Equipment type'
+		dataType: string
+		lineageTag: ec452bf9-a6e5-4e84-a425-0f8c7373f09c
+		summarizeBy: none
+		sourceColumn: Equipment type
+
+		annotation SummarizationSetBy = Automatic
+
+	column Container
+		dataType: string
+		lineageTag: 75fe05ab-7f19-458d-946b-e83b60c8bd32
+		summarizeBy: none
+		sourceColumn: Container
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'New Equipment type'
+		dataType: string
+		lineageTag: 42a3e506-4b65-4512-8f12-c0827213e7f9
+		summarizeBy: none
+		sourceColumn: New Equipment type
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'New Traffic type' = IF('H&M SE0591 ShipmentsDims'[Traffic type] IN {"D","K","L","M","P"},'H&M SE0591 ShipmentsDims'[New Equipment type],'H&M SE0591 ShipmentsDims'[Traffic type])
+		lineageTag: 6d49df31-20a7-4526-8fbe-0e3ded0e8636
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Old Chargeable Weight KGs'
+		dataType: double
+		lineageTag: 6d897e81-e1af-494e-8fe9-71a1a4f0aa0e
+		summarizeBy: sum
+		sourceColumn: Old Chargeable Weight KGs
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Std_CBM
+		dataType: int64
+		formatString: 0
+		lineageTag: a26b0b76-610b-440c-8fbd-2d8cd0f0a0e8
+		summarizeBy: sum
+		sourceColumn: Std_CBM
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'New CBM'
+		dataType: double
+		lineageTag: 05b8060b-8914-4a26-a024-0d9958fcd3c7
+		summarizeBy: sum
+		sourceColumn: New CBM
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Std_LDM
+		dataType: int64
+		formatString: 0
+		lineageTag: ccdabbde-4138-49b6-9c8e-746abb9018a1
+		summarizeBy: sum
+		sourceColumn: Std_LDM
+
+		annotation SummarizationSetBy = Automatic
+
+	column New_LDM
+		dataType: double
+		lineageTag: 58e11c2f-d7d0-46ee-819a-6c4423618510
+		summarizeBy: sum
+		sourceColumn: New_LDM
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ActIncome
+		dataType: string
+		lineageTag: 6267f366-c596-4a77-9117-789174f4249a
+		summarizeBy: none
+		sourceColumn: ActIncome
+
+		annotation SummarizationSetBy = Automatic
+
+	column ActCosts
+		dataType: string
+		lineageTag: e1f3f2e1-471b-41ca-b1ee-0aa31db679c1
+		summarizeBy: none
+		sourceColumn: ActCosts
+
+		annotation SummarizationSetBy = Automatic
+
+	column ActResult
+		dataType: string
+		lineageTag: 5931cb71-eb1f-4c3b-8a49-be27842854cd
+		summarizeBy: none
+		sourceColumn: ActResult
+
+		annotation SummarizationSetBy = Automatic
+
+	column EstIncome
+		dataType: string
+		lineageTag: 92213f42-1a22-4e7f-add7-9083282d2354
+		summarizeBy: none
+		sourceColumn: EstIncome
+
+		annotation SummarizationSetBy = Automatic
+
+	column EstCosts
+		dataType: string
+		lineageTag: 4553dfad-d74d-479a-911e-a0b0c5d5fa36
+		summarizeBy: none
+		sourceColumn: EstCosts
+
+		annotation SummarizationSetBy = Automatic
+
+	column EstResult
+		dataType: string
+		lineageTag: 9d0fa455-846c-4fa0-992f-8dff50d36e62
+		summarizeBy: none
+		sourceColumn: EstResult
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'H&M SE0591 ShipmentsDims-49be8e02-d643-4698-b9e9-ced9a88c4f39' = m
+		mode: import
+		source =
+				let
+				    Source = PowerBI.Dataflows(null),
+				    #"8462b427-3fb4-4d62-bcf8-94449282024f" = Source{[workspaceId="9e645096-1673-4897-892a-ebeca0b45cd7"]}[Data],
+				    #"e85dd28d-65d4-4175-85e6-9a334a44abe6" = #"8462b427-3fb4-4d62-bcf8-94449282024f"{[dataflowId="889dc367-2045-4b51-990e-419d316519bd"]}[Data],
+				    #"New H&M SE0591 Shipments1" = #"e85dd28d-65d4-4175-85e6-9a334a44abe6"{[entity="CW_Optilo H&M SE0591 Shipments"]}[Data],
+				    #"Removed Columns" = Table.RemoveColumns(#"New H&M SE0591 Shipments1",{"Km", "Collies", "Loading Meters", "Cubic Meters CBM", "Gross Weight KGs", "Freight Chargeable Weight KGs", "ETD", "ETA", "ATD", "ATA", "Financial Date", "Revenue"}),
+				    #"Added Custom" = Table.AddColumn(#"Removed Columns", "CNTCNTLane", each [Loading Country]&[Unloading Country]),
+				    #"Inserted Merged Column" = Table.AddColumn(#"Added Custom", "New Equipment type", each Text.Combine({Text.From([Container], "en-US"), [Equipment type]}, " "), type text)
+				in
+				    #"Inserted Merged Column"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

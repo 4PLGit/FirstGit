@@ -1,0 +1,126 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "c6e99b4f7bd7e5e413a6",
+  "position": {
+    "x": 10.078740157480317,
+    "y": 113.61488904795992,
+    "z": 0,
+    "height": 593.7294201861132,
+    "width": 860.3579098067288,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Jobs_Events_Dates"
+                    }
+                  },
+                  "Property": "Job Number"
+                }
+              },
+              "queryRef": "Jobs_Events_Dates.Job Number",
+              "nativeQueryRef": "Job Number"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Unloading_Changes"
+                    }
+                  },
+                  "Property": "Initial_Unloading_Change_From"
+                }
+              },
+              "queryRef": "Unloading_Changes.Initial_Unloading_Change_From",
+              "nativeQueryRef": "Initial_Unloading_Change_From1"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Jobs_Events_Dates"
+                    }
+                  },
+                  "Property": "MJB600_Scheduled"
+                }
+              },
+              "queryRef": "Jobs_Events_Dates.MJB600_Scheduled",
+              "nativeQueryRef": "MJB600_Scheduled"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Jobs_Events_Dates"
+                    }
+                  },
+                  "Property": "Delivery_Plan_Violation"
+                }
+              },
+              "queryRef": "Jobs_Events_Dates.Delivery_Violation",
+              "nativeQueryRef": "Delivery_Violation"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Unloading_Changes"
+                    }
+                  },
+                  "Property": "Count_CHGUND"
+                }
+              },
+              "queryRef": "Unloading_Changes.Count_CHGUND",
+              "nativeQueryRef": "Count_CHGUND1"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Jobs_Events_Dates"
+                  }
+                },
+                "Property": "Job Number"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ]
+      }
+    },
+    "objects": {
+      "total": [
+        {
+          "properties": {
+            "totals": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

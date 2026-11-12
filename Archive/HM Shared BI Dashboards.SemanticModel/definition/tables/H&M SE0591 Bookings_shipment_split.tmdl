@@ -1,0 +1,52 @@
+table 'H&M SE0591 Bookings_shipment_split'
+	lineageTag: b44be45f-d46a-4dd9-9d45-34c5d4dd772f
+
+	column 'Booking Number'
+		dataType: string
+		lineageTag: 12d5c4ab-7398-4c02-8c48-076afd9d9eb2
+		summarizeBy: none
+		sourceColumn: Booking Number
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Shipment Number'
+		dataType: string
+		lineageTag: 9de1f367-a675-49dd-b9f0-719fe72eb53e
+		summarizeBy: none
+		sourceColumn: Shipment Number
+
+		annotation SummarizationSetBy = Automatic
+
+	column REC_RETRIEV_DATE
+		dataType: string
+		lineageTag: c9e400e1-883b-49b4-a110-380c141fa663
+		summarizeBy: none
+		sourceColumn: REC_RETRIEV_DATE
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Orig.Bookning Status'
+		dataType: string
+		lineageTag: 570be4e0-7812-433d-a750-a77270f48aab
+		summarizeBy: none
+		sourceColumn: Orig.Bookning Status
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'H&M SE0591 Bookings_shipment_split-9aa9e58a-feac-42a3-a269-032b1c901996' = m
+		mode: import
+		source =
+				let
+				    Source = PowerBI.Dataflows(null),
+				    #"8462b427-3fb4-4d62-bcf8-94449282024f" = Source{[workspaceId="9e645096-1673-4897-892a-ebeca0b45cd7"]}[Data],
+				    #"e85dd28d-65d4-4175-85e6-9a334a44abe6" = #"8462b427-3fb4-4d62-bcf8-94449282024f"{[dataflowId="889dc367-2045-4b51-990e-419d316519bd"]}[Data],
+				    #"New H&M SE0591 Bookings1" = #"e85dd28d-65d4-4175-85e6-9a334a44abe6"{[entity="CW_Optilo H&M SE0591 Bookings"]}[Data],
+				    #"Removed Columns" = Table.RemoveColumns(#"New H&M SE0591 Bookings1",{"Client", "Supplier Matchcode", "Loading Country", "Unloading Country", "Bookning Status", "Booking Type", "Booking Priority", "Booking Mode of Transport", "ADDNEWDATE", "First Booked to Imperial", "Booking Confirmation Date", "Booking last updated on", "Pickup Start", "Pickup End", "Purchase Order Number", "Latest On-Hold Reasoncode", "Record_Added_On", "Name"}),
+				    #"Split Column by Delimiter" = Table.ExpandListColumn(Table.TransformColumns(#"Removed Columns", {{"Shipment Number", Splitter.SplitTextByDelimiter(";", QuoteStyle.Csv), let itemType = (type nullable text) meta [Serialized.Text = true] in type {itemType}}}), "Shipment Number")
+				in
+				    #"Split Column by Delimiter"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

@@ -1,0 +1,352 @@
+table 'H&M SE0591 Orders'
+	lineageTag: 37657b76-6e4c-4ca2-80e2-cd1ee294d353
+
+	column 'Source.Name'
+		dataType: string
+		lineageTag: a54f59d3-b46d-42db-962c-647710a32e01
+		summarizeBy: none
+		sourceColumn: Source.Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Purchase Order Number'
+		dataType: string
+		lineageTag: 2e3bba89-73bb-4783-98f1-a6132a9d5cf0
+		summarizeBy: none
+		sourceColumn: Purchase Order Number
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Order Status'
+		dataType: string
+		lineageTag: 75e4f380-9536-434e-bd49-6f57c158c8fa
+		summarizeBy: none
+		sourceColumn: Order Status
+
+		annotation SummarizationSetBy = Automatic
+
+	column Client
+		dataType: string
+		lineageTag: 0facd307-d311-4cda-a963-5fc4b55dfe53
+		summarizeBy: none
+		sourceColumn: Client
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Supplier Matchcode'
+		dataType: string
+		lineageTag: 6c105dd6-614b-4aed-8792-d79167bdb967
+		summarizeBy: none
+		sourceColumn: Supplier Matchcode
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Supplier Name'
+		dataType: string
+		lineageTag: fef4792c-cc0f-47f9-a45e-920fbfa8b2c2
+		summarizeBy: none
+		sourceColumn: Supplier Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'From Country'
+		dataType: string
+		lineageTag: c4b1fd50-93a4-4673-862d-41e9987b5612
+		summarizeBy: none
+		sourceColumn: From Country
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'To Country'
+		dataType: string
+		lineageTag: 71757869-42eb-49a1-94e4-192e745e3d68
+		summarizeBy: none
+		sourceColumn: To Country
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Delivery To ID'
+		dataType: string
+		lineageTag: c62ef142-5b06-4d7e-84e7-7c2c33a695fc
+		summarizeBy: none
+		sourceColumn: Delivery To ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Final Recipient ID'
+		dataType: string
+		lineageTag: 0ef3a5bb-fec2-48f3-b023-2517f67c13e9
+		summarizeBy: none
+		sourceColumn: Final Recipient ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Purchased By Country'
+		dataType: string
+		lineageTag: edd6b043-644d-454d-a8c8-65dd06fd5765
+		summarizeBy: none
+		sourceColumn: Purchased By Country
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Project Number'
+		dataType: string
+		lineageTag: 590126da-467b-4d9d-b613-7cea04d9ddc0
+		summarizeBy: none
+		sourceColumn: Project Number
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Order Mode of Transport'
+		dataType: string
+		lineageTag: f0c69d5b-08b3-4e6a-a503-2f56839aa99b
+		summarizeBy: none
+		sourceColumn: Order Mode of Transport
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'PO Transport Date'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 5c8846ec-3147-4dbe-ac36-5f1b97b69399
+		summarizeBy: none
+		sourceColumn: PO Transport Date
+
+		variation Variation
+			isDefault
+			relationship: e5e503db-2cef-4837-a910-4fcc3f912e6e
+			defaultHierarchy: LocalDateTable_0348b69c-bada-4bf8-9578-c167cf196a20.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'PO Delivery Date'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: c9102d43-79a4-4007-bc61-cabbb0f42570
+		summarizeBy: none
+		sourceColumn: PO Delivery Date
+
+		variation Variation
+			isDefault
+			relationship: aeb80686-37da-4a45-989d-7a422b9c2281
+			defaultHierarchy: LocalDateTable_5e02bde8-dc9a-4bd5-a95d-ef7edeae972f.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'PO Delivery Type'
+		dataType: string
+		lineageTag: 4f738825-a601-438d-ac1e-b4950e2ff625
+		summarizeBy: none
+		sourceColumn: PO Delivery Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Delivery Order Type'
+		dataType: string
+		lineageTag: 715752d7-6216-4a80-b49c-242c61a70651
+		summarizeBy: none
+		sourceColumn: Delivery Order Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column Brand
+		dataType: string
+		lineageTag: 03a16de4-9194-46bd-b9d3-c7160bd0b3b4
+		summarizeBy: none
+		sourceColumn: Brand
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Client Campaign ref'
+		dataType: string
+		lineageTag: fd75a03f-9e85-46a0-9e5a-a4f3451eb6aa
+		summarizeBy: none
+		sourceColumn: Client Campaign ref
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Imperial Campaign ref'
+		dataType: string
+		lineageTag: 869f055e-22bf-4b98-a50c-8da2ce621a5d
+		summarizeBy: none
+		sourceColumn: Imperial Campaign ref
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Order last updated on'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 85914ddf-ce8f-40f1-b5b4-c1dadd2336d5
+		summarizeBy: none
+		sourceColumn: Order last updated on
+
+		variation Variation
+			isDefault
+			relationship: f365ab68-f4f2-4653-950c-832ab1499674
+			defaultHierarchy: LocalDateTable_25ad685d-661c-469d-ba22-153d80839739.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Business Areas'
+		dataType: string
+		lineageTag: cdf60bd0-2734-420b-90be-e7fdf8dcfb88
+		summarizeBy: none
+		sourceColumn: Business Areas
+
+		annotation SummarizationSetBy = Automatic
+
+	column DELIVERYFROMSITEID
+		dataType: string
+		lineageTag: 6fc8ff74-9562-451e-9d85-8b65680b74d2
+		summarizeBy: none
+		sourceColumn: DELIVERYFROMSITEID
+
+		annotation SummarizationSetBy = Automatic
+
+	column TOTALITEMQUANTITY
+		dataType: string
+		lineageTag: 255ec07e-9f18-4f47-92a7-d4a22d2887db
+		summarizeBy: none
+		sourceColumn: TOTALITEMQUANTITY
+
+		annotation SummarizationSetBy = Automatic
+
+	column TOTALWEIGHTKG
+		dataType: string
+		lineageTag: adbba52d-655b-46e6-bb0f-86d583fbfa32
+		summarizeBy: none
+		sourceColumn: TOTALWEIGHTKG
+
+		annotation SummarizationSetBy = Automatic
+
+	column TOTALVOLUMEM3
+		dataType: string
+		lineageTag: 995e109f-c6b4-4741-9974-6328411a76ea
+		summarizeBy: none
+		sourceColumn: TOTALVOLUMEM3
+
+		annotation SummarizationSetBy = Automatic
+
+	column TRADEPRODUCTDESCRIPTION
+		dataType: string
+		lineageTag: 06ad8b43-89af-4ee6-83a5-294d0ebdc8c5
+		summarizeBy: none
+		sourceColumn: TRADEPRODUCTDESCRIPTION
+
+		annotation SummarizationSetBy = Automatic
+
+	column Record_Added_On
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 105fc99f-2866-4ee5-9ea3-9ed92451d8c6
+		summarizeBy: none
+		sourceColumn: Record_Added_On
+
+		variation Variation
+			isDefault
+			relationship: 31b3dbcc-ca90-4546-9a99-267f2523a371
+			defaultHierarchy: LocalDateTable_abf0c9af-e9bd-499a-b487-5c6589a2a4d6.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Booking SOP Compliance' = ```
+			
+			//H&Ms SOP with suppliers stipulates how many days in advance the booking should be placed to Imperial in relation to the orders transport date. The number of days depend on geography and mode of transport.
+			
+			VAR BookedDaysFromTOD = DATEDIFF([PO Transport Date],FIRSTNONBLANK('H&M SE0591 Bookings'[First Booked to Imperial],1),DAY) //Days between TOD and FirstBookedToImperial, if booked multiple times should use the first instance.
+			
+			VAR EU = {"AT","BE","BG","HR","CY","CZ","DK","EE","FI","FR","DE","GR","HU","IE","IT","LV","LT","LU","MT","NL","PL","PT","RO","SK","SI","ES","SE"} //List of EU member countries
+			
+			VAR IntraEUTransport = AND(FIRSTNONBLANK('H&M SE0591 ShipmentsDims'[Loading Country],1) IN EU, //If both loading and unloading is in EU --> true else false
+			                           FIRSTNONBLANK('H&M SE0591 ShipmentsDims'[Unloading Country],1) IN EU
+			                          )
+			                          
+			VAR modeOfTransport = FIRSTNONBLANK('H&M SE0591 ShipmentsDims'[Service Type],1) //Shipment service type
+			
+			VAR BookedAccordingtoSOP = SWITCH(
+			                                    modeOfTransport,
+			                                    "Road Transport",
+			                                                IF(IntraEUTransport,
+			                                                    IF(BookedDaysFromTOD <-3,TRUE,FALSE), //Road - Intra EU transports
+			                                                    IF(BookedDaysFromTOD<-5,TRUE,FALSE)), //Road Exports or Imports EU
+			       
+			                                    "Sea Freight",IF(BookedDaysFromTOD<-4,TRUE,FALSE),
+			                                    "Air Freight",IF(BookedDaysFromTOD<-5,TRUE,FALSE),
+			                                    "Courier",IF(BookedDaysFromTOD<-9,TRUE,FALSE),
+			                                    Blank()                                             // return blank if not any of the above modes of transport
+			                                    )
+			RETURN
+			IF(BookedAccordingtoSOP,"Compliant", "Not Compliant")
+			```
+		lineageTag: 902dca86-022b-4055-986c-947475165b5c
+		summarizeBy: none
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+	column INVOICEVAT
+		dataType: string
+		lineageTag: c49f8c28-7e63-4e3b-911b-b33eb586bba9
+		summarizeBy: none
+		sourceColumn: INVOICEVAT
+
+		annotation SummarizationSetBy = Automatic
+
+	column REC_RETRIEV_DATE
+		dataType: string
+		lineageTag: ca82a88e-d5dd-43d9-bb75-c27b10bae7ad
+		summarizeBy: none
+		sourceColumn: REC_RETRIEV_DATE
+
+		annotation SummarizationSetBy = Automatic
+
+	column INV_REC_ADD
+		dataType: string
+		lineageTag: fc9d43d4-0a14-4583-9f3f-1b505f4856e2
+		summarizeBy: none
+		sourceColumn: INV_REC_ADD
+
+		annotation SummarizationSetBy = Automatic
+
+	column INVOICE_RECIPIENT_NAME
+		dataType: string
+		lineageTag: de558d43-cb66-4ca1-8364-c998ba566cad
+		summarizeBy: none
+		sourceColumn: INVOICE_RECIPIENT_NAME
+
+		annotation SummarizationSetBy = Automatic
+
+	column STATUS
+		dataType: string
+		lineageTag: 4bdcac65-4cdf-455c-b6b5-e11dced06639
+		summarizeBy: none
+		sourceColumn: STATUS
+
+		annotation SummarizationSetBy = Automatic
+
+	column TRANSPORTMODE
+		dataType: string
+		lineageTag: 6b49041b-3844-4667-a3f4-5238824e9ddd
+		summarizeBy: none
+		sourceColumn: TRANSPORTMODE
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'H&M SE0591 Orders-740a7b73-ea66-4f41-bff3-197aaed3e65b' = m
+		mode: import
+		source =
+				let
+				    Source = PowerBI.Dataflows(null),
+				    #"8462b427-3fb4-4d62-bcf8-94449282024f" = Source{[workspaceId="9e645096-1673-4897-892a-ebeca0b45cd7"]}[Data],
+				    #"e85dd28d-65d4-4175-85e6-9a334a44abe6" = #"8462b427-3fb4-4d62-bcf8-94449282024f"{[dataflowId="889dc367-2045-4b51-990e-419d316519bd"]}[Data],
+				    #"New H&M SE0591 Orders1" = #"e85dd28d-65d4-4175-85e6-9a334a44abe6"{[entity="CW_Optilo H&M SE0591 Orders"]}[Data]
+				in
+				    #"New H&M SE0591 Orders1"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

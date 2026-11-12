@@ -1,0 +1,26 @@
+table Subcategory_Selector
+	lineageTag: deffd5b1-4f3a-4a28-a01f-51ae1fe30171
+
+	column Subcategory
+		lineageTag: 710b6fa3-ec7b-44ba-b233-df87a9238278
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Subcategory]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Subcategory_Selector = calculated
+		mode: import
+		source =
+				
+				DATATABLE(
+				    "Subcategory", STRING,
+				    {
+				        {"Planned"},
+				        {"Actual"},
+				        {"Reported"}
+				    }
+				)
+
+	annotation PBI_Id = d03636d435394c0cba713b6b7167d1b4
+

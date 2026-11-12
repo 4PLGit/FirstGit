@@ -1,0 +1,1752 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/bookmark/2.1.0/schema.json",
+  "displayName": "Planned Pickup_Explanation",
+  "name": "4b822dff11f0b9a91796",
+  "options": {
+    "targetVisualNames": [
+      "51637179d5c94949cda6"
+    ]
+  },
+  "explorationState": {
+    "version": "1.3",
+    "activeSection": "fe2cb8f8447989c0744d",
+    "sections": {
+      "fe2cb8f8447989c0744d": {
+        "visualContainers": {
+          "59a0d8d57b9c4b402ddb": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "0d0391659219e839776a",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_Measure"
+                        }
+                      },
+                      "Property": "Confirmed_Total_Jobs"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "4bf279e1eb416e974bdf",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_Measure"
+                        }
+                      },
+                      "Property": "Confirmation_Violation_Total"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "e03de0331e9c63f25988",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_Measure"
+                        }
+                      },
+                      "Property": "Confirmation_Violation_%"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "f180784775721809b23c",
+                  "type": "Advanced",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Jobs_Events_Dates"
+                        }
+                      },
+                      "Property": "MJB350_Scheduled"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "0f169bafab5bf4e74946",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Jobs_Events_Dates"
+                        }
+                      },
+                      "Property": "MJB350_Scheduled"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "lineClusteredColumnComboChart",
+              "objects": {},
+              "activeProjections": {
+                "Category": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Jobs_Events_Dates"
+                        }
+                      },
+                      "Property": "MJB350_Scheduled"
+                    }
+                  }
+                ]
+              },
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "fbc4397f66a9dd154906": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "a2fd320799b37132006b": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "c1624bc740dd005d06b1": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "9f12476e0b1e9c4a2597": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "ee1647cf0c83076b73d0": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "7b4868516b0002cecd8b": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "57509fb0c5d0e643dab4": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "38db2ed9a390d4b8e43b": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "51c45bf4df13a9b833c8",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Dispo"
+                        }
+                      },
+                      "Property": "Start_CNT"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "merge": {
+                  "data": [
+                    {
+                      "properties": {
+                        "mode": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "'Dropdown'"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "activeProjections": {
+                "Values": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Dispo"
+                        }
+                      },
+                      "Property": "Start_CNT"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "79f8de0dbbd345e05733": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "1807cc99db4103b56a89",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Dispo"
+                        }
+                      },
+                      "Property": "Service Type"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "merge": {
+                  "data": [
+                    {
+                      "properties": {
+                        "mode": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "'Dropdown'"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "activeProjections": {
+                "Values": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Dispo"
+                        }
+                      },
+                      "Property": "Service Type"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "2371a4ce00a3a5535d81": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "bebb0e6c90bb9aee01c9",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Jobs_Events_Dates"
+                        }
+                      },
+                      "Property": "Carrier Name"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "merge": {
+                  "data": [
+                    {
+                      "properties": {
+                        "mode": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "'Dropdown'"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "activeProjections": {
+                "Values": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Jobs_Events_Dates"
+                        }
+                      },
+                      "Property": "Carrier Name"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "0d0636d20ab00ac1dd13": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "bd0a57377aad0e55911f",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Dispo"
+                        }
+                      },
+                      "Property": "End_CNT"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "merge": {
+                  "data": [
+                    {
+                      "properties": {
+                        "mode": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "'Dropdown'"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "activeProjections": {
+                "Values": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Dispo"
+                        }
+                      },
+                      "Property": "End_CNT"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "1839352e7db9a4c73943": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "f876525c321bb4569528",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_Measure"
+                        }
+                      },
+                      "Property": "Total_Jobs"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "advanceCardE03760C5AB684758B56AA29F9E6C257B",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_Measure"
+                        }
+                      },
+                      "Property": "Total_Jobs"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "3432c5ceaa71d837c783": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "146d10f8258d99c4120d",
+                  "type": "Advanced",
+                  "expression": {
+                    "Aggregation": {
+                      "Expression": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "Jobs_Events_Dates"
+                            }
+                          },
+                          "Property": "Loading_Time_Variance_day"
+                        }
+                      },
+                      "Function": 1
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "advanceCardE03760C5AB684758B56AA29F9E6C257B",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Aggregation": {
+                      "Expression": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "Jobs_Events_Dates"
+                            }
+                          },
+                          "Property": "Loading_Variance_Same_Day_zero (min)"
+                        }
+                      },
+                      "Function": 1
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "232b080022d4510088a3": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "663de190a59076452690",
+                  "type": "Advanced",
+                  "expression": {
+                    "Aggregation": {
+                      "Expression": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "Jobs_Events_Dates"
+                            }
+                          },
+                          "Property": "Unloading_Time_Variance_day"
+                        }
+                      },
+                      "Function": 1
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "advanceCardE03760C5AB684758B56AA29F9E6C257B",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Aggregation": {
+                      "Expression": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "Jobs_Events_Dates"
+                            }
+                          },
+                          "Property": "Unloading_Variance_Same_Day_zero (min)"
+                        }
+                      },
+                      "Function": 1
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "ec7ebad02d3c12034d4a": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "bce2affb08aa05ff37be",
+                  "type": "Advanced",
+                  "expression": {
+                    "Aggregation": {
+                      "Expression": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "Jobs_Events_Dates"
+                            }
+                          },
+                          "Property": "LeadTime_Calendar_Days"
+                        }
+                      },
+                      "Function": 1
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "advanceCardE03760C5AB684758B56AA29F9E6C257B",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Aggregation": {
+                      "Expression": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "Jobs_Events_Dates"
+                            }
+                          },
+                          "Property": "LeadTime_Calendar_Min"
+                        }
+                      },
+                      "Function": 1
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "510841097091aae83d38": {
+            "singleVisual": {
+              "visualType": "image",
+              "objects": {}
+            }
+          },
+          "2a37c53ca09d5b84717e": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "f3e3cc2683c7298be531",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_Measure"
+                        }
+                      },
+                      "Property": "Overall_Performance_%"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "gauge",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_Measure"
+                        }
+                      },
+                      "Property": "Overall_Performance_%"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "a4789afd8e90300e84ab": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "objects": {}
+            }
+          },
+          "51637179d5c94949cda6": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "918bc692a1b0d51a105a",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_Measure"
+                        }
+                      },
+                      "Property": "Loading_Plan_Violation_%"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "0b69423d01f12b809272",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_Measure"
+                        }
+                      },
+                      "Property": "Loaded_Plan_Total_Jobs"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "3fe4cb2980be3655653c",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_Measure"
+                        }
+                      },
+                      "Property": "Loading_Plan_Violation_Total"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "54df9028ac803147b577",
+                  "type": "Advanced",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Jobs_Events_Dates"
+                        }
+                      },
+                      "Property": "MJB350_Scheduled"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "0e490d4202a25f6f5484",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Jobs_Events_Dates"
+                        }
+                      },
+                      "Property": "MJB350_Scheduled"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "lineClusteredColumnComboChart",
+              "objects": {},
+              "activeProjections": {
+                "Category": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Jobs_Events_Dates"
+                        }
+                      },
+                      "Property": "MJB350_Scheduled"
+                    }
+                  },
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Jobs_Events_Dates"
+                        }
+                      },
+                      "Property": "MJB350_Scheduled"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "cc2a0c3308e07505ba7a": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "6a5bab380c35020248ab",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_Measure"
+                        }
+                      },
+                      "Property": "Unloading_Plan_Violation_%"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "88f58fccdf599d773e18",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_Measure"
+                        }
+                      },
+                      "Property": "Unloaded_Plan_Total_Jobs"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "3eea280529fd5cfd338e",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_Measure"
+                        }
+                      },
+                      "Property": "Unloading_Plan_Violation_Total"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "dee2589cae75d0150891",
+                  "type": "Advanced",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Jobs_Events_Dates"
+                        }
+                      },
+                      "Property": "MJB350_Scheduled"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "b770811b6e3a696a5109",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Jobs_Events_Dates"
+                        }
+                      },
+                      "Property": "MJB350_Scheduled"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "lineClusteredColumnComboChart",
+              "objects": {},
+              "activeProjections": {
+                "Category": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Jobs_Events_Dates"
+                        }
+                      },
+                      "Property": "MJB350_Scheduled"
+                    }
+                  }
+                ]
+              },
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "8181d741a818971e07b1": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "a69e4a90bf26c8b32f15",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_Measure"
+                        }
+                      },
+                      "Property": "Unloaded_Actual_Total_Jobs"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "2c827f049c63877ffe28",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_Measure"
+                        }
+                      },
+                      "Property": "Unloading_Actual_Violation_Total"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "db07d974987847097c3a",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_Measure"
+                        }
+                      },
+                      "Property": "Unloading_Actual_Violation_%"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "cardVisual",
+              "objects": {}
+            }
+          },
+          "dfcd7ab6b285b546ede1": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "d391b3b1a2ff0798fcc3",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_Measure"
+                        }
+                      },
+                      "Property": "Unloading_Reporting_Violation_%"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "1c21b974efb05b772589",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_Measure"
+                        }
+                      },
+                      "Property": "Unloading_Reporting_Violation_Total"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "6c77a00fd5b78a548708",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_Measure"
+                        }
+                      },
+                      "Property": "Unloaded_Reporting_Total_Jobs"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "cardVisual",
+              "objects": {}
+            }
+          },
+          "ee0ae71a94e947e2e41d": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "3e39db5707ea3aa2a6bd",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_Measure"
+                        }
+                      },
+                      "Property": "Unloaded_Plan_Total_Jobs"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "f5031b2631cf0728ed2c",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_Measure"
+                        }
+                      },
+                      "Property": "Unloading_Plan_Violation_%"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "b2c603edc99dd9e7a044",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_Measure"
+                        }
+                      },
+                      "Property": "Unloading_Plan_Violation_Total"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "cardVisual",
+              "objects": {}
+            }
+          },
+          "305b005a94179b20cd2d": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "2692a1bc109b96d31f12",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_Measure"
+                        }
+                      },
+                      "Property": "Loading_Reporting_Violation_Total"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "9b51f278c1f023189e08",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_Measure"
+                        }
+                      },
+                      "Property": "Loading_Reporting_Violation_%"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "20c43a95f36c9881c6b9",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_Measure"
+                        }
+                      },
+                      "Property": "Loaded_Reporting_Total_Jobs"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "cardVisual",
+              "objects": {}
+            }
+          },
+          "11a261cbc9050698166e": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "90d15990aa8cdd40f6d0",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_Measure"
+                        }
+                      },
+                      "Property": "Loading_Actual_Violation_Total"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "edb14d1f451effb8fba7",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_Measure"
+                        }
+                      },
+                      "Property": "Loading_Actual_Violation_%"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "4f1cddc0b5e7553715da",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_Measure"
+                        }
+                      },
+                      "Property": "Loaded_Actual_Total_Jobs"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "cardVisual",
+              "objects": {}
+            }
+          },
+          "92360b0a95bd3a68e2c3": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "33ba0a155f6a27315c49",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_Measure"
+                        }
+                      },
+                      "Property": "Loading_Plan_Violation_Total"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "381981ec9ce0c6edea36",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_Measure"
+                        }
+                      },
+                      "Property": "Loading_Plan_Violation_%"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "115507851905c1c576f3",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_Measure"
+                        }
+                      },
+                      "Property": "Loaded_Plan_Total_Jobs"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "cardVisual",
+              "objects": {}
+            }
+          },
+          "11d300f2bb820c0599ee": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "50d98ff06965a49a0627",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_Measure"
+                        }
+                      },
+                      "Property": "Confirmation_Violation_%"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "b2b8b4039a9caafc5393",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_Measure"
+                        }
+                      },
+                      "Property": "Confirmation_Violation_Total"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "81d02ac34d5d6bbd6228",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_Measure"
+                        }
+                      },
+                      "Property": "Confirmed_Total_Jobs"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "cardVisual",
+              "objects": {}
+            }
+          },
+          "0c0a5241e897d2cc3b08": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "objects": {}
+            }
+          },
+          "fed45f3471c8be2b5a00": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "9620753483206d3d83c3",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Jobs_Events_Dates"
+                        }
+                      },
+                      "Property": "MJB350_Scheduled"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "merge": {
+                  "data": [
+                    {
+                      "properties": {
+                        "startDate": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "datetime'2023-12-01T00:00:00'"
+                            }
+                          }
+                        },
+                        "endDate": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "datetime'2026-06-18T00:00:00'"
+                            }
+                          }
+                        },
+                        "mode": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "'Between'"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "orderBy": [
+                {
+                  "Direction": 1,
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Dispo"
+                        }
+                      },
+                      "Property": "FinanceDate"
+                    }
+                  }
+                }
+              ],
+              "activeProjections": {
+                "Values": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Jobs_Events_Dates"
+                        }
+                      },
+                      "Property": "MJB350_Scheduled"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "5209d0f976a50249c881": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "9017b74617509653b5bb",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Dispo"
+                        }
+                      },
+                      "Property": "FinanceDate"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "46c40295fe1e19664b27",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_Measure"
+                        }
+                      },
+                      "Property": "Loading_Actual_Violation_%"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "939b300f5df9b9618d3e",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_Measure"
+                        }
+                      },
+                      "Property": "Loading_Actual_Violation_Total"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "0cf6d484eb4f4a4238be",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_Measure"
+                        }
+                      },
+                      "Property": "Loaded_Actual_Total_Jobs"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "7c452cea47c65adbad64",
+                  "type": "Advanced",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Jobs_Events_Dates"
+                        }
+                      },
+                      "Property": "MJB350_Scheduled"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "573cbfedf7ac46ad9ab3",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Jobs_Events_Dates"
+                        }
+                      },
+                      "Property": "MJB350_Scheduled"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "lineClusteredColumnComboChart",
+              "objects": {},
+              "activeProjections": {
+                "Category": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Jobs_Events_Dates"
+                        }
+                      },
+                      "Property": "MJB350_Scheduled"
+                    }
+                  }
+                ]
+              },
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "4434ad3b115d8a1361aa": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "916309973a9f273c3851",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_Measure"
+                        }
+                      },
+                      "Property": "Loading_Reporting_Violation_%"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "bda7c2d94e0c895a74bd",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_Measure"
+                        }
+                      },
+                      "Property": "Loading_Reporting_Violation_Total"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "651996289cf0d1dd70de",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_Measure"
+                        }
+                      },
+                      "Property": "Loaded_Reporting_Total_Jobs"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "e85d157e022154825aa2",
+                  "type": "Advanced",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Jobs_Events_Dates"
+                        }
+                      },
+                      "Property": "MJB350_Scheduled"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "cf74bfedcff69ffce460",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Jobs_Events_Dates"
+                        }
+                      },
+                      "Property": "MJB350_Scheduled"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "lineClusteredColumnComboChart",
+              "objects": {},
+              "activeProjections": {
+                "Category": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Jobs_Events_Dates"
+                        }
+                      },
+                      "Property": "MJB350_Scheduled"
+                    }
+                  }
+                ]
+              },
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "69bb4e980032a704876e": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "7d94dc8a82b982d7250e",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_Measure"
+                        }
+                      },
+                      "Property": "Unloading_Actual_Violation_%"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "c31ddad51927ac635e2b",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_Measure"
+                        }
+                      },
+                      "Property": "Unloaded_Actual_Total_Jobs"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "c2af55fb6f63301a3aec",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_Measure"
+                        }
+                      },
+                      "Property": "Unloading_Actual_Violation_Total"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "b0e0c5ee95f8cb219101",
+                  "type": "Advanced",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Jobs_Events_Dates"
+                        }
+                      },
+                      "Property": "MJB350_Scheduled"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "b8d61d9e5b4dd0c31b08",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Jobs_Events_Dates"
+                        }
+                      },
+                      "Property": "MJB350_Scheduled"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "lineClusteredColumnComboChart",
+              "objects": {},
+              "activeProjections": {
+                "Category": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Jobs_Events_Dates"
+                        }
+                      },
+                      "Property": "MJB350_Scheduled"
+                    }
+                  }
+                ]
+              },
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "9a62a4bf956d8a05e322": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "344c26436953a9058d6e",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_Measure"
+                        }
+                      },
+                      "Property": "Unloading_Reporting_Violation_%"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "abe2fc389e38514761a3",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_Measure"
+                        }
+                      },
+                      "Property": "Unloading_Reporting_Violation_Total"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "b8d6847995ef91325f94",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_Measure"
+                        }
+                      },
+                      "Property": "Unloaded_Reporting_Total_Jobs"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "10bd3eeaf6f79ac11705",
+                  "type": "Advanced",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Jobs_Events_Dates"
+                        }
+                      },
+                      "Property": "MJB350_Scheduled"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "04fe4a305e0c67810c1a",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Jobs_Events_Dates"
+                        }
+                      },
+                      "Property": "MJB350_Scheduled"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "lineClusteredColumnComboChart",
+              "objects": {},
+              "activeProjections": {
+                "Category": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Jobs_Events_Dates"
+                        }
+                      },
+                      "Property": "MJB350_Scheduled"
+                    }
+                  }
+                ]
+              },
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          }
+        }
+      }
+    },
+    "objects": {
+      "merge": {
+        "outspacePane": [
+          {
+            "properties": {
+              "expanded": {
+                "expr": {
+                  "Literal": {
+                    "Value": "false"
+                  }
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

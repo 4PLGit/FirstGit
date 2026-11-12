@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "HM Shared BI Dashboards"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "16f6d24e-ad5f-87e6-4fa6-a43a30a6011d"
+  }
+}

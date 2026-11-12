@@ -1,0 +1,26 @@
+table Event_Code
+	lineageTag: 7c85eb10-113e-4fcc-8402-e721154a066e
+
+	column 'Event Code'
+		dataType: string
+		lineageTag: 551516ed-18be-46cb-9d28-456814b49068
+		summarizeBy: none
+		sourceColumn: Event Code
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Event_Code = m
+		mode: import
+		source =
+				let
+				    Source = PowerBI.Dataflows(null),
+				    #"9e645096-1673-4897-892a-ebeca0b45cd7" = Source{[workspaceId="9e645096-1673-4897-892a-ebeca0b45cd7"]}[Data],
+				    #"d16f5bb1-a1ef-434e-8bfb-d1fad2af7c89" = #"9e645096-1673-4897-892a-ebeca0b45cd7"{[dataflowId="d16f5bb1-a1ef-434e-8bfb-d1fad2af7c89"]}[Data],
+				    Event_Code1 = #"d16f5bb1-a1ef-434e-8bfb-d1fad2af7c89"{[entity="Event_Code"]}[Data]
+				in
+				    Event_Code1
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,113 @@
+table 'Supplier Summary'
+	lineageTag: 9e1cb4f1-7fd8-495b-a2ec-b692532e65f2
+
+	measure FillRate = ROUND(DIVIDE(sum('H&M SE0591 ShipmentsFacts'[Freight Chargeable Weight KGs]),sum('H&M SE0591 ShipmentsFacts'[Gross Weight KGs])),2)
+		lineageTag: 2801ff01-bdd4-4ac8-99ed-5f979977333d
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'CO2 TONNE'
+		lineageTag: 2d5ede2c-853a-441f-bb2c-89670929ddfb
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [CO2 TONNE]
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Transport Spend'
+		lineageTag: 52a46ba6-7a09-493b-ae89-b4afc127c2ef
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Transport Spend]
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Purchase Orders'
+		formatString: 0
+		lineageTag: 6365d591-eafe-4e48-a907-5bfea0dd5e99
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Purchase Orders]
+
+		annotation SummarizationSetBy = Automatic
+
+	column CBM
+		lineageTag: 1998f37e-0ccd-47db-8df1-db82dee4573e
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [CBM]
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Weight Kgs'
+		lineageTag: 291992b8-d2f1-4178-a55d-ec428fbba92a
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Weight Kgs]
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Supplier = ```
+			
+			VAR OrderName = 
+			                LOOKUPVALUE('H&M SE0591 Suppliers'[Supplier name],[Sender_Code],[Sender_Code])
+			RETURN
+			    OrderName
+			```
+		lineageTag: 362b2f3b-89b1-4202-8d3e-2253328098e0
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column Sender_Code
+		lineageTag: 2fa2cba7-b16f-4009-bd1b-ecd82b6aa8dc
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: H&M SE0591 ShipmentsDims[Sender_Code]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Shipments
+		formatString: 0
+		lineageTag: a8089b11-77fb-4e3f-a661-acd6ec5628ab
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Shipments]
+
+		annotation SummarizationSetBy = Automatic
+
+	column FrKg
+		lineageTag: ca68f010-ee61-4d5a-8395-bd9bba7e6bfb
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [FrKg]
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition 'Supplier Summary-1b1bfc72-f8a8-4951-93ea-8f9df9a7662c' = calculated
+		mode: import
+		source = ```
+				SUMMARIZECOLUMNS(
+				    'H&M SE0591 ShipmentsDims'[Sender_Code], 
+				                                        "CO2 TONNE", SUM('H&M SE0591 ShipmentsFacts'[Calc CO2]), 
+				                                        "Transport Spend", SUM('H&M SE0591 ShipmentsFacts'[Revenue]),
+				                                        "Purchase Orders",DISTINCTCOUNT('H&M SE0591 Orders'[Purchase Order Number]),
+				                                        "CBM",SUM('H&M SE0591 ShipmentsFacts'[Cubic Meters CBM]),
+				                                        "Weight Kgs",SUM('H&M SE0591 ShipmentsFacts'[Gross Weight KGs]),
+				                                        "Shipments",DISTINCTCOUNT('H&M SE0591 ShipmentsDims'[Shipment]),
+				                                        "FrKg",SUM('H&M SE0591 ShipmentsFacts'[Freight Chargeable Weight KGs])                                
+				                                    )
+				```
+
+	annotation PBI_Id = 62d5b7dedaf0450f9d4779ec0e473258
+

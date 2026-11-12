@@ -1,0 +1,189 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "1777c71e154d7a6a5e0c",
+  "position": {
+    "x": 9.1624910522548326,
+    "y": 106.28489620615606,
+    "z": 0,
+    "height": 612.97065139584834,
+    "width": 954.73156764495354,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Jobs_Events_Dates"
+                    }
+                  },
+                  "Property": "Job Number"
+                }
+              },
+              "queryRef": "Jobs_Events_Dates.Job Number",
+              "nativeQueryRef": "Job Number"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Jobs_Events_Dates"
+                    }
+                  },
+                  "Property": "MJB600_Completed"
+                }
+              },
+              "queryRef": "Jobs_Events_Dates.MJB600_Completed",
+              "nativeQueryRef": "MJB600_Completed"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Jobs_Events_Dates"
+                    }
+                  },
+                  "Property": "MJB600_Event"
+                }
+              },
+              "queryRef": "Jobs_Events_Dates.MJB600_Event",
+              "nativeQueryRef": "MJB600_Event"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Jobs_Events_Dates"
+                    }
+                  },
+                  "Property": "Unloading_Reporting_Minutes_NoWeekend"
+                }
+              },
+              "queryRef": "Jobs_Events_Dates.Unloading_Reporting_Minutes_NoWeekend",
+              "nativeQueryRef": "Unloading_Reporting_Minutes_NoWeekend"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Jobs_Events_Dates"
+                    }
+                  },
+                  "Property": "Unloading_Reporting_Days_NoWeekend"
+                }
+              },
+              "queryRef": "Jobs_Events_Dates.Unloading_Reporting_Days_NoWeekend",
+              "nativeQueryRef": "Unloading_Reporting_Days_NoWeekend1"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Jobs_Events_Dates"
+                    }
+                  },
+                  "Property": "Unloading_Reporting_Violation"
+                }
+              },
+              "queryRef": "Jobs_Events_Dates.Unloading_Reporting Violation_test",
+              "nativeQueryRef": "Unloading_Reporting_Violation"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Jobs_Events_Dates"
+                  }
+                },
+                "Property": "Job Number"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ]
+      }
+    },
+    "objects": {
+      "total": [
+        {
+          "properties": {
+            "totals": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "159.25266440454112D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Jobs_Events_Dates.Unloading_Reporting_Minutes_NoWeekend"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "151.19778570591555D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Jobs_Events_Dates.Unloading_Reporting_Days_NoWeekend"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "154.228774850347D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Jobs_Events_Dates.Unloading_Reporting Violation_test"
+          }
+        }
+      ],
+      "columnHeaders": [
+        {
+          "properties": {}
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

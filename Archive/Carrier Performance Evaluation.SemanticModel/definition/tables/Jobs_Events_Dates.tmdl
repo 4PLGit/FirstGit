@@ -1,0 +1,715 @@
+table Jobs_Events_Dates
+	lineageTag: be7e59e3-c7ef-4501-a2c6-7b1546decfa8
+
+	column 'Job Number'
+		dataType: string
+		lineageTag: 3d10ba10-98a1-4d52-bdf0-287fa8ec5344
+		summarizeBy: none
+		sourceColumn: Job Number
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Current Status'
+		dataType: string
+		lineageTag: 6ad5c649-96b4-48cd-a897-3a6490d6bbcb
+		summarizeBy: none
+		sourceColumn: Current Status
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Carrier Name'
+		dataType: string
+		lineageTag: 3af2b509-725c-4df6-ae99-5e6ad3c0a355
+		summarizeBy: none
+		sourceColumn: Carrier Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column MJB260_Event
+		dataType: dateTime
+		formatString: yyyy-mm-dd hh:nn:ss
+		lineageTag: 4f3c0039-46b0-4158-a7c9-22bc641500cb
+		summarizeBy: none
+		sourceColumn: MJB260_Event
+
+		variation Variation
+			isDefault
+			relationship: aa9b50cb-2870-4de1-b357-1bda230bc994
+			defaultHierarchy: LocalDateTable_dac85330-ea09-46e8-b80e-6ce09cf7cb47.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column MJB290_Event
+		dataType: dateTime
+		formatString: yyyy-mm-dd hh:nn:ss
+		lineageTag: d7c83993-071d-4bfd-a509-9dc6b8d5b64d
+		summarizeBy: none
+		sourceColumn: MJB290_Event
+
+		variation Variation
+			isDefault
+			relationship: b9a6e4eb-d7de-4dda-b879-9b359bb6c553
+			defaultHierarchy: LocalDateTable_83e10a8c-c4e6-4634-a965-26fa40a42e66.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column MJB350_Event
+		dataType: dateTime
+		formatString: yyyy-mm-dd hh:nn:ss
+		lineageTag: dab051ed-a59b-48c4-b0f4-cea4af0145fc
+		summarizeBy: none
+		sourceColumn: MJB350_Event
+
+		variation Variation
+			isDefault
+			relationship: 19312dfc-641c-417d-b2f6-45e6fc048271
+			defaultHierarchy: LocalDateTable_6ba385c1-bc31-4c3d-b3fe-b291a35a8253.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column MJB600_Event
+		dataType: dateTime
+		formatString: yyyy-mm-dd hh:nn:ss
+		lineageTag: 50e97afb-879b-42ad-a348-99c9a109139a
+		summarizeBy: none
+		sourceColumn: MJB600_Event
+
+		variation Variation
+			isDefault
+			relationship: 2d8a7e16-de68-4b25-806b-c84a201de56b
+			defaultHierarchy: LocalDateTable_a5af39c5-2ab0-42a9-8e16-df86b1da0fba.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column MJB260_Scheduled
+		dataType: dateTime
+		formatString: yyyy-mm-dd hh:nn:ss
+		lineageTag: 4355646b-1267-44bc-9658-d04aaa0e0fc5
+		summarizeBy: none
+		sourceColumn: MJB260_Scheduled
+
+		variation Variation
+			isDefault
+			relationship: 5553fd3c-19e5-434c-bdb1-694efdf16399
+			defaultHierarchy: LocalDateTable_ebf5a6e1-3d4e-4dc3-a81b-7e3b2893c5ff.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column MJB290_Scheduled
+		dataType: dateTime
+		formatString: yyyy-mm-dd hh:nn:ss
+		lineageTag: 60cbbf6b-02fc-46fa-90a9-ba20cf42d164
+		summarizeBy: none
+		sourceColumn: MJB290_Scheduled
+
+		variation Variation
+			isDefault
+			relationship: 5505c336-010c-42f6-8852-19302ae09977
+			defaultHierarchy: LocalDateTable_1504afe6-98dc-47aa-ada1-25994fd00173.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column MJB350_Scheduled
+		dataType: dateTime
+		formatString: yyyy-mm-dd hh:nn:ss
+		lineageTag: e33eb3ab-7d21-4628-80f1-535354aa8f90
+		summarizeBy: none
+		sourceColumn: MJB350_Scheduled
+
+		variation Variation
+			isDefault
+			relationship: cec82b1b-2e43-4347-a9a8-875bfbce6fe1
+			defaultHierarchy: LocalDateTable_5b3741c4-c7ea-4925-bf76-ce9d20530bc2.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column MJB600_Scheduled
+		dataType: dateTime
+		formatString: yyyy-mm-dd hh:nn:ss
+		lineageTag: 8b01dc0c-b01c-4a5b-97fe-be814a090c20
+		summarizeBy: none
+		sourceColumn: MJB600_Scheduled
+
+		variation Variation
+			isDefault
+			relationship: d4504cc1-f5b4-4b15-bdb5-137129992f8e
+			defaultHierarchy: LocalDateTable_3ad550aa-3700-40e7-abed-45bb71a18ab5.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column MJB260_Completed
+		dataType: dateTime
+		formatString: yyyy-mm-dd hh:nn:ss
+		lineageTag: 4eec3f04-7ce8-428c-8440-3207627d4417
+		summarizeBy: none
+		sourceColumn: MJB260_Completed
+
+		variation Variation
+			isDefault
+			relationship: 83fbcd90-6e24-4ace-b160-acb6b23e32a6
+			defaultHierarchy: LocalDateTable_9880ff06-80d2-4443-94a7-12b91edc6bf0.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column MJB290_Completed
+		dataType: dateTime
+		formatString: yyyy-mm-dd hh:nn:ss
+		lineageTag: 3b131e6e-685a-49db-bbf2-179c51029734
+		summarizeBy: none
+		sourceColumn: MJB290_Completed
+
+		variation Variation
+			isDefault
+			relationship: 8fe3d509-07be-4333-b75d-38c1e6c98e26
+			defaultHierarchy: LocalDateTable_cffcfddd-cb65-4e35-b533-d3cb3affcc84.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column MJB350_Completed
+		dataType: dateTime
+		formatString: yyyy-mm-dd hh:nn:ss
+		lineageTag: cfb764e9-4a3e-43b1-8ee3-44fdddd48162
+		summarizeBy: none
+		sourceColumn: MJB350_Completed
+
+		variation Variation
+			isDefault
+			relationship: 4fa3b249-f5e1-4815-89ea-3ef14dbb4ecd
+			defaultHierarchy: LocalDateTable_58015e29-ad09-444f-b528-3008a80714e4.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column MJB600_Completed
+		dataType: dateTime
+		formatString: yyyy-mm-dd hh:nn:ss
+		lineageTag: a0b7299a-549e-4139-a185-eac87e4a41ba
+		summarizeBy: none
+		sourceColumn: MJB600_Completed
+
+		variation Variation
+			isDefault
+			relationship: cd7f0309-c6db-44e1-82da-c9ffaf4d1a67
+			defaultHierarchy: LocalDateTable_d7d085e0-c1df-4fd0-9c14-cce00bf4ed24.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column Confirmation_Working_Minutes
+		dataType: int64
+		formatString: 0
+		lineageTag: 8b77b73a-879d-485e-8b0f-53a7d9f8430f
+		summarizeBy: sum
+		sourceColumn: Confirmation_Working_Minutes
+
+		annotation SummarizationSetBy = Automatic
+
+	column Confirmation_Violation =
+			
+			IF(ISBLANK([Confirmation_Working_Minutes]),
+			    BLANK(),
+			    IF([Confirmation_Working_Minutes] > 120,
+			        1,
+			        0
+			    )
+			)
+		formatString: 0
+		lineageTag: c88d98aa-50c9-4058-bd83-87eec009114d
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column Loading_Plan_Violation = ```
+			
+			VAR HasChange =
+			    NOT(ISBLANK(RELATED(Loading_Changes[Initial_Loading_Change_From])))
+			
+			RETURN
+			IF(
+			    HasChange,
+			    
+			    -- Case 1: CHGLOD exists
+			    IF(
+			        RELATED(Loading_Changes[Initial_Loading_Change_From]) + 3 <
+			        'Jobs_Events_Dates'[MJB350_Scheduled],
+			        1,
+			        0
+			    )
+			
+			)
+			```
+		formatString: 0
+		lineageTag: f1a84985-7a3f-435b-a1d9-de9e2952c58b
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column Loading_Actual_Violation = ```
+			
+			VAR HasChange =
+			    NOT(ISBLANK(RELATED(Loading_Changes[Initial_Loading_Change_From])))
+			
+			RETURN
+			IF(
+			    HasChange,
+			    
+			    -- Case 1: CHGLOD exists
+			    IF(
+			        RELATED(Loading_Changes[Initial_Loading_Change_From]) + 3 <
+			        'Jobs_Events_Dates'[MJB350_Completed],
+			        1,
+			        0
+			    ),
+			
+			    -- Case 2: No CHGLOD
+			  IF( 'Jobs_Events_Dates'[MJB350_Scheduled] + 3 < 'Jobs_Events_Dates'[MJB350_Completed], 1, 0 ) )
+			```
+		lineageTag: 99708cec-4e82-460b-af78-62b94391ee13
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column Loading_Reporting_Violation =
+			
+			IF(ISBLANK([Loading_Reporting_Minutes_NoWeekend]),
+			    BLANK(),
+			    IF([Loading_Reporting_Minutes_NoWeekend] > 1440,
+			        1,
+			        0
+			    )
+			)
+		lineageTag: 713b4df8-5f18-4100-8a8a-c991f52ccc9e
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column Loading_Reporting_Minutes_NoWeekend = ```
+			
+			VAR StartDate = 'Jobs_Events_Dates'[MJB350_Completed]
+			VAR EndDate   = 'Jobs_Events_Dates'[MJB350_Event]
+			
+			RETURN
+			IF(
+			    ISBLANK(StartDate) || ISBLANK(EndDate),
+			    BLANK(),
+			    
+			    SUMX(
+			        ADDCOLUMNS(
+			            CALENDAR(StartDate, EndDate),
+			            "IsWeekend", WEEKDAY([Date],2) > 5
+			        ),
+			        IF(
+			            [IsWeekend],
+			            0,
+			            VAR CurrentDay = [Date]
+			            VAR FromTime =
+			                IF(CurrentDay = DATEVALUE(StartDate), StartDate, CurrentDay)
+			            VAR ToTime =
+			                IF(CurrentDay = DATEVALUE(EndDate), EndDate, CurrentDay + 1)
+			            RETURN DATEDIFF(FromTime, ToTime, MINUTE)
+			        )
+			    )
+			)
+			```
+		formatString: 0
+		lineageTag: f3cbed2c-4f81-4dc4-bf48-436ecdb3a9fd
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column Delivery_Plan_Violation = ```
+			
+			VAR HasChange =
+			    NOT(ISBLANK(RELATED('Unloading_Changes'[Initial_Unloading_Change_From])))
+			
+			VAR Completed = 'Jobs_Events_Dates'[MJB600_Scheduled]
+			
+			RETURN
+			IF(
+			    ISBLANK(Completed),
+			    BLANK(),
+			
+			    IF(
+			        HasChange,
+			        
+			        -- Case 1: CHGUND exists
+			        IF(
+			            Completed < RELATED('Unloading_Changes'[Initial_Unloading_Change_From]) - 3
+			            || Completed > RELATED('Unloading_Changes'[Initial_Unloading_Change_From]),
+			            1,
+			            0
+			        ),
+			        
+			        -- Case 2: No CHGUND 
+			        BLANK()   
+			    )
+			)
+			```
+		formatString: 0
+		lineageTag: 92b8a715-17bc-4cb5-9ceb-360c0fa7cfcf
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column Delivery_Actual_Violation = ```
+			
+			VAR HasChange =
+			    NOT(ISBLANK(RELATED('Unloading_Changes'[Initial_Unloading_Change_From])))
+			
+			VAR Completed = 'Jobs_Events_Dates'[MJB600_Completed]
+			
+			RETURN
+			IF(
+			    ISBLANK(Completed),
+			    BLANK(),
+			
+			    IF(
+			        HasChange,
+			        
+			        -- Case 1: CHGUND exists
+			        IF(
+			            Completed < RELATED('Unloading_Changes'[Initial_Unloading_Change_From]) - 3
+			            || Completed > RELATED('Unloading_Changes'[Initial_Unloading_Change_From]),
+			            1,
+			            0
+			        ),
+			        
+			        -- Case 2: No CHGUND 
+			        
+			        IF(
+			            Completed < Jobs_Events_Dates[MJB600_Scheduled] - 3
+			            || Completed > Jobs_Events_Dates[MJB600_Scheduled],
+			            1,
+			            0
+			        )
+			))
+			```
+		formatString: 0
+		lineageTag: 40973ccc-a8f9-4966-a840-f753b1c0453b
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column Unloading_Reporting_Violation =
+			
+			IF(ISBLANK([Unloading_Reporting_Minutes_NoWeekend]),
+			    BLANK(),
+			    IF([Unloading_Reporting_Minutes_NoWeekend] > 1440,
+			        1,
+			        0
+			    )
+			)
+		lineageTag: 8b688e2f-b25c-4165-a738-1aec28e7c3c3
+		summarizeBy: none
+
+		annotation SummarizationSetBy = User
+
+	column Unloading_Reporting_Minutes_NoWeekend = ```
+			
+			VAR StartDate = 'Jobs_Events_Dates'[MJB600_Completed]
+			VAR EndDate   = 'Jobs_Events_Dates'[MJB600_Event]
+			
+			RETURN
+			IF(
+			    ISBLANK(StartDate) || ISBLANK(EndDate),
+			    BLANK(),
+			    
+			    SUMX(
+			        ADDCOLUMNS(
+			            CALENDAR(StartDate, EndDate),
+			            "IsWeekend", WEEKDAY([Date],2) > 5
+			        ),
+			        IF(
+			            [IsWeekend],
+			            0,
+			            VAR CurrentDay = [Date]
+			            VAR FromTime =
+			                IF(CurrentDay = DATEVALUE(StartDate), StartDate, CurrentDay)
+			            VAR ToTime =
+			                IF(CurrentDay = DATEVALUE(EndDate), EndDate, CurrentDay + 1)
+			            RETURN DATEDIFF(FromTime, ToTime, MINUTE)
+			        )
+			    )
+			)
+			```
+		formatString: 0
+		lineageTag: 538bfc32-ca04-4d55-924d-8c4f59b61387
+		summarizeBy: none
+
+		annotation SummarizationSetBy = User
+
+	column Planning_SLA_Violation =
+			
+			IF(
+			    [Loading_Plan_Violation] = 1 || [Delivery_Plan_Violation] = 1,
+			    1,
+			    0
+			)
+		formatString: 0
+		lineageTag: 5968a8dc-8d49-4e64-a72f-dd1f070582a5
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column Unloading_Time_Variance_day =
+			
+			DIVIDE([Unloading_Variance_Same_Day_zero (min)], 1440)
+		lineageTag: ebeccde7-26d0-42cb-9fb1-df73f38a3666
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Unloading_Variance_Same_Day_zero (min)' =
+			
+			VAR Planned = 'Jobs_Events_Dates'[MJB600_Scheduled]
+			VAR Actual  = 'Jobs_Events_Dates'[MJB600_Completed]
+			
+			RETURN
+			IF(
+			    ISBLANK(Planned) || ISBLANK(Actual),
+			    BLANK(),
+			
+			    IF(
+			        DATEVALUE(Planned) = DATEVALUE(Actual),
+			        0,
+			        DATEDIFF(Planned, Actual, MINUTE)
+			    )
+			)
+		formatString: 0
+		lineageTag: 03f158ab-bd5e-49f6-8fec-c4dba62aa67e
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column Confirmation_Latency_day =
+			
+			DIVIDE([Confirmation_Working_Minutes], 540)
+		lineageTag: b7828d9a-026b-4377-b2e7-02d6266094ff
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Confirmation_Latency (min)' =
+			
+			DATEDIFF(
+			    [MJB260_Completed],
+			    [MJB290_Completed],
+			    MINUTE
+			)
+		formatString: 0
+		lineageTag: 92f05dfb-8a26-48db-99e0-dd6853cee985
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column LeadTime_Calendar_Days =
+			
+			VAR Loading = 'Jobs_Events_Dates'[MJB350_Completed]
+			VAR Unloading = 'Jobs_Events_Dates'[MJB600_Completed]
+			RETURN
+			IF(
+			    OR(ISBLANK(Loading), ISBLANK(Unloading)),
+			    BLANK(),
+			    DATEDIFF(Loading, Unloading, DAY)
+			)
+		formatString: 0
+		lineageTag: 6774cd71-bc44-457a-a310-846635ed09a3
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column LeadTime_Calendar_Min =
+			
+			VAR Loading = 'Jobs_Events_Dates'[MJB350_Completed]
+			VAR Unloading = 'Jobs_Events_Dates'[MJB600_Completed]
+			RETURN
+			IF(
+			    OR(ISBLANK(Loading), ISBLANK(Unloading)),
+			    BLANK(),
+			    DATEDIFF(Loading, Unloading, MINUTE)
+			)
+		formatString: 0
+		lineageTag: 08fbe397-180d-4dcb-b9eb-2500ba8af1b3
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Loading_Variance_Same_Day_zero (min)' =
+			
+			VAR Planned = 'Jobs_Events_Dates'[MJB350_Scheduled]
+			VAR Actual  = 'Jobs_Events_Dates'[MJB350_Completed]
+			
+			RETURN
+			IF(
+			    ISBLANK(Planned) || ISBLANK(Actual),
+			    BLANK(),
+			
+			    IF(
+			        DATEVALUE(Planned) = DATEVALUE(Actual),
+			        0,
+			        DATEDIFF(Planned, Actual, MINUTE)
+			    )
+			)
+		formatString: 0
+		lineageTag: 8ec6682b-4efc-4172-a619-14032fe35473
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column Loading_Time_Variance_day =
+			
+			DIVIDE([Loading_Variance_Same_Day_zero (min)], 1440)
+		lineageTag: cebdf14a-a91a-490d-8262-402598167602
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Loading_Reporting_Days_NoWeekend =
+			
+			VAR StartDate = DATEVALUE('Jobs_Events_Dates'[MJB350_Completed])
+			VAR EndDate   = DATEVALUE('Jobs_Events_Dates'[MJB350_Event])
+			
+			RETURN
+			IF(
+			    ISBLANK(StartDate) || ISBLANK(EndDate),
+			    BLANK(),
+			
+			    COUNTROWS(
+			        FILTER(
+			            CALENDAR(StartDate, EndDate),
+			            WEEKDAY([Date],2) <= 5
+			        )
+			    ) - 1
+			)
+		formatString: 0
+		lineageTag: 27882e4e-b4dc-48d3-a20a-00a9b670ca8b
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column Unloading_Reporting_Days_NoWeekend =
+			
+			VAR StartDate = DATEVALUE('Jobs_Events_Dates'[MJB600_Completed])
+			VAR EndDate   = DATEVALUE('Jobs_Events_Dates'[MJB600_Event])
+			
+			RETURN
+			IF(
+			    ISBLANK(StartDate) || ISBLANK(EndDate),
+			    BLANK(),
+			
+			    COUNTROWS(
+			        FILTER(
+			            CALENDAR(StartDate, EndDate),
+			            WEEKDAY([Date],2) <= 5
+			        )
+			    ) - 1
+			)
+		formatString: 0
+		lineageTag: bc9e7b13-989e-4525-b568-04bd6e386a04
+		summarizeBy: none
+
+		annotation SummarizationSetBy = User
+
+	column Relational_MJB350
+		dataType: dateTime
+		formatString: yyyy-mm-dd
+		lineageTag: 364e9346-7054-4adf-a371-32a4b5312768
+		summarizeBy: none
+		sourceColumn: Relational_MJB350
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	partition Jobs_Events_Dates = m
+		mode: import
+		source = ```
+				let
+				    Source = Table.NestedJoin(Event_Date, {"Job Number"}, Scheduled_Date, {"Job Number"}, "Scheduled_Date", JoinKind.LeftOuter),
+				    #"Expanded Scheduled_Date" = Table.ExpandTableColumn(Source, "Scheduled_Date", {"MJB260_Scheduled", "MJB290_Scheduled", "MJB350_Scheduled", "MJB600_Scheduled"}, {"MJB260_Scheduled", "MJB290_Scheduled", "MJB350_Scheduled", "MJB600_Scheduled"}),
+				    #"Merged Queries" = Table.NestedJoin(#"Expanded Scheduled_Date", {"Job Number"}, Completed_Date, {"Job Number"}, "Completed_Date", JoinKind.LeftOuter),
+				    #"Expanded Completed_Date" = Table.ExpandTableColumn(#"Merged Queries", "Completed_Date", {"MJB260_Completed", "MJB290_Completed", "MJB350_Completed", "MJB600_Completed"}, {"MJB260_Completed", "MJB290_Completed", "MJB350_Completed", "MJB600_Completed"}),
+				    Confirmation = Table.AddColumn(#"Expanded Completed_Date", "Confirmation_Working_Minutes", each if [MJB260_Completed] = null or [MJB290_Completed] = null then 
+				    null 
+				else 
+				    Working_Minutes([MJB260_Completed], [MJB290_Completed])),
+				    #"Changed Type1" = Table.TransformColumnTypes(Confirmation,{{"Confirmation_Working_Minutes", Int64.Type}}),
+				    #"Added Conditional Column" = Table.AddColumn(#"Changed Type1", "Status_Prio", each if [Current Status] = "600" then 6 else if [Current Status] = "550" then 5 else if [Current Status] = "500" then 4 else if [Current Status] = "450" then 3 else if [Current Status] = "290" then 2 else if [Current Status] = "260" then 1 else 0),
+				    #"Changed Type2" = Table.TransformColumnTypes(#"Added Conditional Column",{{"Status_Prio", type text}}),
+				    #"Grouped Rows" = Table.Group(#"Changed Type2", {"Job Number"}, {{"AllRows", each _, type table [Job Number=nullable text, Current Status=nullable text, Carrier Name=nullable text, MJB260_Event=nullable datetime, MJB290_Event=nullable datetime, MJB350_Event=nullable datetime, MJB600_Event=nullable datetime, MJB260_Scheduled=nullable datetime, MJB290_Scheduled=nullable datetime, MJB350_Scheduled=nullable datetime, MJB600_Scheduled=nullable datetime, MJB260_Completed=nullable datetime, MJB290_Completed=nullable datetime, MJB350_Completed=nullable datetime, MJB600_Completed=nullable datetime, Confirmation_Working_Minutes=nullable number, Status_Prio=number]}}),
+				    #"Added Custom" = Table.AddColumn(#"Grouped Rows", "Sorted", each Table.Sort([AllRows], {{"Status_Prio", Order.Descending}})),
+				    #"Added Custom1" = Table.AddColumn(#"Added Custom", "Filled", each let
+				    down = Table.FillDown([Sorted], {
+				        "MJB260_Event",
+				        "MJB290_Event",
+				        "MJB350_Event",
+				        "MJB600_Event",
+				        "MJB260_Scheduled",
+				        "MJB290_Scheduled",
+				        "MJB350_Scheduled",
+				        "MJB600_Scheduled",
+				        "MJB260_Completed",
+				        "MJB290_Completed",
+				        "MJB350_Completed",
+				        "MJB600_Completed"
+				    }),
+				
+				    up = Table.FillUp(down, {
+				        "MJB260_Event",
+				        "MJB290_Event",
+				        "MJB350_Event",
+				        "MJB600_Event",
+				        "MJB260_Scheduled",
+				        "MJB290_Scheduled",
+				        "MJB350_Scheduled",
+				        "MJB600_Scheduled",
+				        "MJB260_Completed",
+				        "MJB290_Completed",
+				        "MJB350_Completed",
+				        "MJB600_Completed"
+				    })
+				in
+				    up),
+				    #"Added Custom2" = Table.AddColumn(#"Added Custom1", "BestRow", each Table.First([Filled])),
+				    #"Expanded BestRow" = Table.ExpandRecordColumn(#"Added Custom2", "BestRow", {"Job Number", "Current Status", "Carrier Name", "MJB260_Event", "MJB290_Event", "MJB350_Event", "MJB600_Event", "MJB260_Scheduled", "MJB290_Scheduled", "MJB350_Scheduled", "MJB600_Scheduled", "MJB260_Completed", "MJB290_Completed", "MJB350_Completed", "MJB600_Completed", "Confirmation_Working_Minutes", "Status_Prio"}, {"Job Number.1", "Current Status", "Carrier Name", "MJB260_Event", "MJB290_Event", "MJB350_Event", "MJB600_Event", "MJB260_Scheduled", "MJB290_Scheduled", "MJB350_Scheduled", "MJB600_Scheduled", "MJB260_Completed", "MJB290_Completed", "MJB350_Completed", "MJB600_Completed", "Confirmation_Working_Minutes", "Status_Prio"}),
+				    #"Removed Columns" = Table.RemoveColumns(#"Expanded BestRow",{"AllRows", "Sorted", "Filled", "Job Number.1"}),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Removed Columns",{{"Confirmation_Working_Minutes", Int64.Type}, {"Status_Prio", type text}, {"Current Status", type text}, {"Carrier Name", type text}, {"MJB260_Event", type datetime}, {"MJB290_Event", type datetime}, {"MJB350_Event", type datetime}, {"MJB600_Event", type datetime}, {"MJB260_Scheduled", type datetime}, {"MJB290_Scheduled", type datetime}, {"MJB350_Scheduled", type datetime}, {"MJB600_Scheduled", type datetime}, {"MJB260_Completed", type datetime}, {"MJB290_Completed", type datetime}, {"MJB350_Completed", type datetime}, {"MJB600_Completed", type datetime}}),
+				    #"Removed Columns1" = Table.RemoveColumns(#"Changed Type",{"Status_Prio"}),
+				    #"Added Custom3" = Table.AddColumn(#"Removed Columns1", "Relational_MJB350", each Date.From([MJB350_Scheduled])),
+				    #"Changed Type3" = Table.TransformColumnTypes(#"Added Custom3",{{"Relational_MJB350", type date}})
+				in
+				    #"Changed Type3"
+				```
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

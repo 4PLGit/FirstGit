@@ -1,0 +1,26 @@
+table 'Carrier Name'
+	lineageTag: 7f438521-e3a1-4c2e-b281-da96a71a1fb5
+
+	column 'Carrier Name'
+		dataType: string
+		lineageTag: 67ac32fd-d10a-4c6f-aafe-45b02294ccbe
+		summarizeBy: none
+		sourceColumn: Carrier Name
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Carrier Name' = m
+		mode: import
+		source =
+				let
+				    Source = PowerBI.Dataflows(null),
+				    #"9e645096-1673-4897-892a-ebeca0b45cd7" = Source{[workspaceId="9e645096-1673-4897-892a-ebeca0b45cd7"]}[Data],
+				    #"d16f5bb1-a1ef-434e-8bfb-d1fad2af7c89" = #"9e645096-1673-4897-892a-ebeca0b45cd7"{[dataflowId="d16f5bb1-a1ef-434e-8bfb-d1fad2af7c89"]}[Data],
+				    #"Carrier Name1" = #"d16f5bb1-a1ef-434e-8bfb-d1fad2af7c89"{[entity="Carrier Name"]}[Data]
+				in
+				    #"Carrier Name1"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

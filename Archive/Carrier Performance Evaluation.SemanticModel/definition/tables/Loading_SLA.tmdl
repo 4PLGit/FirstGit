@@ -1,0 +1,42 @@
+table Loading_SLA
+	lineageTag: 0f6c86d8-4798-4990-8b17-310b7e38782c
+
+	column 'Job Number'
+		dataType: string
+		lineageTag: 555ecc6c-b628-49b6-b4a9-145abddf285a
+		summarizeBy: none
+		sourceColumn: Job Number
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'SLA Date_Loading (SLALOA)'
+		dataType: dateTime
+		formatString: yyyy-mm-dd hh:nn:ss
+		lineageTag: b2a199e7-a1a7-4c1c-8369-5164f49c1aa5
+		summarizeBy: none
+		sourceColumn: SLA Date_Loading (SLALOA)
+
+		variation Variation
+			isDefault
+			relationship: 7c294fdc-7d8e-4bde-a51d-3391bcd445a6
+			defaultHierarchy: LocalDateTable_7fba494b-0c0e-452a-82ef-32e8e7c201f3.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	partition Loading_SLA = m
+		mode: import
+		source =
+				let
+				    Source = PowerBI.Dataflows(null),
+				    #"9e645096-1673-4897-892a-ebeca0b45cd7" = Source{[workspaceId="9e645096-1673-4897-892a-ebeca0b45cd7"]}[Data],
+				    #"d16f5bb1-a1ef-434e-8bfb-d1fad2af7c89" = #"9e645096-1673-4897-892a-ebeca0b45cd7"{[dataflowId="d16f5bb1-a1ef-434e-8bfb-d1fad2af7c89"]}[Data],
+				    Loading_SLA1 = #"d16f5bb1-a1ef-434e-8bfb-d1fad2af7c89"{[entity="Loading_SLA"]}[Data]
+				in
+				    Loading_SLA1
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

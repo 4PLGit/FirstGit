@@ -1,0 +1,109 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "b06d530b4eee0ed513ca",
+  "position": {
+    "x": 9.4971145919208571,
+    "y": 0,
+    "z": 0,
+    "height": 720.72547403132728,
+    "width": 1270.5028854080792,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Jobs_Events_Dates"
+                    }
+                  },
+                  "Property": "Job Number"
+                }
+              },
+              "queryRef": "Jobs_Events_Dates.Job Number",
+              "nativeQueryRef": "Job Number"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Jobs_Events_Dates"
+                    }
+                  },
+                  "Property": "Carrier Name"
+                }
+              },
+              "queryRef": "Jobs_Events_Dates.Carrier Name",
+              "nativeQueryRef": "Carrier Name1"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Jobs_Events_Dates"
+                    }
+                  },
+                  "Property": "Loading_Plan_Violation"
+                }
+              },
+              "queryRef": "Jobs_Events_Dates.Pickup_Violation",
+              "nativeQueryRef": "Pickup_Violation"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Jobs_Events_Dates"
+                    }
+                  },
+                  "Property": "Delivery_Plan_Violation"
+                }
+              },
+              "queryRef": "Jobs_Events_Dates.Delivery_Violation",
+              "nativeQueryRef": "Delivery_Violation"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Jobs_Events_Dates"
+                    }
+                  },
+                  "Property": "Planning_SLA_Violation"
+                }
+              },
+              "queryRef": "Sum(Jobs_Events_Dates.Planning_SLA_Violation)",
+              "nativeQueryRef": "Planning_SLA_Violation"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "total": [
+        {
+          "properties": {
+            "totals": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

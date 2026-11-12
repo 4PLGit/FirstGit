@@ -1,0 +1,141 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "7584b05ce0d6b366b500",
+  "position": {
+    "x": 9.1624910522548326,
+    "y": 112.69863994273445,
+    "z": 0,
+    "height": 607.47315676449534,
+    "width": 1233.2712956335004,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Jobs_Events_Dates"
+                    }
+                  },
+                  "Property": "Job Number"
+                }
+              },
+              "queryRef": "Jobs_Events_Dates.Job Number",
+              "nativeQueryRef": "Job Number"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Loading_Changes"
+                    }
+                  },
+                  "Property": "Initial_Loading_Change_From"
+                }
+              },
+              "queryRef": "Loading_Changes.Initial_Loading_Change_From",
+              "nativeQueryRef": "Initial_Loading_Change_From1"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Jobs_Events_Dates"
+                    }
+                  },
+                  "Property": "MJB350_Scheduled"
+                }
+              },
+              "queryRef": "Jobs_Events_Dates.MJB350_Scheduled",
+              "nativeQueryRef": "MJB350_Scheduled"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Jobs_Events_Dates"
+                    }
+                  },
+                  "Property": "MJB350_Completed"
+                }
+              },
+              "queryRef": "Jobs_Events_Dates.MJB350_Completed",
+              "nativeQueryRef": "MJB350_Completed"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Jobs_Events_Dates"
+                    }
+                  },
+                  "Property": "Loading_Variance_Same_Day_zero (min)"
+                }
+              },
+              "queryRef": "Jobs_Events_Dates.Loading_Variance_Same_Day_zero (min)",
+              "nativeQueryRef": "Loading_Variance_Same_Day_zero (min)1"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Jobs_Events_Dates"
+                    }
+                  },
+                  "Property": "Loading_Time_Variance_day"
+                }
+              },
+              "queryRef": "Sum(Jobs_Events_Dates.Loading_Time_Variance_day)",
+              "nativeQueryRef": "Loading_Time_Variance (day)",
+              "displayName": "Loading_Time_Variance (day)"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Jobs_Events_Dates"
+                  }
+                },
+                "Property": "Job Number"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ]
+      }
+    },
+    "objects": {
+      "total": [
+        {
+          "properties": {
+            "totals": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}
